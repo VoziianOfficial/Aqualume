@@ -1353,81 +1353,68 @@
 }
 
 /* =========================================================
-   SERVICE HERO — PHOTO AS SECTION BACKGROUND
-   Keeps the original pale aqua hero and original content colors
+   SERVICE HERO — FINAL BACKGROUND SYSTEM
 ========================================================= */
 
-.service-hero {
-    position: relative;
-    overflow: hidden;
-    background: var(--light-hero-gradient);
-    isolation: isolate;
+body[data-service-page="emergency-water-damage"] .service-hero {
+    --service-hero-bg: url("../images/service-pages/emergency-water-damage-hero.jpg");
+    --service-hero-bg-position: center center;
 }
 
-/*
-    The photo is no longer a card.
-    It is a right-side background layer that blends into
-    the existing pale aqua hero background.
-*/
-.service-hero::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: auto;
-    z-index: 0;
-    width: min(68vw, 980px);
-    height: auto;
-    aspect-ratio: auto;
-    content: "";
-    border: 0;
-    border-radius: 0;
-    pointer-events: none;
+body[data-service-page="water-extraction-drying"] .service-hero {
+    --service-hero-bg: url("../images/service-pages/water-extraction-drying-hero.jpg");
+    --service-hero-bg-position: center center;
+}
 
+body[data-service-page="flood-damage-restoration"] .service-hero {
+    --service-hero-bg: url("../images/service-pages/flood-damage-restoration-hero.jpg");
+    --service-hero-bg-position: center center;
+}
+
+body[data-service-page="burst-pipe-leak-damage"] .service-hero {
+    --service-hero-bg: url("../images/service-pages/burst-pipe-leak-damage-hero.jpg");
+    --service-hero-bg-position: center center;
+}
+
+body[data-service-page="basement-water-damage"] .service-hero {
+    --service-hero-bg: url("../images/service-pages/basement-water-damage-hero.jpg");
+    --service-hero-bg-position: center center;
+}
+
+body[data-service-page="mold-remediation-options"] .service-hero {
+    --service-hero-bg: url("../images/service-pages/mold-remediation-options-hero.jpg");
+    --service-hero-bg-position: center center;
+}
+
+.service-hero {
+    padding-bottom: clamp(58px, 6vw, 84px);
+    background-color: #ddf4fb;
     background-image:
         linear-gradient(90deg,
-            rgba(221, 244, 251, 1) 0%,
-            rgba(221, 244, 251, 0.98) 17%,
-            rgba(221, 244, 251, 0.86) 35%,
-            rgba(221, 244, 251, 0.42) 58%,
-            rgba(221, 244, 251, 0) 84%),
-        var(--service-hero-image);
-
+            rgba(221, 244, 251, 0.995) 0%,
+            rgba(221, 244, 251, 0.985) 28%,
+            rgba(221, 244, 251, 0.92) 47%,
+            rgba(221, 244, 251, 0.56) 66%,
+            rgba(221, 244, 251, 0.16) 82%,
+            rgba(221, 244, 251, 0.02) 100%),
+        var(--service-hero-bg),
+        var(--light-hero-gradient);
     background-repeat: no-repeat;
-    background-size:
-        100% 100%,
-        cover;
+    background-size: 100% 100%, cover, cover;
     background-position:
         center,
-        var(--service-hero-position, center center);
+        var(--service-hero-bg-position, center center),
+        center;
 }
 
-/*
-    The old small outlined circle stays subtle and behind content.
-*/
-.service-hero::before {
-    z-index: 0;
-}
-
-/*
-    One text column only now.
-    No empty right grid column remains after removing the image card.
-*/
 .service-hero__container {
     position: relative;
     z-index: 1;
-    display: grid;
     grid-template-columns: minmax(0, 1fr);
-    align-items: center;
     gap: 0;
-    min-height: clamp(470px, 46vw, 620px);
+    min-height: clamp(390px, 38vw, 520px);
 }
 
-/*
-    Do not change existing text colors, buttons, kicker,
-    description, note, spacing, or typography.
-    This only removes obsolete photo-card layout space.
-*/
 .service-hero__visual,
 .service-hero__photo,
 .service-hero__photo-label,
@@ -1436,89 +1423,35 @@
     display: none;
 }
 
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-    .service-hero::after {
-        width: 100%;
-        background-image:
-            linear-gradient(180deg,
-                rgba(221, 244, 251, 0.97) 0%,
-                rgba(221, 244, 251, 0.89) 45%,
-                rgba(221, 244, 251, 0.72) 100%),
-            var(--service-hero-image);
-
-        background-position:
-            center,
-            var(--service-hero-position-tablet,
-                var(--service-hero-position, center center));
-    }
-
-    .service-hero__container {
-        grid-template-columns: minmax(0, 1fr);
-        min-height: 440px;
-    }
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 620px) {
-    .service-hero::after {
-        width: 100%;
-        background-image:
-            linear-gradient(180deg,
-                rgba(221, 244, 251, 0.98) 0%,
-                rgba(221, 244, 251, 0.91) 48%,
-                rgba(221, 244, 251, 0.76) 100%),
-            var(--service-hero-image);
-
-        background-position:
-            center,
-            var(--service-hero-position-mobile,
-                var(--service-hero-position, center center));
-    }
-
-    .service-hero__container {
-        min-height: 0;
-    }
-}
-
-/* =========================================================
-   SERVICE HERO — COMPACT BOTTOM SPACING
-   For full-background service heroes
-========================================================= */
-
-.service-hero {
-    padding-bottom: clamp(58px, 6vw, 84px);
-}
-
-.service-hero__container {
-    min-height: clamp(390px, 38vw, 520px);
-}
-
-/* Tablet */
-
 @media (max-width: 900px) {
     .service-hero {
         padding-bottom: 68px;
+        background-image:
+            linear-gradient(180deg,
+                rgba(221, 244, 251, 0.985) 0%,
+                rgba(221, 244, 251, 0.94) 34%,
+                rgba(221, 244, 251, 0.8) 68%,
+                rgba(221, 244, 251, 0.62) 100%),
+            var(--service-hero-bg),
+            var(--light-hero-gradient);
     }
 
     .service-hero__container {
         min-height: 0;
     }
 }
-
-/* Mobile */
 
 @media (max-width: 620px) {
     .service-hero {
         padding-bottom: 52px;
+        background-image:
+            linear-gradient(180deg,
+                rgba(221, 244, 251, 0.99) 0%,
+                rgba(221, 244, 251, 0.955) 38%,
+                rgba(221, 244, 251, 0.84) 72%,
+                rgba(221, 244, 251, 0.68) 100%),
+            var(--service-hero-bg),
+            var(--light-hero-gradient);
     }
 
     .service-hero__container {
