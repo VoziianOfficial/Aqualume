@@ -2392,3 +2392,57 @@
         transform: translateX(0);
     }
 }
+
+/* =========================================================
+   CONTACT PREP — LARGE SHAPE BEHIND PHOTO
+========================================================= */
+
+.contact-prep__visual {
+    position: relative;
+    isolation: isolate;
+}
+
+.contact-prep__photo {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-prep__shape {
+    position: absolute;
+    z-index: 1;
+    top: -8%;
+    right: -10%;
+    width: 98%;
+    height: 108%;
+    border-radius: 46% 54% 42% 58% / 53% 45% 55% 47%;
+    pointer-events: none;
+    transform: rotate(-10deg);
+}
+
+.contact-prep__ripple {
+    position: absolute;
+    z-index: 3;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .contact-prep__shape {
+        top: -6%;
+        right: -7%;
+        width: 96%;
+        height: 104%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 620px) {
+    .contact-prep__shape {
+        top: -4%;
+        right: -5%;
+        width: 93%;
+        height: 100%;
+        transform: rotate(-8deg);
+    }
+}

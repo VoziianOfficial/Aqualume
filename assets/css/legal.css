@@ -1016,3 +1016,439 @@
         height: 16px;
     }
 }
+
+/* =========================================================
+   AQUALUME LEGAL — JUICIER VISUAL SYSTEM
+========================================================= */
+
+.legal-page {
+    background:
+        radial-gradient(circle at 92% 6%,
+            rgba(99, 196, 227, 0.13),
+            transparent 20%),
+        var(--icy-mist);
+}
+
+/* ---------------------------------------------------------
+   TOP PAGE PROGRESS
+--------------------------------------------------------- */
+
+.legal-scroll-progress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    height: 3px;
+    background: linear-gradient(90deg,
+            var(--deep-teal) 0%,
+            var(--soft-azure) 55%,
+            var(--action-red-light) 100%);
+    box-shadow: 0 0 14px rgba(99, 196, 227, 0.48);
+    transform: scaleX(0);
+    transform-origin: left center;
+    pointer-events: none;
+}
+
+/* ---------------------------------------------------------
+   HERO
+--------------------------------------------------------- */
+
+.legal-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 84% 20%,
+            rgba(99, 196, 227, 0.33),
+            transparent 22%),
+        radial-gradient(circle at 15% 100%,
+            rgba(0, 95, 111, 0.11),
+            transparent 26%),
+        var(--light-hero-gradient);
+}
+
+.legal-hero::before {
+    position: absolute;
+    top: -155px;
+    right: -115px;
+    z-index: -1;
+    width: 390px;
+    height: 390px;
+    content: "";
+    border: 1px solid rgba(99, 196, 227, 0.32);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 38px rgba(99, 196, 227, 0.05),
+        0 0 0 79px rgba(99, 196, 227, 0.025);
+}
+
+.legal-hero::after {
+    position: absolute;
+    bottom: -85px;
+    left: -85px;
+    z-index: -1;
+    width: 250px;
+    height: 250px;
+    content: "";
+    border: 1px solid rgba(0, 95, 111, 0.16);
+    border-radius: 50%;
+}
+
+.legal-hero__card {
+    border-color: rgba(99, 196, 227, 0.28);
+    box-shadow:
+        0 24px 54px rgba(0, 78, 92, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition:
+        transform 340ms cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 260ms ease,
+        box-shadow 300ms ease;
+}
+
+.legal-hero__card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3px;
+    content: "";
+    background: linear-gradient(90deg,
+            var(--soft-azure),
+            var(--rich-teal),
+            var(--action-red-light));
+    opacity: 0.9;
+}
+
+.legal-hero__card:hover {
+    border-color: rgba(99, 196, 227, 0.62);
+    box-shadow:
+        0 32px 68px rgba(0, 78, 92, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    transform: translateY(-7px);
+}
+
+.legal-hero__card li {
+    transition:
+        color 220ms ease,
+        transform 220ms ease;
+}
+
+.legal-hero__card li:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+/* ---------------------------------------------------------
+   TABLE OF CONTENTS
+--------------------------------------------------------- */
+
+.legal-toc__inner {
+    border-color: rgba(0, 95, 111, 0.14);
+    box-shadow: 0 18px 42px rgba(0, 78, 92, 0.08);
+}
+
+.legal-toc nav a {
+    position: relative;
+    overflow: hidden;
+    transition:
+        color 220ms ease,
+        padding-left 260ms cubic-bezier(0.22, 1, 0.36, 1),
+        background 220ms ease;
+}
+
+.legal-toc nav a::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    content: "";
+    border-radius: 50%;
+    background: var(--soft-azure);
+    opacity: 0;
+    transform: translateY(-50%) scale(0);
+    transition:
+        opacity 180ms ease,
+        transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.legal-toc nav a:hover {
+    padding-left: 13px;
+    color: var(--deep-teal);
+    background: rgba(221, 244, 251, 0.54);
+}
+
+.legal-toc nav a:hover::before,
+.legal-toc nav a.is-active::before {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+.legal-toc nav a.is-active {
+    padding-left: 13px;
+    color: var(--deep-teal);
+    background:
+        linear-gradient(90deg,
+            rgba(221, 244, 251, 0.95),
+            rgba(221, 244, 251, 0));
+}
+
+/* ---------------------------------------------------------
+   CONTENT SECTIONS
+--------------------------------------------------------- */
+
+.legal-content__section {
+    position: relative;
+    overflow: visible;
+    border-radius: 18px;
+    transition:
+        background 280ms ease,
+        box-shadow 280ms ease,
+        transform 280ms ease;
+}
+
+.legal-content__section::before {
+    position: absolute;
+    top: 26px;
+    bottom: 26px;
+    left: -1px;
+    width: 3px;
+    content: "";
+    border-radius: 999px;
+    background: linear-gradient(180deg,
+            var(--soft-azure),
+            var(--rich-teal),
+            var(--action-red-light));
+    opacity: 0;
+    transform: scaleY(0.32);
+    transform-origin: top center;
+    transition:
+        opacity 260ms ease,
+        transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.legal-content__section.is-in-view::before {
+    opacity: 0.34;
+    transform: scaleY(1);
+}
+
+.legal-content__section.is-active-section {
+    background:
+        linear-gradient(90deg,
+            rgba(221, 244, 251, 0.43),
+            rgba(255, 255, 255, 0) 74%);
+    box-shadow: inset 1px 0 0 rgba(99, 196, 227, 0.14);
+}
+
+.legal-content__section.is-active-section::before {
+    opacity: 1;
+}
+
+.legal-content__number {
+    color: var(--deep-teal);
+    text-shadow: 0 7px 19px rgba(99, 196, 227, 0.28);
+    transition:
+        color 240ms ease,
+        transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.legal-content__section:hover .legal-content__number {
+    color: var(--action-red);
+    transform: translateY(-4px);
+}
+
+.legal-content__section h2 {
+    transition: color 240ms ease;
+}
+
+.legal-content__section:hover h2 {
+    color: var(--deep-teal);
+}
+
+/* ---------------------------------------------------------
+   DATA CARDS
+--------------------------------------------------------- */
+
+.legal-data-card {
+    position: relative;
+    overflow: hidden;
+    border-color: rgba(0, 95, 111, 0.13);
+    transition:
+        transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 300ms ease,
+        border-color 260ms ease;
+}
+
+.legal-data-card::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    content: "";
+    background: linear-gradient(90deg,
+            var(--deep-teal),
+            var(--soft-azure),
+            transparent);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.legal-data-card:nth-child(2)::after {
+    background: linear-gradient(90deg,
+            var(--rich-teal),
+            var(--soft-azure),
+            transparent);
+}
+
+.legal-data-card:nth-child(3)::after {
+    background: linear-gradient(90deg,
+            var(--action-red),
+            #ff9a87,
+            transparent);
+}
+
+.legal-data-card:hover {
+    border-color: rgba(99, 196, 227, 0.58);
+    box-shadow: 0 18px 34px rgba(0, 78, 92, 0.12);
+    transform: translateY(-6px);
+}
+
+.legal-data-card:hover::after {
+    transform: scaleX(1);
+}
+
+.legal-data-card:hover>svg {
+    color: var(--deep-teal);
+    transform: translateY(-4px) rotate(-5deg);
+}
+
+/* ---------------------------------------------------------
+   NOTICES, LISTS, COOKIE TABLE, CONTACT CARD
+--------------------------------------------------------- */
+
+.legal-notice {
+    border-color: rgba(99, 196, 227, 0.33);
+    box-shadow: 0 13px 28px rgba(0, 78, 92, 0.07);
+    transition:
+        transform 260ms ease,
+        box-shadow 260ms ease;
+}
+
+.legal-notice:hover {
+    box-shadow: 0 18px 34px rgba(0, 78, 92, 0.12);
+    transform: translateY(-3px);
+}
+
+.legal-list li {
+    transition:
+        color 220ms ease,
+        transform 220ms ease;
+}
+
+.legal-list li:hover {
+    color: var(--deep-teal);
+    transform: translateX(6px);
+}
+
+.legal-list li:hover svg {
+    color: var(--action-red);
+    transform: scale(1.12);
+}
+
+.legal-cookie-table__row {
+    position: relative;
+    transition:
+        background 240ms ease,
+        padding-left 260ms ease,
+        transform 260ms ease;
+}
+
+.legal-cookie-table__row:hover {
+    padding-left: 14px;
+    background: rgba(221, 244, 251, 0.55);
+    transform: translateX(3px);
+}
+
+.legal-cookie-table__row:hover .tag {
+    border-color: rgba(99, 196, 227, 0.65);
+    color: var(--deep-teal);
+}
+
+.legal-contact-card {
+    border-color: rgba(99, 196, 227, 0.28);
+    box-shadow: 0 18px 40px rgba(0, 78, 92, 0.1);
+    transition:
+        border-color 260ms ease,
+        box-shadow 300ms ease,
+        transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.legal-contact-card:hover {
+    border-color: rgba(99, 196, 227, 0.6);
+    box-shadow: 0 25px 48px rgba(0, 78, 92, 0.16);
+    transform: translateY(-5px);
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .legal-hero::before {
+        top: -120px;
+        right: -155px;
+    }
+
+    .legal-content__section::before {
+        top: 19px;
+        bottom: 19px;
+    }
+}
+
+@media (max-width: 620px) {
+    .legal-scroll-progress {
+        height: 2px;
+    }
+
+    .legal-hero::before {
+        width: 250px;
+        height: 250px;
+    }
+
+    .legal-content__section {
+        border-radius: 13px;
+    }
+
+    .legal-content__section::before {
+        display: none;
+    }
+
+    .legal-content__section.is-active-section {
+        background: rgba(221, 244, 251, 0.33);
+    }
+
+    .legal-data-card:hover,
+    .legal-contact-card:hover,
+    .legal-hero__card:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .legal-scroll-progress {
+        display: none;
+    }
+
+    .legal-hero__card,
+    .legal-data-card,
+    .legal-contact-card,
+    .legal-content__section,
+    .legal-toc nav a,
+    .legal-list li,
+    .legal-cookie-table__row {
+        transition: none;
+    }
+}

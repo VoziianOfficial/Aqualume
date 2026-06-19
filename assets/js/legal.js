@@ -4,10 +4,7 @@
    AQUALUME — LEGAL PAGES FUNCTIONALITY
    Privacy Policy / Terms of Service / Cookie Policy
    File: assets/js/legal.js
-
-   Requires:
-   - assets/js/global.js
-   ========================================================= */
+========================================================= */
 
 (function () {
     const SELECTORS = {
@@ -22,7 +19,7 @@
         return header ? header.offsetHeight + 22 : 100;
     }
 
-    function updateActiveTocLink(activeId, links) {
+    function setActiveLegalState(activeId, links, sections) {
         links.forEach((link) => {
             const isActive = link.getAttribute('href') === `#${activeId}`;
 
@@ -33,6 +30,13 @@
             } else {
                 link.removeAttribute('aria-current');
             }
+        });
+
+        sections.forEach((section) => {
+            section.classList.toggle(
+                'is-active-section',
+                section.id === activeId
+            );
         });
     }
 
@@ -45,16 +49,62 @@
             '(prefers-reduced-motion: reduce)'
         ).matches;
 
-        const headerOffset = getHeaderOffset();
         const targetPosition =
             window.scrollY +
             target.getBoundingClientRect().top -
-            headerOffset;
+            getHeaderOffset();
 
         window.scrollTo({
             top: Math.max(0, targetPosition),
             behavior: reducedMotion ? 'auto' : 'smooth'
         });
+    }
+
+    function initLegalScrollProgress() {
+        if (document.querySelector('.legal-scroll-progress')) {
+            return;
+        }
+
+        const progress = document.createElement('div');
+
+        progress.className = 'legal-scroll-progress';
+        progress.setAttribute('aria-hidden', 'true');
+
+        document.body.append(progress);
+
+        let ticking = false;
+
+        function updateProgress() {
+            const documentHeight =
+                document.documentElement.scrollHeight - window.innerHeight;
+
+            const progressValue =
+                documentHeight > 0
+                    ? Math.min(window.scrollY / documentHeight, 1)
+                    : 0;
+
+            progress.style.transform = `scaleX(${progressValue})`;
+
+            ticking = false;
+        }
+
+        function requestUpdate() {
+            if (ticking) {
+                return;
+            }
+
+            ticking = true;
+
+            window.requestAnimationFrame(updateProgress);
+        }
+
+        window.addEventListener('scroll', requestUpdate, {
+            passive: true
+        });
+
+        window.addEventListener('resize', requestUpdate);
+
+        requestUpdate();
     }
 
     function initLegalTableOfContents() {
@@ -68,7 +118,9 @@
             return;
         }
 
-        const sectionIds = new Set(sections.map((section) => section.id));
+        const sectionIds = new Set(
+            sections.map((section) => section.id)
+        );
 
         links.forEach((link) => {
             link.addEventListener('click', (event) => {
@@ -82,15 +134,25 @@
 
                 event.preventDefault();
 
-                updateActiveTocLink(targetId, links);
+                setActiveLegalState(targetId, links, sections);
                 scrollToSection(target);
 
-                window.history.replaceState(null, '', `#${targetId}`);
+                window.history.replaceState(
+                    null,
+                    '',
+                    `#${targetId}`
+                );
             });
         });
 
         const observer = new IntersectionObserver(
             (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-in-view');
+                    }
+                });
+
                 const visibleSections = entries
                     .filter((entry) => entry.isIntersecting)
                     .sort(
@@ -105,12 +167,16 @@
 
                 const currentSection = visibleSections[0].target;
 
-                updateActiveTocLink(currentSection.id, links);
+                setActiveLegalState(
+                    currentSection.id,
+                    links,
+                    sections
+                );
             },
             {
                 root: null,
-                rootMargin: `-${getHeaderOffset()}px 0px -58% 0px`,
-                threshold: 0.08
+                rootMargin: `-${getHeaderOffset()}px 0px -56% 0px`,
+                threshold: 0.1
             }
         );
 
@@ -121,17 +187,21 @@
         if (initialHash && sectionIds.has(initialHash)) {
             const target = document.getElementById(initialHash);
 
-            updateActiveTocLink(initialHash, links);
+            setActiveLegalState(initialHash, links, sections);
 
             window.setTimeout(() => {
                 scrollToSection(target);
-            }, 80);
-        } else {
-            updateActiveTocLink(sections[0].id, links);
+            }, 90);
+
+            return;
         }
+
+        setActiveLegalState(sections[0].id, links, sections);
+        sections[0].classList.add('is-in-view');
     }
 
     function initLegalPage() {
+        initLegalScrollProgress();
         initLegalTableOfContents();
     }
 
