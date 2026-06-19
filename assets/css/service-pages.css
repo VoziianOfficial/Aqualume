@@ -1437,3 +1437,177 @@
         transform: translateX(0);
     }
 }
+
+/* =========================================================
+   SERVICE HERO — PHOTO AS SECTION BACKGROUND
+   Keeps the original pale aqua hero and original content colors
+========================================================= */
+
+.service-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--light-hero-gradient);
+    isolation: isolate;
+}
+
+/*
+    The photo is no longer a card.
+    It is a right-side background layer that blends into
+    the existing pale aqua hero background.
+*/
+.service-hero::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    z-index: 0;
+    width: min(68vw, 980px);
+    height: auto;
+    aspect-ratio: auto;
+    content: "";
+    border: 0;
+    border-radius: 0;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(90deg,
+            rgba(221, 244, 251, 1) 0%,
+            rgba(221, 244, 251, 0.98) 17%,
+            rgba(221, 244, 251, 0.86) 35%,
+            rgba(221, 244, 251, 0.42) 58%,
+            rgba(221, 244, 251, 0) 84%),
+        var(--service-hero-image);
+
+    background-repeat: no-repeat;
+    background-size:
+        100% 100%,
+        cover;
+    background-position:
+        center,
+        var(--service-hero-position, center center);
+}
+
+/*
+    The old small outlined circle stays subtle and behind content.
+*/
+.service-hero::before {
+    z-index: 0;
+}
+
+/*
+    One text column only now.
+    No empty right grid column remains after removing the image card.
+*/
+.service-hero__container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: 0;
+    min-height: clamp(470px, 46vw, 620px);
+}
+
+/*
+    Do not change existing text colors, buttons, kicker,
+    description, note, spacing, or typography.
+    This only removes obsolete photo-card layout space.
+*/
+.service-hero__visual,
+.service-hero__photo,
+.service-hero__photo-label,
+.service-hero__orb,
+.service-hero__ripple {
+    display: none;
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+    .service-hero::after {
+        width: 100%;
+        background-image:
+            linear-gradient(180deg,
+                rgba(221, 244, 251, 0.97) 0%,
+                rgba(221, 244, 251, 0.89) 45%,
+                rgba(221, 244, 251, 0.72) 100%),
+            var(--service-hero-image);
+
+        background-position:
+            center,
+            var(--service-hero-position-tablet,
+                var(--service-hero-position, center center));
+    }
+
+    .service-hero__container {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: 440px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+    .service-hero::after {
+        width: 100%;
+        background-image:
+            linear-gradient(180deg,
+                rgba(221, 244, 251, 0.98) 0%,
+                rgba(221, 244, 251, 0.91) 48%,
+                rgba(221, 244, 251, 0.76) 100%),
+            var(--service-hero-image);
+
+        background-position:
+            center,
+            var(--service-hero-position-mobile,
+                var(--service-hero-position, center center));
+    }
+
+    .service-hero__container {
+        min-height: 0;
+    }
+}
+
+/* =========================================================
+   SERVICE HERO — COMPACT BOTTOM SPACING
+   For full-background service heroes
+========================================================= */
+
+.service-hero {
+    padding-bottom: clamp(58px, 6vw, 84px);
+}
+
+.service-hero__container {
+    min-height: clamp(390px, 38vw, 520px);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .service-hero {
+        padding-bottom: 68px;
+    }
+
+    .service-hero__container {
+        min-height: 0;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 620px) {
+    .service-hero {
+        padding-bottom: 52px;
+    }
+
+    .service-hero__container {
+        min-height: 0;
+    }
+}
