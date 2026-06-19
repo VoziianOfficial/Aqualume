@@ -20,17 +20,17 @@
             label: 'START WITH CONTEXT'
         },
         paths: {
-            image: 'assets/images/about/support-paths.jpg',
+            image: 'assets/images/services/services-hero.jpg',
             alt: 'Homeowner reviewing relevant water damage support paths',
             label: 'EXPLORE THE RIGHT DIRECTION'
         },
         options: {
-            image: 'assets/images/about/provider-options.jpg',
+            image: 'assets/images/services/water-extraction-drying-explorer.jpg',
             alt: 'Homeowner comparing local provider options with more clarity',
             label: 'COMPARE WITH MORE CLARITY'
         },
         choose: {
-            image: 'assets/images/about/homeowner-choice.jpg',
+            image: 'assets/images/contact/contact-hero.jpg',
             alt: 'Homeowner confidently choosing a next step for their home',
             label: 'YOUR HOME. YOUR DECISION.'
         }
