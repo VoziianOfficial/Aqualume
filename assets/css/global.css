@@ -2138,3 +2138,49 @@ p {
         max-width: 100%;
     }
 }
+
+
+/* =========================================================
+   DESKTOP HERO H1 — SMALLER, WIDER, MORE PREMIUM
+   Add at the very end of global.css
+========================================================= */
+
+@media (min-width: 1101px) {
+
+    /*
+       Работает для hero на всех страницах:
+       home, about, services, contact, service pages, legal pages.
+    */
+    main>section:first-child h1,
+    .home-hero h1,
+    .service-hero h1,
+    .contact-hero h1,
+    .legal-hero h1 {
+        width: 100%;
+        max-width: 1040px;
+        font-size: clamp(3.1rem, 4.25vw, 4.6rem);
+        letter-spacing: -0.06em;
+        line-height: 1.02;
+    }
+
+    /*
+       На split hero текст не должен быть слишком узким
+       внутри левой колонки.
+    */
+    .service-hero__content h1,
+    .contact-hero__content h1,
+    .legal-hero__content h1 {
+        max-width: 900px;
+    }
+
+    /*
+       Для home hero можно сделать чуть шире,
+       чтобы главный заголовок выглядел масштабно,
+       но не был чрезмерно большим.
+    */
+    .home-hero__content h1,
+    .home-hero h1 {
+        max-width: 1080px;
+        font-size: clamp(3.2rem, 4.45vw, 4.8rem);
+    }
+}
