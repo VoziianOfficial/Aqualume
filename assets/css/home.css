@@ -2298,3 +2298,384 @@
 .home-liquid-statement__texture {
     display: none;
 }
+
+/* =========================================================
+   HOME PLATFORM PULSE — CLEAN DARK COUNTER STRIP
+   Replaces the previous home-platform-pulse CSS
+========================================================= */
+
+.home-platform-pulse {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(40px, 4.6vw, 62px) 0 clamp(24px, 3vw, 38px);
+    border-top: 1px solid rgba(168, 221, 237, 0.18);
+    border-bottom: 1px solid rgba(168, 221, 237, 0.15);
+    background: linear-gradient(90deg,
+            #070a0d 0%,
+            #10171d 48%,
+            #080b0f 100%);
+    color: var(--white);
+    isolation: isolate;
+}
+
+/* Убираем все водные glow/круги/линии из прошлого варианта */
+.home-platform-pulse::before,
+.home-platform-pulse::after,
+.home-platform-pulse__glow,
+.home-platform-pulse__waterline {
+    display: none;
+}
+
+.home-platform-pulse__container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------------------------------------------------------
+   TOP INTRO — compact editorial heading
+--------------------------------------------------------- */
+
+.home-platform-pulse__intro {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.44fr) minmax(0, 1.56fr);
+    gap: clamp(28px, 5.5vw, 94px);
+    align-items: end;
+    padding-bottom: clamp(28px, 3vw, 42px);
+}
+
+.home-platform-pulse .section-kicker {
+    margin: 0 0 3px;
+    color: var(--soft-azure);
+}
+
+.home-platform-pulse__intro h2 {
+    max-width: 800px;
+    margin: 0;
+    color: var(--white);
+    font-size: clamp(1.95rem, 3.35vw, 3.75rem);
+    letter-spacing: -0.07em;
+    line-height: 0.98;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.08),
+        3px 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.home-platform-pulse__intro h2 span {
+    color: var(--soft-azure);
+    background: none;
+    -webkit-text-fill-color: currentColor;
+}
+
+.home-platform-pulse__intro p {
+    max-width: 540px;
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.56);
+    font-size: 0.78rem;
+    line-height: 1.62;
+}
+
+/* ---------------------------------------------------------
+   COUNTERS — one clean system, no cards
+--------------------------------------------------------- */
+
+.home-platform-pulse__markers {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid rgba(168, 221, 237, 0.19);
+    border-bottom: 1px solid rgba(168, 221, 237, 0.14);
+}
+
+.home-platform-pulse__marker {
+    position: relative;
+    min-height: 172px;
+    padding: clamp(18px, 2vw, 27px) clamp(15px, 2.2vw, 31px) clamp(19px, 2vw, 28px);
+    overflow: hidden;
+    border-right: 1px solid rgba(168, 221, 237, 0.17);
+    transition:
+        background var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.home-platform-pulse__marker:last-child {
+    border-right: 0;
+}
+
+/* Это не карточка: только тонкий accent снизу при hover */
+.home-platform-pulse__marker::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    content: "";
+    background: var(--soft-azure);
+    opacity: 0;
+    transform: scaleX(0.2);
+    transform-origin: center;
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base);
+}
+
+.home-platform-pulse__marker:hover {
+    background: rgba(255, 255, 255, 0.025);
+    box-shadow: inset 0 -1px 0 rgba(99, 196, 227, 0.36);
+}
+
+.home-platform-pulse__marker:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.home-platform-pulse__marker-top,
+.home-platform-pulse__value,
+.home-platform-pulse__marker p {
+    position: relative;
+    z-index: 1;
+}
+
+.home-platform-pulse__marker-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.home-platform-pulse__marker-top>span {
+    color: rgba(255, 255, 255, 0.34);
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 750;
+    letter-spacing: 0.14em;
+    line-height: 1;
+}
+
+.home-platform-pulse__marker-top svg {
+    width: 21px;
+    height: 21px;
+    color: var(--soft-azure);
+    stroke-width: 1.65;
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-base);
+}
+
+.home-platform-pulse__marker:hover .home-platform-pulse__marker-top svg {
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.home-platform-pulse__value {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    margin-top: clamp(20px, 2.5vw, 32px);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 4.7vw, 5.15rem);
+    font-weight: 690;
+    letter-spacing: -0.1em;
+    line-height: 0.82;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.08),
+        4px 7px 16px rgba(0, 0, 0, 0.34);
+}
+
+.home-platform-pulse__value em {
+    margin-top: 0.03em;
+    color: var(--soft-azure);
+    font-size: 0.5em;
+    font-style: normal;
+    letter-spacing: -0.04em;
+}
+
+.home-platform-pulse__marker--choice .home-platform-pulse__value {
+    color: var(--soft-azure);
+    font-size: clamp(2.1rem, 3.25vw, 3.6rem);
+    font-weight: 670;
+    letter-spacing: -0.11em;
+    line-height: 0.9;
+}
+
+.home-platform-pulse__marker p {
+    max-width: 210px;
+    margin-top: 16px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.72rem;
+    line-height: 1.52;
+}
+
+/* ---------------------------------------------------------
+   BOTTOM LINE
+--------------------------------------------------------- */
+
+.home-platform-pulse__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-top: 15px;
+}
+
+.home-platform-pulse__footer>span {
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 0.68rem;
+    line-height: 1.45;
+}
+
+.home-platform-pulse__footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--soft-azure);
+    font-size: 0.72rem;
+    font-weight: 740;
+    line-height: 1.2;
+    white-space: nowrap;
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.home-platform-pulse__footer a svg {
+    width: 17px;
+    height: 17px;
+    stroke-width: 1.8;
+    transition: transform var(--transition-fast);
+}
+
+.home-platform-pulse__footer a:hover {
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.home-platform-pulse__footer a:hover svg {
+    transform: translate(3px, -3px);
+}
+
+/* ---------------------------------------------------------
+   TABLET
+--------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+    .home-platform-pulse {
+        padding: 46px 0 30px;
+    }
+
+    .home-platform-pulse__intro {
+        grid-template-columns: 1fr;
+        gap: 13px;
+        max-width: 850px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .home-platform-pulse__intro h2 {
+        max-width: 850px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .home-platform-pulse__intro p {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .home-platform-pulse__markers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-platform-pulse__marker:nth-child(2) {
+        border-right: 0;
+    }
+
+    .home-platform-pulse__marker:nth-child(-n + 2) {
+        border-bottom: 1px solid rgba(168, 221, 237, 0.16);
+    }
+
+    .home-platform-pulse__marker p {
+        max-width: 280px;
+    }
+}
+
+/* ---------------------------------------------------------
+   MOBILE — compact 2 × 2 stats system
+--------------------------------------------------------- */
+
+@media (max-width: 620px) {
+    .home-platform-pulse {
+        padding: 38px 0 26px;
+    }
+
+    .home-platform-pulse__intro {
+        padding-bottom: 27px;
+    }
+
+    .home-platform-pulse__intro h2 {
+        font-size: clamp(1.85rem, 8.8vw, 2.65rem);
+        line-height: 1.01;
+    }
+
+    .home-platform-pulse__intro p {
+        margin-top: 13px;
+        font-size: 0.74rem;
+        line-height: 1.58;
+    }
+
+    .home-platform-pulse__markers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-platform-pulse__marker,
+    .home-platform-pulse__marker:nth-child(2) {
+        display: block;
+        min-height: 148px;
+        padding: 16px 13px 18px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(168, 221, 237, 0.15);
+    }
+
+    .home-platform-pulse__marker:nth-child(odd) {
+        border-right: 1px solid rgba(168, 221, 237, 0.15);
+    }
+
+    .home-platform-pulse__marker:nth-last-child(-n + 2) {
+        border-bottom: 0;
+    }
+
+    .home-platform-pulse__marker-top svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .home-platform-pulse__marker-top>span {
+        font-size: 0.57rem;
+    }
+
+    .home-platform-pulse__value {
+        margin-top: 19px;
+        font-size: clamp(2.45rem, 12vw, 3.3rem);
+    }
+
+    .home-platform-pulse__marker--choice .home-platform-pulse__value {
+        font-size: clamp(1.85rem, 9vw, 2.45rem);
+    }
+
+    .home-platform-pulse__marker p {
+        margin-top: 11px;
+        font-size: 0.67rem;
+        line-height: 1.48;
+    }
+
+    .home-platform-pulse__footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 9px;
+        padding-top: 14px;
+    }
+
+    .home-platform-pulse__footer>span {
+        font-size: 0.65rem;
+    }
+}

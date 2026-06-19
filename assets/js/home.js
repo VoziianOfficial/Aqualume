@@ -280,6 +280,93 @@
         });
     }
 
+    /* =========================================================
+   HOME PLATFORM PULSE — COUNTER ANIMATION
+   Add at the very end of assets/js/home.js
+========================================================= */
+
+    (function () {
+        const pulseSection = document.querySelector('.home-platform-pulse');
+
+        if (!pulseSection) {
+            return;
+        }
+
+        const counterElements = Array.from(
+            pulseSection.querySelectorAll('[data-counter-value]')
+        );
+
+        if (counterElements.length === 0) {
+            return;
+        }
+
+        const reducedMotion = window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+        ).matches;
+
+        function animateCounter(element) {
+            const target = Number(element.dataset.counterValue);
+
+            if (!Number.isFinite(target)) {
+                return;
+            }
+
+            if (reducedMotion) {
+                element.textContent = String(target);
+                return;
+            }
+
+            const duration = 1150;
+            const startTime = performance.now();
+
+            element.textContent = '0';
+
+            function updateCounter(currentTime) {
+                const progress = Math.min((currentTime - startTime) / duration, 1);
+
+                /* Smooth premium ease-out */
+                const easedProgress = 1 - Math.pow(1 - progress, 4);
+                const currentValue = Math.round(target * easedProgress);
+
+                element.textContent = String(currentValue);
+
+                if (progress < 1) {
+                    window.requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = String(target);
+                }
+            }
+
+            window.requestAnimationFrame(updateCounter);
+        }
+
+        const observer = new IntersectionObserver(
+            (entries, currentObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
+
+                    counterElements.forEach((counter) => {
+                        if (counter.dataset.counterPlayed === 'true') {
+                            return;
+                        }
+
+                        counter.dataset.counterPlayed = 'true';
+                        animateCounter(counter);
+                    });
+
+                    currentObserver.unobserve(entry.target);
+                });
+            },
+            {
+                threshold: 0.36
+            }
+        );
+
+        observer.observe(pulseSection);
+    })();
+
     function init() {
         initSituationSelector();
         initCounters();
