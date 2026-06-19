@@ -1,11 +1,6 @@
-/* =========================================================
-   AQUALUME — GLOBAL DESIGN SYSTEM
-   File: assets/css/global.css
-   ========================================================= */
 
-/* ---------------------------------------------------------
-   1. CSS VARIABLES
---------------------------------------------------------- */
+
+
 
 :root {
     --black: #0b0f14;
@@ -80,9 +75,7 @@
         linear-gradient(145deg, #f15a5c 0%, #e84d4f 60%, #c93e42 100%);
 }
 
-/* ---------------------------------------------------------
-   2. RESET
---------------------------------------------------------- */
+
 
 *,
 *::before,
@@ -179,9 +172,7 @@ h6 {
     outline-offset: 4px;
 }
 
-/* ---------------------------------------------------------
-   3. ACCESSIBILITY HELPERS
---------------------------------------------------------- */
+
 
 .sr-only {
     position: absolute;
@@ -215,9 +206,7 @@ h6 {
     transform: translateY(0);
 }
 
-/* ---------------------------------------------------------
-   4. LAYOUT
---------------------------------------------------------- */
+
 
 .container {
     width: min(calc(100% - 48px), var(--container));
@@ -286,9 +275,7 @@ h6 {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* ---------------------------------------------------------
-   5. TYPOGRAPHY
---------------------------------------------------------- */
+
 
 .display-heading,
 h1,
@@ -386,9 +373,7 @@ p {
     color: var(--action-red);
 }
 
-/* ---------------------------------------------------------
-   6. BRAND
---------------------------------------------------------- */
+
 
 .brand {
     display: inline-flex;
@@ -430,9 +415,7 @@ p {
     color: var(--deep-teal);
 }
 
-/* ---------------------------------------------------------
-   7. BUTTONS
---------------------------------------------------------- */
+
 
 .button,
 .button-reset {
@@ -595,9 +578,7 @@ p {
     color: var(--soft-azure);
 }
 
-/* ---------------------------------------------------------
-   8. SHARED COMPONENTS
---------------------------------------------------------- */
+
 
 .tag {
     display: inline-flex;
@@ -754,9 +735,7 @@ p {
     transform: rotate(-2deg);
 }
 
-/* ---------------------------------------------------------
-   9. HEADER
---------------------------------------------------------- */
+
 
 .site-header {
     position: fixed;
@@ -916,9 +895,7 @@ p {
     display: none;
 }
 
-/* ---------------------------------------------------------
-   10. MOBILE MENU
---------------------------------------------------------- */
+
 
 .mobile-menu {
     position: fixed;
@@ -1057,9 +1034,7 @@ p {
     font-size: 0.86rem;
 }
 
-/* ---------------------------------------------------------
-   11. FORMS
---------------------------------------------------------- */
+
 
 .form-grid {
     display: grid;
@@ -1177,9 +1152,7 @@ p {
     color: var(--action-red-dark);
 }
 
-/* ---------------------------------------------------------
-   12. FOOTER
---------------------------------------------------------- */
+
 
 .site-footer {
     position: relative;
@@ -1289,9 +1262,7 @@ p {
     inset: 53px;
 }
 
-/* ---------------------------------------------------------
-   13. COOKIE BANNER + SETTINGS PANEL
---------------------------------------------------------- */
+
 
 .cookie-banner {
     position: fixed;
@@ -1503,9 +1474,7 @@ p {
     gap: 10px;
 }
 
-/* ---------------------------------------------------------
-   14. GENERIC ACCORDION
---------------------------------------------------------- */
+
 
 .accordion {
     border-top: 1px solid var(--soft-border);
@@ -1606,9 +1575,7 @@ p {
     transform: rotate(45deg);
 }
 
-/* ---------------------------------------------------------
-   15. COUNTER STRIP
---------------------------------------------------------- */
+
 
 .stats-strip {
     position: relative;
@@ -1672,9 +1639,7 @@ p {
     line-height: 1.4;
 }
 
-/* ---------------------------------------------------------
-   16. AOS + REDUCED MOTION
---------------------------------------------------------- */
+
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -1702,9 +1667,7 @@ p {
     }
 }
 
-/* ---------------------------------------------------------
-   17. RESPONSIVE — LARGE TABLET
---------------------------------------------------------- */
+
 
 @media (max-width: 1100px) {
     :root {
@@ -1746,9 +1709,7 @@ p {
     }
 }
 
-/* ---------------------------------------------------------
-   18. RESPONSIVE — TABLET
---------------------------------------------------------- */
+
 
 @media (max-width: 820px) {
 
@@ -1820,9 +1781,7 @@ p {
     }
 }
 
-/* ---------------------------------------------------------
-   19. RESPONSIVE — MOBILE
---------------------------------------------------------- */
+
 
 @media (max-width: 560px) {
     :root {
@@ -2013,19 +1972,11 @@ p {
     }
 }
 
-/* =========================================================
-   TABLET + MOBILE — CENTERED FULL-WIDTH HEADINGS
-   Add this block at the very end of global.css
-========================================================= */
+
 
 @media (max-width: 1100px) {
 
-    /*
-       Все H1/H2 внутри main:
-       - становятся чуть компактнее;
-       - занимают всю доступную ширину своего блока;
-       - выравниваются по центру.
-    */
+    
     main h1,
     main h2 {
         width: 100%;
@@ -2046,10 +1997,7 @@ p {
         line-height: 1.1;
     }
 
-    /*
-       Заголовочные зоны секций на планшетах идут одной ровной
-       колонкой: сначала заголовок, потом поясняющий текст.
-    */
+    
     main .section__top {
         display: grid;
         grid-template-columns: 1fr;
@@ -2075,10 +2023,7 @@ p {
         justify-content: center;
     }
 
-    /*
-       Центрируем текстовые части hero-блоков.
-       Изображение при этом остаётся отдельным визуальным блоком.
-    */
+    
     main .service-hero__content,
     main .contact-hero__content,
     main .legal-hero__content {
@@ -2105,11 +2050,7 @@ p {
 
 @media (max-width: 560px) {
 
-    /*
-       На телефонах ещё немного компактнее,
-       чтобы заголовки не выглядели тяжёлыми
-       и не создавали слишком много строк.
-    */
+    
     main h1 {
         font-size: clamp(2.15rem, 10vw, 2.8rem);
         line-height: 1.05;
@@ -2139,17 +2080,11 @@ p {
 }
 
 
-/* =========================================================
-   DESKTOP HERO H1 — SMALLER, WIDER, MORE PREMIUM
-   Add at the very end of global.css
-========================================================= */
+
 
 @media (min-width: 1101px) {
 
-    /*
-       Работает для hero на всех страницах:
-       home, about, services, contact, service pages, legal pages.
-    */
+    
     main>section:first-child h1,
     .home-hero h1,
     .service-hero h1,
@@ -2162,21 +2097,14 @@ p {
         line-height: 1.02;
     }
 
-    /*
-       На split hero текст не должен быть слишком узким
-       внутри левой колонки.
-    */
+    
     .service-hero__content h1,
     .contact-hero__content h1,
     .legal-hero__content h1 {
         max-width: 900px;
     }
 
-    /*
-       Для home hero можно сделать чуть шире,
-       чтобы главный заголовок выглядел масштабно,
-       но не был чрезмерно большим.
-    */
+    
     .home-hero__content h1,
     .home-hero h1 {
         max-width: 1080px;
@@ -2184,12 +2112,9 @@ p {
     }
 }
 
-/* =========================================================
-   PREMIUM 3D EFFECT FOR H1 + H2
-   Add at the very end of global.css
-========================================================= */
 
-/* Light sections: clean white highlight + subtle teal depth */
+
+
 main h1,
 main h2 {
     position: relative;
@@ -2201,7 +2126,7 @@ main h2 {
         4px 6px 14px rgba(0, 95, 111, 0.13);
 }
 
-/* Dark sections and dark hero/card areas */
+
 .section--dark h1,
 .section--dark h2,
 .section--dark-soft h1,
@@ -2216,8 +2141,7 @@ main h2 {
         5px 8px 18px rgba(0, 0, 0, 0.34);
 }
 
-/* White/light hero headings need the same premium depth,
-   but without making the text look dirty */
+
 .home-hero h1,
 .about-hero h1,
 .services-hero h1,
@@ -2230,7 +2154,7 @@ main h2 {
         5px 7px 16px rgba(0, 95, 111, 0.14);
 }
 
-/* Slightly richer depth on desktop without making headings too heavy */
+
 @media (min-width: 1101px) {
     main h1 {
         text-shadow:
@@ -2253,7 +2177,7 @@ main h2 {
     }
 }
 
-/* Mobile: keep the volume, but make it lighter and cleaner */
+
 @media (max-width: 560px) {
 
     main h1,
@@ -2277,13 +2201,9 @@ main h2 {
     }
 }
 
-/* =========================================================
-   COMPACT SECTION SPACING
-   All regular sections — 50% less vertical padding
-   Add at the very end of global.css
-========================================================= */
 
-/* Desktop */
+
+
 @media (min-width: 1101px) {
     main>section:not(.home-hero):not(.about-hero):not(.services-hero):not(.service-hero):not(.contact-hero):not(.legal-hero) {
         padding-top: clamp(42px, 4.5vw, 72px) !important;
@@ -2291,7 +2211,7 @@ main h2 {
     }
 }
 
-/* Tablet */
+
 @media (min-width: 561px) and (max-width: 1100px) {
     main>section:not(.home-hero):not(.about-hero):not(.services-hero):not(.service-hero):not(.contact-hero):not(.legal-hero) {
         padding-top: clamp(34px, 5vw, 54px) !important;
@@ -2299,7 +2219,7 @@ main h2 {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     main>section:not(.home-hero):not(.about-hero):not(.services-hero):not(.service-hero):not(.contact-hero):not(.legal-hero) {
         padding-top: 34px !important;

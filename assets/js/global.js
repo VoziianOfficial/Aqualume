@@ -1,14 +1,6 @@
 'use strict';
 
-/* =========================================================
-   AQUALUME — GLOBAL FUNCTIONALITY
-   File: assets/js/global.js
 
-   Requires:
-   - assets/js/config.js
-   - Lucide CDN
-   - AOS CDN
-   ========================================================= */
 
 (function () {
     const CONFIG = window.AQUALUME_CONFIG;
@@ -46,10 +38,7 @@
         dynamicYear: '[data-current-year]'
     };
 
-    /**
-     * Finds a deeply nested value from AQUALUME_CONFIG.
-     * Example: getConfigValue('contact.email')
-     */
+    
     function getConfigValue(path) {
         return path.split('.').reduce((value, key) => {
             if (value && Object.prototype.hasOwnProperty.call(value, key)) {
@@ -60,11 +49,7 @@
         }, CONFIG);
     }
 
-    /**
-     * Inserts plain text from config into HTML elements.
-     * HTML example:
-     * <span data-config-text="contact.email"></span>
-     */
+    
     function hydrateTextValues() {
         const textElements = document.querySelectorAll('[data-config-text]');
 
@@ -78,14 +63,7 @@
         });
     }
 
-    /**
-     * Inserts attributes from config into HTML elements.
-     *
-     * HTML examples:
-     * <a data-config-href="contact.emailHref"></a>
-     * <a data-config-href="contact.phoneHref"></a>
-     * <a data-config-href="urls.contact"></a>
-     */
+    
     function hydrateHrefValues() {
         const hrefElements = document.querySelectorAll('[data-config-href]');
 
@@ -99,13 +77,7 @@
         });
     }
 
-    /**
-     * Inserts arbitrary attribute values from config.
-     *
-     * HTML examples:
-     * <a data-config-attr="aria-label:company.name"></a>
-     * <a data-config-attr="aria-label:company.name|title:company.name"></a>
-     */
+    
     function hydrateConfigAttributes() {
         const attributeElements = document.querySelectorAll('[data-config-attr]');
 
@@ -139,11 +111,7 @@
         });
     }
 
-    /**
-     * Replaces company placeholder tokens inside attribute values.
-     * Example:
-     * data-clarity-title="Does {{company.name}} ..."
-     */
+    
     function hydrateCompanyAttributePlaceholders() {
         document.querySelectorAll('*').forEach((element) => {
             Array.from(element.attributes).forEach((attribute) => {
@@ -159,13 +127,7 @@
         });
     }
 
-    /**
-     * Builds accessible labels that include the current company name.
-     *
-     * HTML examples:
-     * <a data-config-company-label="Call"></a>
-     * <a data-config-company-label="Explore all {company} services"></a>
-     */
+    
     function hydrateCompanyLabels() {
         const labelElements = document.querySelectorAll('[data-config-company-label]');
 
@@ -184,12 +146,7 @@
         });
     }
 
-    /**
-     * Sets Google Maps links from the centralized company address config.
-     *
-     * HTML example:
-     * <a data-config-map-link></a>
-     */
+    
     function hydrateMapLinks() {
         document.querySelectorAll('[data-config-map-link]').forEach((element) => {
             element.setAttribute('href', CONFIG.company.mapHref);
@@ -198,22 +155,14 @@
         });
     }
 
-    /**
-     * Inserts a current year into elements:
-     * <span data-current-year></span>
-     */
+    
     function hydrateCurrentYear() {
         document.querySelectorAll(SELECTORS.dynamicYear).forEach((element) => {
             element.textContent = String(new Date().getFullYear());
         });
     }
 
-    /**
-     * Builds the desktop Services dropdown from config.
-     *
-     * HTML:
-     * <div class="site-nav__dropdown" data-services-dropdown></div>
-     */
+    
     function renderDesktopServiceDropdown() {
         const dropdowns = document.querySelectorAll(SELECTORS.desktopServicesDropdown);
 
@@ -231,15 +180,7 @@
         });
     }
 
-    /**
-     * Builds services accordion inside mobile menu from config.
-     *
-     * HTML:
-     * <div class="mobile-menu__services" data-mobile-services>
-     *   <button data-mobile-services-trigger></button>
-     *   <div data-mobile-services-list></div>
-     * </div>
-     */
+    
     function renderMobileServiceLinks() {
         const serviceLists = document.querySelectorAll(SELECTORS.mobileServicesList);
 
@@ -257,12 +198,7 @@
         });
     }
 
-    /**
-     * Builds footer service links from config.
-     *
-     * HTML:
-     * <ul class="site-footer__links" data-footer-services></ul>
-     */
+    
     function renderFooterServiceLinks() {
         const footerLists = document.querySelectorAll(SELECTORS.footerServices);
 
@@ -282,9 +218,7 @@
         });
     }
 
-    /**
-     * Creates Lucide icons only after dynamic service links are inserted.
-     */
+    
     function initLucideIcons() {
         if (!window.lucide || typeof window.lucide.createIcons !== 'function') {
             console.warn('Lucide was not found. Add the Lucide CDN before global.js.');
@@ -298,9 +232,7 @@
         });
     }
 
-    /**
-     * AOS only runs where library exists.
-     */
+    
     function initAOS() {
         if (!window.AOS || typeof window.AOS.init !== 'function') {
             console.warn('AOS was not found. Add the AOS CDN before global.js.');
@@ -319,9 +251,7 @@
         });
     }
 
-    /**
-     * Keeps sticky header visually lighter until the user scrolls.
-     */
+    
     function initStickyHeader() {
         const header = document.querySelector(SELECTORS.header);
 
@@ -341,13 +271,7 @@
         });
     }
 
-    /**
-     * Mobile menu functionality:
-     * - open / close
-     * - body scroll lock
-     * - Escape support
-     * - close after navigation click
-     */
+    
     function initMobileMenu() {
         const menu = document.querySelector(SELECTORS.mobileMenu);
         const openButton = document.querySelector(SELECTORS.mobileMenuOpen);
@@ -429,9 +353,7 @@
         });
     }
 
-    /**
-     * Expanding service list inside mobile menu.
-     */
+    
     function initMobileServicesAccordion() {
         const serviceContainers = document.querySelectorAll(SELECTORS.mobileServices);
 
@@ -450,16 +372,7 @@
         });
     }
 
-    /**
-     * Generic accordion for FAQ and service pages.
-     *
-     * Expected markup:
-     * <div data-accordion>
-     *   <article data-accordion-item class="accordion__item">
-     *     <button data-accordion-trigger aria-expanded="false"></button>
-     *   </article>
-     * </div>
-     */
+    
     function initAccordions() {
         const accordions = document.querySelectorAll(SELECTORS.accordion);
 
@@ -508,9 +421,7 @@
         });
     }
 
-    /**
-     * Simple smooth scrolling for internal anchors.
-     */
+    
     function initSmoothScroll() {
         document.addEventListener('click', (event) => {
             const link = event.target.closest('a[href^="#"]');
@@ -544,9 +455,7 @@
         });
     }
 
-    /**
-     * Cookie consent storage logic.
-     */
+    
     function getStoredCookiePreferences() {
         try {
             const storedValue = localStorage.getItem(CONFIG.cookies.storageKey);
@@ -747,16 +656,7 @@
         });
     }
 
-    /**
-     * Global form validation.
-     *
-     * Important:
-     * This does not fake a successful submission.
-     * A form is only submitted when it has a real action URL.
-     *
-     * HTML:
-     * <form data-aqualume-form action="https://your-real-endpoint.com" method="post">
-     */
+    
     function initForms() {
         const forms = document.querySelectorAll(SELECTORS.form);
 
@@ -843,10 +743,7 @@
         });
     }
 
-    /**
-     * Convenience methods for service data.
-     * Other page-specific scripts can use these methods safely.
-     */
+    
     window.Aqualume = {
         config: CONFIG,
 
@@ -879,9 +776,7 @@
         }
     };
 
-    /**
-     * Global initialization order.
-     */
+    
     function init() {
         hydrateTextValues();
         hydrateHrefValues();

@@ -1,11 +1,6 @@
 'use strict';
 
-/**
- * Aqualume — central website configuration.
- *
- * Update brand, contact details, legal date, service URLs,
- * footer text and service content only here.
- */
+
 window.AQUALUME_CONFIG = {
     company: {
         name: 'Aqualume',

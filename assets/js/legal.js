@@ -1,10 +1,6 @@
 'use strict';
 
-/* =========================================================
-   AQUALUME — LEGAL PAGES FUNCTIONALITY
-   Privacy Policy / Terms of Service / Cookie Policy
-   File: assets/js/legal.js
-========================================================= */
+
 
 (function () {
     const SELECTORS = {

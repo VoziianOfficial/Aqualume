@@ -1,11 +1,6 @@
-/* =========================================================
-   AQUALUME — CONTACT PAGE
-   File: assets/css/contact.css
-   ========================================================= */
 
-/* ---------------------------------------------------------
-   CONTACT HERO
---------------------------------------------------------- */
+
+
 
 .contact-hero {
     position: relative;
@@ -193,9 +188,7 @@
     transform: rotate(14deg);
 }
 
-/* ---------------------------------------------------------
-   CONTACT REQUEST
---------------------------------------------------------- */
+
 
 .contact-request {
     position: relative;
@@ -237,9 +230,7 @@
     gap: clamp(26px, 4vw, 56px);
 }
 
-/* ---------------------------------------------------------
-   CONTACT REQUEST ASIDE
---------------------------------------------------------- */
+
 
 .contact-request__aside {
     position: relative;
@@ -371,9 +362,7 @@
     transform: rotate(-15deg);
 }
 
-/* ---------------------------------------------------------
-   REQUEST FORM
---------------------------------------------------------- */
+
 
 .request-form {
     position: relative;
@@ -553,9 +542,7 @@
     transform: translateY(-50%);
 }
 
-/* ---------------------------------------------------------
-   CHECKBOXES
---------------------------------------------------------- */
+
 
 .request-form__checkboxes {
     padding: 0;
@@ -683,9 +670,7 @@
     color: var(--rich-teal);
 }
 
-/* ---------------------------------------------------------
-   REQUEST FORM BOTTOM + STATUS
---------------------------------------------------------- */
+
 
 .request-form__bottom {
     display: flex;
@@ -731,9 +716,7 @@
     color: var(--action-red-dark);
 }
 
-/* ---------------------------------------------------------
-   CONTACT OPTIONS
---------------------------------------------------------- */
+
 
 .contact-options {
     position: relative;
@@ -858,9 +841,7 @@
     transform: translate(3px, -3px);
 }
 
-/* ---------------------------------------------------------
-   PREPARE YOUR REQUEST
---------------------------------------------------------- */
+
 
 .contact-prep {
     position: relative;
@@ -987,9 +968,7 @@
     margin-top: 29px;
 }
 
-/* ---------------------------------------------------------
-   CONTACT FAQ
---------------------------------------------------------- */
+
 
 .contact-faq {
     position: relative;
@@ -1101,9 +1080,7 @@
     opacity: 1;
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE — LARGE TABLET
---------------------------------------------------------- */
+
 
 @media (max-width: 1120px) {
     .contact-hero__container {
@@ -1129,9 +1106,7 @@
     }
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE — TABLET
---------------------------------------------------------- */
+
 
 @media (max-width: 900px) {
     .contact-hero {
@@ -1215,9 +1190,7 @@
     }
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE — MOBILE
---------------------------------------------------------- */
+
 
 @media (max-width: 620px) {
     .contact-hero {
@@ -1434,10 +1407,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT HERO — TABLET + MOBILE REDESIGN
-   Centered content + visible portrait image
-========================================================= */
+
 
 @media (max-width: 900px) {
     .contact-hero {
@@ -1501,7 +1471,7 @@
         text-align: left;
     }
 
-    /* Фото остаётся вертикальным и аккуратным */
+    
 
     .contact-hero__visual {
         position: relative;
@@ -1582,9 +1552,7 @@
     }
 }
 
-/* =========================================================
-   MOBILE — compact centered text + clean photo
-========================================================= */
+
 
 @media (max-width: 620px) {
     .contact-hero {
@@ -1676,7 +1644,7 @@
         backdrop-filter: none;
     }
 
-    /* На мобилке оставляем только tag, чтобы фото не перекрывалось */
+    
 
     .contact-hero__photo-label>span:last-child {
         display: none;
@@ -1704,9 +1672,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT REQUEST — COMPACT SPLIT FORM
-========================================================= */
+
 
 .contact-request {
     overflow: hidden;
@@ -1723,7 +1689,7 @@
     gap: clamp(28px, 4.5vw, 68px);
 }
 
-/* Compact left panel: it no longer stretches to form height */
+
 
 .contact-request__aside {
     position: relative;
@@ -1804,7 +1770,7 @@
     display: none;
 }
 
-/* Narrower form with less padding and less empty space */
+
 
 .request-form {
     width: 100%;
@@ -1897,7 +1863,7 @@
     text-underline-offset: 3px;
 }
 
-/* Tablet */
+
 
 @media (max-width: 900px) {
     .contact-request__grid {
@@ -1915,7 +1881,7 @@
     }
 }
 
-/* Mobile */
+
 
 @media (max-width: 620px) {
     .contact-request__top {
@@ -1978,9 +1944,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT REQUEST STEPS — HOVER UNDERLINE EFFECT
-========================================================= */
+
 
 .contact-request__step {
     position: relative;
@@ -1990,7 +1954,7 @@
         transform 260ms ease;
 }
 
-/* Акцентная линия под каждой отдельной строкой */
+
 
 .contact-request__step::after {
     position: absolute;
@@ -2044,9 +2008,7 @@
     color: rgba(255, 255, 255, 0.82);
 }
 
-/* =========================================================
-   CONTACT OPTIONS — INDIVIDUAL BORDER HOVERS
-========================================================= */
+
 
 .contact-option {
     position: relative;
@@ -2073,7 +2035,7 @@
         transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* First card — deep teal */
+
 
 .contact-option:nth-child(1)::before {
     background: linear-gradient(90deg,
@@ -2087,7 +2049,7 @@
     box-shadow: 0 16px 30px rgba(0, 95, 111, 0.12);
 }
 
-/* Second card — coral/red */
+
 
 .contact-option:nth-child(2)::before {
     background: linear-gradient(90deg,
@@ -2101,7 +2063,7 @@
     box-shadow: 0 16px 30px rgba(232, 77, 79, 0.12);
 }
 
-/* Third card — bright aqua */
+
 
 .contact-option:nth-child(3)::before {
     background: linear-gradient(90deg,
@@ -2115,7 +2077,7 @@
     box-shadow: 0 16px 30px rgba(99, 196, 227, 0.14);
 }
 
-/* Shared hover */
+
 
 .contact-option:hover {
     transform: translateY(-5px);
@@ -2141,7 +2103,7 @@
     transform: translate(4px, -4px);
 }
 
-/* Different icon colors on hover */
+
 
 .contact-option:nth-child(1):hover>svg:first-child,
 .contact-option:nth-child(1):hover h3 {
@@ -2164,9 +2126,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT PREP — INDIVIDUAL HOVER UNDERLINES
-========================================================= */
+
 
 .contact-prep__list article {
     position: relative;
@@ -2176,7 +2136,7 @@
         transform 260ms ease;
 }
 
-/* Линия под каждой отдельной строкой */
+
 
 .contact-prep__list article::after {
     position: absolute;
@@ -2193,7 +2153,7 @@
         transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Каждой строке — свой акцент */
+
 
 .contact-prep__list article:nth-child(1)::after {
     background: linear-gradient(90deg,
@@ -2244,7 +2204,7 @@
     color: var(--text-main);
 }
 
-/* Разные цвета иконок при hover */
+
 
 .contact-prep__list article:nth-child(1):hover>svg {
     color: var(--deep-teal);
@@ -2258,9 +2218,7 @@
     color: var(--action-red);
 }
 
-/* =========================================================
-   CONTACT ICON MARQUEE — DARK INFINITE ICON STRIP
-========================================================= */
+
 
 .contact-icon-marquee {
     position: relative;
@@ -2333,7 +2291,7 @@
         transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Accent variation across the icon rhythm */
+
 
 .contact-icon-marquee__group svg:nth-child(3n + 1) {
     color: rgba(99, 196, 227, 0.78);
@@ -2393,9 +2351,7 @@
     }
 }
 
-/* =========================================================
-   CONTACT PREP — LARGE SHAPE BEHIND PHOTO
-========================================================= */
+
 
 .contact-prep__visual {
     position: relative;
@@ -2424,7 +2380,7 @@
     z-index: 3;
 }
 
-/* Tablet */
+
 
 @media (max-width: 900px) {
     .contact-prep__shape {
@@ -2435,7 +2391,7 @@
     }
 }
 
-/* Mobile */
+
 
 @media (max-width: 620px) {
     .contact-prep__shape {

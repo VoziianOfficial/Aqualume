@@ -1,13 +1,6 @@
 'use strict';
 
-/* =========================================================
-   AQUALUME — HOME PAGE FUNCTIONALITY
-   File: assets/js/home.js
 
-   Requires:
-   - assets/js/config.js
-   - assets/js/global.js
-   ========================================================= */
 
 (function () {
     const CONFIG = window.AQUALUME_CONFIG;
@@ -29,10 +22,7 @@
         'mold-concerns': 'scan-search'
     };
 
-    /**
-     * Converts icon names such as "ShieldCheck" into "shield-check".
-     * This keeps dynamic Lucide icon rendering safe with config values.
-     */
+    
     function toKebabCase(value) {
         return String(value)
             .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
@@ -40,10 +30,7 @@
             .toLowerCase();
     }
 
-    /**
-     * Replaces the dynamic situation icon and then asks global.js
-     * to render it through Lucide.
-     */
+    
     function updateSituationIcon(iconName) {
         const currentIcon = document.querySelector('[data-home-situation-icon]');
 
@@ -65,10 +52,7 @@
         }
     }
 
-    /**
-     * Updates the left-side information panel in the
-     * "What are you dealing with?" section.
-     */
+    
     function initSituationSelector() {
         const buttons = Array.from(
             document.querySelectorAll('[data-home-situation]')
@@ -149,10 +133,7 @@
         });
     }
 
-    /**
-     * Counts a single number from zero to its target value.
-     * It intentionally does not animate non-numeric labels such as "24/7".
-     */
+    
     function animateCounter(element, duration = 1100) {
         const target = Number(element.dataset.counterValue);
 
@@ -175,7 +156,7 @@
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
 
-            /* Ease out quart: fast start, calm premium finish */
+            
             const easedProgress = 1 - Math.pow(1 - progress, 4);
             const currentValue = Math.floor(target * easedProgress);
 
@@ -193,9 +174,7 @@
         window.requestAnimationFrame(updateCounter);
     }
 
-    /**
-     * Starts counters only once when the stats strip becomes visible.
-     */
+    
     function initCounters() {
         const counterElements = Array.from(
             document.querySelectorAll('[data-counter-value]')
@@ -241,10 +220,7 @@
         observer.observe(statsStrip);
     }
 
-    /**
-     * Keeps the requested option selected when a user clicks a situation
-     * and then continues to the home request form on the same page.
-     */
+    
     function initSituationToFormSync() {
         const situationButtons = document.querySelectorAll(
             '[data-home-situation]'
@@ -280,10 +256,7 @@
         });
     }
 
-    /* =========================================================
-   HOME PLATFORM PULSE — COUNTER ANIMATION
-   Add at the very end of assets/js/home.js
-========================================================= */
+    
 
     (function () {
         const pulseSection = document.querySelector('.home-platform-pulse');
@@ -324,7 +297,7 @@
             function updateCounter(currentTime) {
                 const progress = Math.min((currentTime - startTime) / duration, 1);
 
-                /* Smooth premium ease-out */
+                
                 const easedProgress = 1 - Math.pow(1 - progress, 4);
                 const currentValue = Math.round(target * easedProgress);
 

@@ -1,14 +1,6 @@
 'use strict';
 
-/* =========================================================
-   AQUALUME — SERVICE PAGES FUNCTIONALITY
-   Shared logic for all six service pages
-   File: assets/js/service-pages.js
 
-   Requires:
-   - assets/js/config.js
-   - assets/js/global.js
-   ========================================================= */
 
 (function () {
     const CONFIG = window.AQUALUME_CONFIG;
@@ -122,10 +114,7 @@
             }
 
             trigger.addEventListener('click', () => {
-                /*
-                 * One item always remains visible.
-                 * Clicking the currently active item keeps it open.
-                 */
+                
                 if (row.classList.contains('is-open')) {
                     return;
                 }

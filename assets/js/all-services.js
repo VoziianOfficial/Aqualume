@@ -1,13 +1,6 @@
 'use strict';
 
-/* =========================================================
-   AQUALUME — ALL SERVICES PAGE FUNCTIONALITY
-   File: assets/js/all-services.js
 
-   Requires:
-   - assets/js/config.js
-   - assets/js/global.js
-   ========================================================= */
 
 (function () {
     const CONFIG = window.AQUALUME_CONFIG;
@@ -20,10 +13,7 @@
         return;
     }
 
-    /*
-     * Fallback details ensure the service explorer works even if
-     * image fields inside config.js are changed later.
-     */
+    
     const FALLBACK_SERVICE_DETAILS = {
         'emergency-water-damage': {
             title: 'Emergency Water Damage Help',
@@ -311,10 +301,7 @@
                 }
             });
 
-            /*
-               При закрытии текущей строки фото остаётся прежним.
-               При открытии другой — меняются фото, tag, текст и icon.
-            */
+            
             if (!closeAllRows) {
                 updateMedia(details);
             }
@@ -336,10 +323,7 @@
             });
         });
 
-        /*
-         * Supports links such as:
-         * services.html?service=basement-water-damage
-         */
+        
         const requestedService = new URLSearchParams(
             window.location.search
         ).get('service');

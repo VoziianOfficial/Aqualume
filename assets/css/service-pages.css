@@ -1,12 +1,6 @@
-/* =========================================================
-   AQUALUME — SERVICE PAGES
-   Shared styles for all six service pages
-   File: assets/css/service-pages.css
-   ========================================================= */
 
-/* ---------------------------------------------------------
-   SERVICE HERO
---------------------------------------------------------- */
+
+
 
 .service-hero {
     position: relative;
@@ -193,9 +187,7 @@
     transform: rotate(14deg);
 }
 
-/* ---------------------------------------------------------
-   EDITORIAL TEXT + PHOTO
---------------------------------------------------------- */
+
 
 .service-editorial {
     position: relative;
@@ -333,9 +325,7 @@
     transform: rotate(17deg);
 }
 
-/* ---------------------------------------------------------
-   THREE-STEP SUPPORT PATH
---------------------------------------------------------- */
+
 
 .service-support-path {
     position: relative;
@@ -512,9 +502,7 @@
 
 
 
-/* ---------------------------------------------------------
-   SERVICE CLARITY TOOL
---------------------------------------------------------- */
+
 
 .service-clarity {
     position: relative;
@@ -737,9 +725,7 @@
     opacity: 1;
 }
 
-/* ---------------------------------------------------------
-   RELATED SERVICES
---------------------------------------------------------- */
+
 
 .related-services {
     position: relative;
@@ -890,9 +876,7 @@
     transform: translate(19%, -18%) scale(1.16);
 }
 
-/* ---------------------------------------------------------
-   COMPACT HORIZONTAL FINAL CTA
---------------------------------------------------------- */
+
 
 .service-final-cta {
     position: relative;
@@ -970,9 +954,7 @@
     pointer-events: none;
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE — LARGE TABLET
---------------------------------------------------------- */
+
 
 @media (max-width: 1120px) {
     .service-hero__container {
@@ -997,9 +979,7 @@
     }
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE — TABLET
---------------------------------------------------------- */
+
 
 @media (max-width: 900px) {
     .service-hero {
@@ -1124,9 +1104,7 @@
     }
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE — MOBILE
---------------------------------------------------------- */
+
 
 @media (max-width: 620px) {
     .service-hero {
@@ -1352,9 +1330,7 @@
     }
 }
 
-/* =========================================================
-   SERVICE HERO — FINAL BACKGROUND SYSTEM
-========================================================= */
+
 
 body[data-service-page="emergency-water-damage"] .service-hero {
     --service-hero-bg: url("../images/service-pages/emergency-water-damage-hero.jpg");
@@ -1459,9 +1435,7 @@ body[data-service-page="mold-remediation-options"] .service-hero {
     }
 }
 
-/* =========================================================
-   SERVICE ICON MARQUEE — FINAL CSS-ONLY INFINITE LOOP
-========================================================= */
+
 
 .service-icon-marquee {
     position: relative;
@@ -1526,10 +1500,7 @@ body[data-service-page="mold-remediation-options"] .service-hero {
     opacity: 0.66;
 }
 
-/*
-   Each group takes exactly one full visible row width.
-   At -50%, the identical second group is already in place.
-*/
+
 
 .service-icon-marquee__group {
     display: flex;

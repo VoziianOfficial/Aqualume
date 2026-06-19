@@ -1,13 +1,6 @@
 'use strict';
 
-/* =========================================================
-   AQUALUME — ABOUT PAGE FUNCTIONALITY
-   File: assets/js/about.js
 
-   Requires:
-   - assets/js/config.js
-   - assets/js/global.js
-   ========================================================= */
 
 (function () {
     const CONFIG = window.AQUALUME_CONFIG;
@@ -43,10 +36,7 @@
         }
     };
 
-    /**
-     * Makes the “What Aqualume Helps You Do” rows interactive.
-     * Each row changes the visual, photo label, and active content state.
-     */
+    
     function initHelpRows() {
         const rows = Array.from(
             document.querySelectorAll('[data-about-help-row]')
@@ -123,9 +113,7 @@
         });
     }
 
-    /**
-     * Creates one testimonial card from the central config data.
-     */
+    
     function createTestimonialCard(testimonial) {
         const card = document.createElement('article');
         const top = document.createElement('div');
@@ -185,10 +173,7 @@
         return card;
     }
 
-    /**
-     * Renders a manual testimonial slider.
-     * No autoplay is used.
-     */
+    
     function initTestimonialsSlider() {
         const slider = document.querySelector('[data-testimonial-slider]');
         const track = document.querySelector('[data-testimonial-track]');

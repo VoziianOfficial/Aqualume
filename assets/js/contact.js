@@ -1,20 +1,6 @@
 'use strict';
 
-/* =========================================================
-   AQUALUME — CONTACT PAGE FUNCTIONALITY
-   File: assets/js/contact.js
 
-   Requires:
-   - assets/js/config.js
-   - assets/js/global.js
-
-   Notes:
-   - Preselects a service from URL parameters:
-     contact.html?service=basement-water-damage
-   - Validates the request form locally.
-   - Does NOT fake a successful submission because no live
-     form endpoint is connected yet.
-   ========================================================= */
 
 (function () {
     const CONFIG = window.AQUALUME_CONFIG;
@@ -390,11 +376,7 @@
                 return;
             }
 
-            /*
-             * There is intentionally no fake "request sent" state.
-             * Replace this block with a real fetch() call once a
-             * secure backend endpoint or form service is connected.
-             */
+            
             setFormStatus(
                 statusElement,
                 'Your request details are complete and ready for review. This project does not yet have a connected submission endpoint, so no information has been sent.',

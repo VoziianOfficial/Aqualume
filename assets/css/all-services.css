@@ -1,11 +1,6 @@
-/* =========================================================
-   AQUALUME — ALL SERVICES PAGE
-   File: assets/css/all-services.css
-   ========================================================= */
 
-/* ---------------------------------------------------------
-   SERVICES HERO
---------------------------------------------------------- */
+
+
 
 .services-hero {
     position: relative;
@@ -191,9 +186,7 @@
     transform: rotate(14deg);
 }
 
-/* ---------------------------------------------------------
-   INTERACTIVE SERVICE EXPLORER
---------------------------------------------------------- */
+
 
 .services-explorer {
     position: relative;
@@ -517,9 +510,7 @@
     margin-top: 28px;
 }
 
-/* ---------------------------------------------------------
-   EDITORIAL SPLIT
---------------------------------------------------------- */
+
 
 .services-editorial {
     position: relative;
@@ -623,9 +614,7 @@
     transform: rotate(17deg);
 }
 
-/* ---------------------------------------------------------
-   ICON MARQUEE
---------------------------------------------------------- */
+
 
 .services-marquee {
     position: relative;
@@ -711,9 +700,7 @@
     }
 }
 
-/* ---------------------------------------------------------
-   SERVICE PATH OVERVIEW
---------------------------------------------------------- */
+
 
 .services-paths {
     overflow: hidden;
@@ -847,9 +834,7 @@
     white-space: nowrap;
 }
 
-/* ---------------------------------------------------------
-   FINAL CTA
---------------------------------------------------------- */
+
 
 .services-final {
     overflow: hidden;
@@ -924,9 +909,7 @@
     transform: rotate(-17deg);
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE — LARGE TABLET
---------------------------------------------------------- */
+
 
 @media (max-width: 1120px) {
     .services-hero__container {
@@ -958,9 +941,7 @@
     }
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE — TABLET
---------------------------------------------------------- */
+
 
 @media (max-width: 900px) {
     .services-hero {
@@ -1046,9 +1027,7 @@
     }
 }
 
-/* ---------------------------------------------------------
-   RESPONSIVE — MOBILE
---------------------------------------------------------- */
+
 
 @media (max-width: 620px) {
     .services-hero {
@@ -1292,9 +1271,7 @@
     }
 }
 
-/* =========================================================
-   SERVICES EXPLORER — WIDER LEFT IMAGE ON DESKTOP
-========================================================= */
+
 
 @media (min-width: 901px) {
     .services-explorer__grid {
@@ -1315,10 +1292,7 @@
     }
 }
 
-/* =========================================================
-   SERVICE PATH OVERVIEW — COMPACT PREMIUM CARDS
-   Add at the very end of all-services.css
-========================================================= */
+
 
 .services-paths__bands {
     display: grid;
@@ -1349,7 +1323,7 @@
         box-shadow 420ms ease;
 }
 
-/* Убираем старую большую окружность */
+
 .service-path-band::before {
     position: absolute;
     top: 0;
@@ -1386,7 +1360,7 @@
     transform: rotate(18deg);
 }
 
-/* Urgent card gets only a restrained red emergency accent */
+
 .service-path-band:nth-child(1) {
     border-color: rgba(232, 77, 79, 0.18);
     background: linear-gradient(145deg,
@@ -1410,7 +1384,7 @@
     color: var(--action-red-dark);
 }
 
-/* Recovery card gets a slightly cooler variation */
+
 .service-path-band:nth-child(3) {
     background: linear-gradient(145deg,
             #ffffff 0%,
@@ -1433,7 +1407,7 @@
     border-color: rgba(232, 77, 79, 0.52);
 }
 
-/* Clean icon — no circle, no square background */
+
 .service-path-band__icon {
     position: absolute;
     top: 22px;
@@ -1463,7 +1437,7 @@
     color: var(--action-red);
 }
 
-/* Content block */
+
 .service-path-band__content {
     position: relative;
     z-index: 1;
@@ -1492,7 +1466,7 @@
     line-height: 1.56;
 }
 
-/* Two services become neat thin navigation lines */
+
 .service-path-band__links {
     position: relative;
     z-index: 1;
@@ -1542,7 +1516,7 @@
     color: var(--action-red-dark);
 }
 
-/* Bottom CTA stays visually connected with the card */
+
 .service-path-band__cta {
     position: relative;
     z-index: 1;
@@ -1557,9 +1531,7 @@
     color: var(--action-red-dark);
 }
 
-/* =========================================================
-   TABLET — 2 cards + centered third card
-========================================================= */
+
 
 @media (max-width: 1060px) {
     .services-paths__bands {
@@ -1578,9 +1550,7 @@
     }
 }
 
-/* =========================================================
-   MOBILE — compact single column
-========================================================= */
+
 
 @media (max-width: 700px) {
     .services-paths__bands {
@@ -1649,10 +1619,7 @@
     }
 }
 
-/* =========================================================
-   SERVICES COMPARE — DARK EDITORIAL COMPARISON
-   No cards. Two comparison columns. Accent hover lines.
-========================================================= */
+
 
 .services-compare {
     --compare-red: #f15a5c;
@@ -1674,7 +1641,7 @@
     color: var(--white);
 }
 
-/* Только тонкие линии, без glow-кругов, сеток и карточек */
+
 
 .services-compare::before,
 .services-compare::after {
@@ -1730,9 +1697,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* =========================================================
-   COMPARISON STRUCTURE
-========================================================= */
+
 
 .services-compare__grid {
     display: grid;
@@ -1747,13 +1712,13 @@
     padding: clamp(29px, 3.4vw, 46px) clamp(20px, 4vw, 60px) clamp(31px, 3.6vw, 48px);
 }
 
-/* Левая часть строже и темнее */
+
 
 .services-compare__column--search {
     background: rgba(0, 0, 0, 0.12);
 }
 
-/* Правая часть чуть свежее, но это не карточка */
+
 
 .services-compare__column--clarity {
     background:
@@ -1762,7 +1727,7 @@
             rgba(0, 95, 111, 0.015));
 }
 
-/* Небольшая тонкая цветная полоса сверху */
+
 
 .services-compare__column::before {
     position: absolute;
@@ -1792,9 +1757,7 @@
     transform: scaleX(1);
 }
 
-/* =========================================================
-   COLUMN HEADINGS + ICONS
-========================================================= */
+
 
 .services-compare__column-top {
     display: flex;
@@ -1828,13 +1791,13 @@
         color 220ms ease;
 }
 
-/* Верхняя иконка слева — coral/red */
+
 
 .services-compare__column--search .services-compare__column-top>svg {
     color: var(--compare-red);
 }
 
-/* Верхняя иконка справа — bright aqua */
+
 
 .services-compare__column--clarity .services-compare__column-top>svg {
     color: var(--compare-aqua);
@@ -1853,9 +1816,7 @@
     line-height: 1.12;
 }
 
-/* =========================================================
-   LISTS + RELIABLE HOVER UNDERLINES
-========================================================= */
+
 
 .services-compare__list {
     display: grid;
@@ -1883,10 +1844,7 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/*
-  Линия висит на LI, а не на span.
-  Поэтому hover работает стабильно, даже когда текст переносится.
-*/
+
 
 .services-compare__list li::after {
     position: absolute;
@@ -1903,7 +1861,7 @@
         transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Красное подчёркивание для левой части */
+
 
 .services-compare__column--search .services-compare__list li::after {
     background: linear-gradient(90deg,
@@ -1912,7 +1870,7 @@
     box-shadow: 0 0 10px rgba(241, 90, 92, 0.26);
 }
 
-/* Голубое подчёркивание для правой части */
+
 
 .services-compare__column--clarity .services-compare__list li::after {
     background: linear-gradient(90deg,
@@ -1930,7 +1888,7 @@
     transform: scaleX(1);
 }
 
-/* X / check icons become truly accent-colored */
+
 
 .services-compare__list li>svg {
     width: 19px;
@@ -1960,9 +1918,7 @@
     transform: translateX(4px) scale(1.07);
 }
 
-/* =========================================================
-   CENTER DIVIDER
-========================================================= */
+
 
 .services-compare__divider {
     position: relative;
@@ -1996,9 +1952,7 @@
     letter-spacing: 0.12em;
 }
 
-/* =========================================================
-   CTA
-========================================================= */
+
 
 .services-compare__link {
     display: inline-flex;
@@ -2034,9 +1988,7 @@
     transform: translate(3px, -3px);
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+
 
 @media (max-width: 900px) {
     .services-compare {
@@ -2082,9 +2034,7 @@
     }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+
 
 @media (max-width: 620px) {
     .services-compare {
@@ -2170,7 +2120,7 @@
     }
 }
 
-/* SERVICES COMPARE — centered heading */
+
 
 .services-compare__heading {
     width: 100%;
@@ -2191,9 +2141,7 @@
 }
 
 
-/* =========================================================
-   SERVICES EXPLORER — KEEP PHOTO CORNERS ON HOVER
-========================================================= */
+
 
 .services-explorer__photo {
     overflow: hidden;
@@ -2213,7 +2161,7 @@
     will-change: transform;
 }
 
-/* Сохраняем аккуратный hover zoom, но фото не становится квадратным */
+
 .services-explorer__photo:hover img {
     transform: scale(1.035);
 }
@@ -2224,10 +2172,7 @@
     }
 }
 
-/* =========================================================
-   SERVICES HERO — FINAL TABLET + MOBILE REDESIGN
-   Keep photo visible, compact and clean
-========================================================= */
+
 
 @media (max-width: 900px) {
     .services-hero {
@@ -2291,10 +2236,7 @@
         text-align: left;
     }
 
-    /*
-      Photo becomes a separate portrait editorial block.
-      It no longer gets cropped into a short landscape rectangle.
-    */
+    
 
     .services-hero__visual {
         position: relative;
@@ -2369,9 +2311,7 @@
     }
 }
 
-/* =========================================================
-   MOBILE — compact text + visible portrait photo
-========================================================= */
+
 
 @media (max-width: 620px) {
     .services-hero {
@@ -2435,10 +2375,7 @@
         line-height: 1.48;
     }
 
-    /*
-      Slightly wider than the text block,
-      but still clean and without horizontal scroll.
-    */
+    
 
     .services-hero__visual {
         width: min(calc(100% + 14px), 400px);
@@ -2469,10 +2406,7 @@
         backdrop-filter: none;
     }
 
-    /*
-      On phones the tag remains, but large second text
-      is hidden so it does not cover the photo.
-    */
+    
 
     .services-hero__photo-label>span:last-child {
         display: none;
@@ -2500,9 +2434,7 @@
     }
 }
 
-/* =========================================================
-   SERVICES HERO — CENTER PHOTO FIX ON TABLET + MOBILE
-========================================================= */
+
 
 @media (max-width: 900px) {
     .services-hero__visual {
