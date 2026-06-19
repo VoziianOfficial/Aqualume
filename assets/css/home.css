@@ -2679,3 +2679,33 @@
         font-size: 0.65rem;
     }
 }
+
+/* Bottom labels — simple hover line only */
+
+.home-liquid-statement__bottom>span {
+    position: relative;
+    cursor: default;
+}
+
+.home-liquid-statement__bottom>span::after {
+    position: absolute;
+    right: 0;
+    bottom: -7px;
+    left: 0;
+    height: 2px;
+    content: "";
+    border-radius: 999px;
+    background: var(--soft-azure);
+    box-shadow: 0 0 10px rgba(99, 196, 227, 0.55);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-liquid-statement__bottom>span:hover::after {
+    transform: scaleX(1);
+}
+
+.home-liquid-statement__bottom>span:hover {
+    color: var(--white);
+}
