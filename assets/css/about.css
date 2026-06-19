@@ -1702,3 +1702,52 @@
         opacity: 0.72;
     }
 }
+
+/* =========================================================
+   ABOUT HELPS — LARGER SHAPE BEHIND PHOTO
+========================================================= */
+
+.about-helps__media {
+    position: relative;
+    isolation: isolate;
+}
+
+.about-helps__photo {
+    position: relative;
+    z-index: 2;
+}
+
+.about-helps__media-shape {
+    position: absolute;
+    z-index: 1;
+    top: -7%;
+    right: -9%;
+    width: 96%;
+    height: 104%;
+    border-radius: 46% 54% 42% 58% / 53% 45% 55% 47%;
+    pointer-events: none;
+    transform: rotate(-10deg);
+}
+
+.about-helps__ripple {
+    z-index: 3;
+}
+
+@media (max-width: 900px) {
+    .about-helps__media-shape {
+        top: -5%;
+        right: -6%;
+        width: 94%;
+        height: 101%;
+    }
+}
+
+@media (max-width: 620px) {
+    .about-helps__media-shape {
+        top: -4%;
+        right: -5%;
+        width: 92%;
+        height: 98%;
+        transform: rotate(-8deg);
+    }
+}
