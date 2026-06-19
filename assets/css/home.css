@@ -2709,3 +2709,485 @@
 .home-liquid-statement__bottom>span:hover {
     color: var(--white);
 }
+
+/* =========================================================
+   HOME HERO — TABLET + MOBILE REDESIGN
+   Add at the very end of home.css
+========================================================= */
+
+/* ---------------------------------------------------------
+   TABLET — centered content + wide visual below
+--------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+    .home-hero {
+        position: relative;
+        overflow: hidden;
+        padding: calc(var(--header-height) + 52px) 0 78px !important;
+        background:
+            radial-gradient(circle at 86% 12%,
+                rgba(99, 196, 227, 0.16),
+                transparent 24%),
+            radial-gradient(circle at 10% 92%,
+                rgba(0, 95, 111, 0.1),
+                transparent 28%),
+            var(--icy-mist);
+    }
+
+    .home-hero .home-hero__container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 42px;
+        max-width: 980px;
+        text-align: center;
+    }
+
+    .home-hero__content {
+        width: 100%;
+        max-width: 790px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .home-hero__content .section-kicker {
+        justify-content: center;
+    }
+
+    .home-hero__content h1 {
+        width: 100%;
+        max-width: 780px;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: clamp(2.65rem, 6vw, 4.1rem);
+        line-height: 1.03;
+        text-align: center;
+    }
+
+    .home-hero__description {
+        max-width: 650px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .home-hero__actions {
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .home-hero__trust {
+        justify-content: center;
+        max-width: 510px;
+        margin: 23px auto 0;
+        text-align: left;
+    }
+
+
+    .home-hero__photo {
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        border-width: 8px;
+        border-radius: 5px 34px 5px 34px;
+        aspect-ratio: 1.34 / 1;
+        box-shadow:
+            0 24px 54px rgba(11, 15, 20, 0.15),
+            0 5px 15px rgba(0, 95, 111, 0.08);
+    }
+
+    .home-hero__photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 43%;
+    }
+
+    .home-hero__photo-label {
+        right: 18px;
+        bottom: 18px;
+        left: auto;
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        max-width: none;
+        text-align: left;
+    }
+
+    .home-hero__photo-label>span:last-child {
+        color: var(--white);
+        font-size: 0.73rem;
+        font-weight: 700;
+        line-height: 1.35;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    }
+
+    .home-hero__orb--one {
+        top: -32px;
+        right: -30px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .home-hero__orb--two {
+        bottom: -32px;
+        left: -42px;
+        width: 118px;
+        height: 118px;
+    }
+
+    .home-hero__ripple {
+        right: -6px;
+        bottom: 6px;
+        width: 210px;
+    }
+}
+
+/* ---------------------------------------------------------
+   MOBILE — compact vertical hero
+--------------------------------------------------------- */
+
+@media (max-width: 620px) {
+    .home-hero {
+        padding: calc(var(--header-height) + 34px) 0 54px !important;
+    }
+
+    .home-hero .home-hero__container {
+        gap: 29px;
+    }
+
+    .home-hero__content h1 {
+        max-width: 100%;
+        font-size: clamp(2.2rem, 10vw, 3rem);
+        letter-spacing: -0.065em;
+        line-height: 1.05;
+    }
+
+    .home-hero__description {
+        max-width: 100%;
+        margin-top: 17px;
+        font-size: 0.91rem;
+        line-height: 1.62;
+    }
+
+    .home-hero__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: min(100%, 340px);
+        margin: 23px auto 0;
+    }
+
+    .home-hero__actions .button {
+        justify-content: center;
+        width: 100%;
+        min-height: 52px;
+    }
+
+    .home-hero__trust {
+        display: grid;
+        grid-template-columns: 27px minmax(0, 1fr);
+        justify-content: initial;
+        gap: 10px;
+        max-width: 330px;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .home-hero__trust-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .home-hero__trust-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .home-hero__trust p {
+        font-size: 0.72rem;
+        line-height: 1.48;
+    }
+
+    /*
+       On phones, image remains substantial but no longer too tall.
+    */
+    .home-hero__visual {
+        width: 100%;
+        padding: 0 13px 17px 0;
+    }
+
+    .home-hero__photo {
+        border-width: 5px;
+        border-radius: 4px 23px 4px 23px;
+        aspect-ratio: 1.08 / 1;
+    }
+
+    .home-hero__photo img {
+        object-position: center 42%;
+    }
+
+    .home-hero__photo-label {
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        justify-content: flex-start;
+    }
+
+    /*
+       Keep the image cleaner on phones:
+       only the small tag stays visible.
+    */
+    .home-hero__photo-label>span:last-child {
+        display: none;
+    }
+
+    .home-hero__photo-label .tag {
+        font-size: 0.65rem;
+    }
+
+    .home-hero__photo-label .tag svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /*
+       Decorative desktop objects are removed on mobile
+       so image composition stays clean.
+    */
+    .home-hero__orb,
+    .home-hero__ripple {
+        display: none;
+    }
+
+    .home-hero .wave-divider {
+        opacity: 0.7;
+    }
+}
+
+/* =========================================================
+   HOME HERO — TABLET + MOBILE PHOTO FIX
+   Keep the full hero image visible and balanced
+========================================================= */
+
+@media (max-width: 1100px) {
+    .home-hero__visual {
+        position: relative;
+        z-index: 1;
+        width: min(100%, 560px);
+        min-height: auto;
+        margin: 0 auto;
+        padding: 0 28px 27px 0;
+    }
+
+    .home-hero__photo {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        border: 8px solid var(--white);
+        border-radius: 5px 34px 5px 34px;
+        aspect-ratio: 800 / 920;
+        background: var(--icy-mist);
+        box-shadow:
+            0 26px 58px rgba(11, 15, 20, 0.16),
+            0 5px 15px rgba(0, 95, 111, 0.08);
+    }
+
+    .home-hero__photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .home-hero__photo-label {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        left: 16px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 12px;
+        max-width: none;
+        text-align: left;
+    }
+
+    .home-hero__photo-label>span:last-child {
+        max-width: 180px;
+        color: var(--white);
+        font-size: 0.72rem;
+        font-weight: 700;
+        line-height: 1.35;
+        text-shadow: 0 2px 9px rgba(0, 0, 0, 0.5);
+    }
+
+    .home-hero__orb--one {
+        top: -30px;
+        right: -25px;
+        width: 135px;
+        height: 135px;
+    }
+
+    .home-hero__orb--two {
+        bottom: -22px;
+        left: -30px;
+        width: 105px;
+        height: 105px;
+    }
+
+    .home-hero__ripple {
+        right: -9px;
+        bottom: 2px;
+        width: 180px;
+    }
+}
+
+@media (max-width: 620px) {
+    .home-hero__visual {
+        width: min(100%, 390px);
+        padding: 0 15px 17px 0;
+    }
+
+    .home-hero__photo {
+        border-width: 5px;
+        border-radius: 4px 24px 4px 24px;
+        aspect-ratio: 800 / 920;
+    }
+
+    .home-hero__photo img {
+        object-position: center center;
+    }
+
+    .home-hero__photo-label {
+        right: 11px;
+        bottom: 11px;
+        left: 11px;
+    }
+
+    .home-hero__photo-label>span:last-child {
+        display: block;
+        max-width: 135px;
+        font-size: 0.62rem;
+        line-height: 1.3;
+    }
+
+    .home-hero__photo-label .tag {
+        padding: 7px 9px;
+        font-size: 0.61rem;
+    }
+
+    .home-hero__photo-label .tag svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .home-hero__orb--one {
+        top: -19px;
+        right: -14px;
+        width: 86px;
+        height: 86px;
+    }
+
+    .home-hero__orb--two {
+        bottom: -13px;
+        left: -17px;
+        width: 66px;
+        height: 66px;
+    }
+
+    .home-hero__ripple {
+        right: -4px;
+        bottom: 0;
+        width: 118px;
+    }
+}
+
+/* =========================================================
+   FINAL HOME HERO MOBILE / TABLET RESET
+   Keep portrait photo visible after previous conflicting rules
+========================================================= */
+
+@media (max-width: 1100px) {
+    .home-hero__visual {
+        min-height: auto;
+    }
+
+    .home-hero__photo {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 800 / 920;
+    }
+
+    .home-hero__photo::before {
+        background: linear-gradient(180deg,
+                rgba(11, 15, 20, 0.01) 25%,
+                rgba(11, 15, 20, 0.38) 100%);
+    }
+}
+
+@media (max-width: 620px) {
+    .home-hero__visual {
+        min-height: auto;
+        width: min(100%, 390px);
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 15px 17px 0;
+    }
+
+    .home-hero__photo {
+        width: 100%;
+        height: auto;
+        border-width: 5px;
+        border-radius: 4px 24px 4px 24px;
+        aspect-ratio: 800 / 920;
+    }
+
+    .home-hero__photo::before {
+        background: linear-gradient(180deg,
+                rgba(11, 15, 20, 0) 38%,
+                rgba(11, 15, 20, 0.32) 100%);
+    }
+
+    .home-hero__photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .home-hero__photo-label>span:last-child {
+        display: block;
+    }
+
+    .home-hero__orb,
+    .home-hero__ripple {
+        display: block;
+    }
+
+    .home-hero__orb--one {
+        top: -19px;
+        right: -14px;
+        width: 86px;
+        height: 86px;
+    }
+
+    .home-hero__orb--two {
+        bottom: -13px;
+        left: -17px;
+        width: 66px;
+        height: 66px;
+    }
+
+    .home-hero__ripple {
+        right: -4px;
+        bottom: 0;
+        width: 118px;
+        height: 58px;
+    }
+}
