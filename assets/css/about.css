@@ -1751,3 +1751,63 @@
         transform: rotate(-8deg);
     }
 }
+
+/* =========================================================
+   ABOUT DIFFERENCE — SCATTERED LABEL HOVERS
+========================================================= */
+
+.about-difference__scattered-list span {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+    transition:
+        color 220ms ease,
+        transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-difference__scattered-list span::after {
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    content: "";
+    opacity: 0;
+    background: linear-gradient(90deg,
+            var(--soft-azure) 0%,
+            var(--rich-teal) 62%,
+            transparent 100%);
+    box-shadow: 0 0 9px rgba(99, 196, 227, 0.28);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition:
+        opacity 180ms ease,
+        transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-difference__scattered-list span:hover {
+    color: var(--soft-azure);
+    transform: translateY(-4px);
+}
+
+.about-difference__scattered-list span:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* Небольшое отличие у двух последних элементов */
+
+.about-difference__scattered-list span:nth-child(4):hover {
+    color: var(--action-red-light);
+}
+
+.about-difference__scattered-list span:nth-child(4)::after {
+    background: linear-gradient(90deg,
+            var(--action-red) 0%,
+            #ff9a87 62%,
+            transparent 100%);
+}
+
+.about-difference__scattered-list span:nth-child(5):hover {
+    color: var(--white);
+}
