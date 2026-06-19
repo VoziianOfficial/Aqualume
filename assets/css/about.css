@@ -504,7 +504,7 @@
 .principle-panel {
     position: relative;
     display: flex;
-    min-height: 355px;
+    min-height: 35px;
     flex-direction: column;
     padding: clamp(24px, 3vw, 34px);
     overflow: hidden;

@@ -279,16 +279,25 @@
         }
 
         function setActiveService(serviceId) {
-            const details = resolveServiceDetails(serviceId);
+            const closeAllRows = !serviceId;
+            const details = closeAllRows
+                ? null
+                : resolveServiceDetails(serviceId);
 
-            if (!details) {
+            if (!closeAllRows && !details) {
                 return;
             }
 
             rows.forEach((row) => {
-                const isActive = row.dataset.serviceId === serviceId;
+                const isActive =
+                    !closeAllRows && row.dataset.serviceId === serviceId;
+
                 const trigger = row.querySelector(
                     '[data-service-explorer-trigger]'
+                );
+
+                const content = row.querySelector(
+                    '.service-explorer-row__content'
                 );
 
                 row.classList.toggle('is-active', isActive);
@@ -296,9 +305,19 @@
                 if (trigger) {
                     trigger.setAttribute('aria-expanded', String(isActive));
                 }
+
+                if (content) {
+                    content.setAttribute('aria-hidden', String(!isActive));
+                }
             });
 
-            updateMedia(details);
+            /*
+               При закрытии текущей строки фото остаётся прежним.
+               При открытии другой — меняются фото, tag, текст и icon.
+            */
+            if (!closeAllRows) {
+                updateMedia(details);
+            }
         }
 
         rows.forEach((row) => {
@@ -309,7 +328,11 @@
             }
 
             trigger.addEventListener('click', () => {
-                setActiveService(row.dataset.serviceId);
+                const isAlreadyOpen = row.classList.contains('is-active');
+
+                setActiveService(
+                    isAlreadyOpen ? null : row.dataset.serviceId
+                );
             });
         });
 

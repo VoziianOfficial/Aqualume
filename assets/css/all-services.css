@@ -1291,3 +1291,26 @@
         transform: translateX(0);
     }
 }
+
+/* =========================================================
+   SERVICES EXPLORER — WIDER LEFT IMAGE ON DESKTOP
+========================================================= */
+
+@media (min-width: 901px) {
+    .services-explorer__grid {
+        grid-template-columns: minmax(430px, 1.06fr) minmax(390px, 0.76fr);
+        gap: clamp(30px, 4.4vw, 72px);
+    }
+
+    .services-explorer__media {
+        --explorer-photo-bleed: clamp(24px, 3.6vw, 58px);
+
+        width: calc(100% + var(--explorer-photo-bleed));
+        min-height: 675px;
+        margin-left: calc(var(--explorer-photo-bleed) * -1);
+    }
+
+    .services-explorer__photo {
+        border-radius: 38px 54px 30px 62px;
+    }
+}
