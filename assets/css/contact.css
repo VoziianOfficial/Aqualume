@@ -763,7 +763,7 @@
     display: grid;
     grid-template-columns: 33px minmax(0, 1fr);
     gap: 15px;
-    min-height: 205px;
+    min-height: 25px;
     padding: clamp(22px, 3vw, 31px);
     overflow: hidden;
     border: 1px solid rgba(0, 95, 111, 0.14);
@@ -1701,5 +1701,694 @@
 
     .contact-hero .wave-divider {
         opacity: 0.72;
+    }
+}
+
+/* =========================================================
+   CONTACT REQUEST — COMPACT SPLIT FORM
+========================================================= */
+
+.contact-request {
+    overflow: hidden;
+}
+
+.contact-request__top {
+    margin-bottom: clamp(30px, 4vw, 46px);
+}
+
+.contact-request__grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.56fr) minmax(440px, 0.92fr);
+    align-items: start;
+    gap: clamp(28px, 4.5vw, 68px);
+}
+
+/* Compact left panel: it no longer stretches to form height */
+
+.contact-request__aside {
+    position: relative;
+    align-self: start;
+    min-height: 0 !important;
+    padding: clamp(25px, 3vw, 34px);
+    overflow: hidden;
+    border-radius: 24px 31px 21px 34px;
+    background:
+        radial-gradient(circle at 88% 12%,
+            rgba(99, 196, 227, 0.16),
+            transparent 26%),
+        linear-gradient(145deg, #0a1116 0%, #17232c 100%);
+    color: var(--white);
+}
+
+.contact-request__aside-main .section-kicker {
+    margin-bottom: 12px;
+}
+
+.contact-request__aside h3 {
+    max-width: 345px;
+    color: var(--white);
+    font-size: clamp(1.45rem, 2vw, 2rem);
+    line-height: 1.08;
+}
+
+.contact-request__steps {
+    display: grid;
+    gap: 0;
+    margin-top: 25px;
+}
+
+.contact-request__step {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 12px;
+    padding: 13px 0;
+}
+
+.contact-request__step+.contact-request__step {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-request__step>svg {
+    width: 21px;
+    height: 21px;
+    margin-top: 1px;
+    color: var(--soft-azure);
+    stroke-width: 1.75;
+}
+
+.contact-request__step strong {
+    display: block;
+    color: var(--white);
+    font-size: 0.82rem;
+    font-weight: 760;
+    line-height: 1.35;
+}
+
+.contact-request__step p {
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 0.74rem;
+    line-height: 1.48;
+}
+
+.contact-request__aside-note {
+    margin: 22px 0 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(99, 196, 227, 0.21);
+    color: rgba(255, 255, 255, 0.57);
+    font-size: 0. সাতrem;
+    line-height: 1.5;
+}
+
+.contact-request__ripple {
+    display: none;
+}
+
+/* Narrower form with less padding and less empty space */
+
+.request-form {
+    width: 100%;
+    max-width: 700px;
+    justify-self: end;
+    padding: clamp(22px, 2.6vw, 30px) !important;
+    border-radius: 24px 31px 21px 34px;
+}
+
+.request-form__heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 19px;
+}
+
+.request-form__heading>p:last-child {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    line-height: 1.4;
+}
+
+.request-form__eyebrow {
+    margin: 0;
+    color: var(--deep-teal);
+    font-size: 0.63rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.request-form__fields {
+    gap: 15px !important;
+}
+
+.request-form .form-field {
+    gap: 6px;
+}
+
+.request-form .form-field label,
+.request-form .request-form__checkboxes legend {
+    font-size: 0.77rem;
+    line-height: 1.35;
+}
+
+.request-form input,
+.request-form select {
+    min-height: 46px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.request-form textarea {
+    min-height: 94px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    resize: vertical;
+}
+
+.request-form__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--soft-border);
+}
+
+.request-form__bottom .button {
+    width: max-content;
+    min-height: 48px;
+    white-space: nowrap;
+}
+
+.request-form__bottom p {
+    max-width: 290px;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    line-height: 1.48;
+}
+
+.request-form__bottom p a {
+    color: var(--deep-teal);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 95, 111, 0.35);
+    text-underline-offset: 3px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .contact-request__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .contact-request__aside {
+        width: min(100%, 680px);
+    }
+
+    .request-form {
+        width: min(100%, 700px);
+        justify-self: start;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 620px) {
+    .contact-request__top {
+        margin-bottom: 27px;
+    }
+
+    .contact-request__aside,
+    .request-form {
+        padding: 21px 18px !important;
+        border-radius: 20px 27px 18px 29px;
+    }
+
+    .contact-request__aside h3 {
+        font-size: 1.42rem;
+    }
+
+    .contact-request__steps {
+        margin-top: 19px;
+    }
+
+    .contact-request__step {
+        padding: 11px 0;
+    }
+
+    .contact-request__step p {
+        font-size: 0.72rem;
+    }
+
+    .contact-request__aside-note {
+        margin-top: 18px;
+        padding-top: 13px;
+        font-size: 0.71rem;
+    }
+
+    .request-form__heading {
+        display: grid;
+        gap: 6px;
+        margin-bottom: 16px;
+    }
+
+    .request-form__fields {
+        grid-template-columns: 1fr !important;
+        gap: 13px !important;
+    }
+
+    .request-form__bottom {
+        display: grid;
+        gap: 13px;
+        margin-top: 17px;
+        padding-top: 16px;
+    }
+
+    .request-form__bottom .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .request-form__bottom p {
+        max-width: none;
+    }
+}
+
+/* =========================================================
+   CONTACT REQUEST STEPS — HOVER UNDERLINE EFFECT
+========================================================= */
+
+.contact-request__step {
+    position: relative;
+    cursor: default;
+    transition:
+        background 260ms ease,
+        transform 260ms ease;
+}
+
+/* Акцентная линия под каждой отдельной строкой */
+
+.contact-request__step::after {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    content: "";
+    background: linear-gradient(90deg,
+            var(--soft-azure) 0%,
+            var(--rich-teal) 58%,
+            transparent 100%);
+    box-shadow: 0 0 10px rgba(99, 196, 227, 0.34);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition:
+        opacity 200ms ease,
+        transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-request__step>svg {
+    transition:
+        color 240ms ease,
+        transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-request__step strong {
+    transition: color 240ms ease;
+}
+
+.contact-request__step p {
+    transition: color 240ms ease;
+}
+
+.contact-request__step:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.contact-request__step:hover>svg {
+    color: var(--white);
+    transform: translateY(-3px) rotate(-5deg);
+}
+
+.contact-request__step:hover strong {
+    color: var(--soft-azure);
+}
+
+.contact-request__step:hover p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+/* =========================================================
+   CONTACT OPTIONS — INDIVIDUAL BORDER HOVERS
+========================================================= */
+
+.contact-option {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 95, 111, 0.16);
+    transition:
+        border-color 280ms ease,
+        box-shadow 280ms ease,
+        transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-option::before {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    left: 0;
+    height: 3px;
+    content: "";
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition:
+        opacity 200ms ease,
+        transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* First card — deep teal */
+
+.contact-option:nth-child(1)::before {
+    background: linear-gradient(90deg,
+            var(--deep-teal),
+            var(--soft-azure),
+            transparent);
+}
+
+.contact-option:nth-child(1):hover {
+    border-color: rgba(0, 95, 111, 0.72);
+    box-shadow: 0 16px 30px rgba(0, 95, 111, 0.12);
+}
+
+/* Second card — coral/red */
+
+.contact-option:nth-child(2)::before {
+    background: linear-gradient(90deg,
+            var(--action-red),
+            #ff9a87,
+            transparent);
+}
+
+.contact-option:nth-child(2):hover {
+    border-color: rgba(232, 77, 79, 0.72);
+    box-shadow: 0 16px 30px rgba(232, 77, 79, 0.12);
+}
+
+/* Third card — bright aqua */
+
+.contact-option:nth-child(3)::before {
+    background: linear-gradient(90deg,
+            var(--soft-azure),
+            #d8f7ff,
+            transparent);
+}
+
+.contact-option:nth-child(3):hover {
+    border-color: rgba(99, 196, 227, 0.85);
+    box-shadow: 0 16px 30px rgba(99, 196, 227, 0.14);
+}
+
+/* Shared hover */
+
+.contact-option:hover {
+    transform: translateY(-5px);
+}
+
+.contact-option:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.contact-option>svg:first-child,
+.contact-option__arrow {
+    transition:
+        color 240ms ease,
+        transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-option:hover>svg:first-child {
+    transform: translateY(-3px) rotate(-5deg);
+}
+
+.contact-option:hover .contact-option__arrow {
+    transform: translate(4px, -4px);
+}
+
+/* Different icon colors on hover */
+
+.contact-option:nth-child(1):hover>svg:first-child,
+.contact-option:nth-child(1):hover h3 {
+    color: var(--deep-teal);
+}
+
+.contact-option:nth-child(2):hover>svg:first-child,
+.contact-option:nth-child(2):hover h3 {
+    color: var(--action-red-dark);
+}
+
+.contact-option:nth-child(3):hover>svg:first-child,
+.contact-option:nth-child(3):hover h3 {
+    color: var(--rich-teal);
+}
+
+@media (max-width: 620px) {
+    .contact-option:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* =========================================================
+   CONTACT PREP — INDIVIDUAL HOVER UNDERLINES
+========================================================= */
+
+.contact-prep__list article {
+    position: relative;
+    cursor: default;
+    transition:
+        background 260ms ease,
+        transform 260ms ease;
+}
+
+/* Линия под каждой отдельной строкой */
+
+.contact-prep__list article::after {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    content: "";
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition:
+        opacity 180ms ease,
+        transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Каждой строке — свой акцент */
+
+.contact-prep__list article:nth-child(1)::after {
+    background: linear-gradient(90deg,
+            var(--deep-teal) 0%,
+            var(--soft-azure) 58%,
+            transparent 100%);
+    box-shadow: 0 0 10px rgba(99, 196, 227, 0.28);
+}
+
+.contact-prep__list article:nth-child(2)::after {
+    background: linear-gradient(90deg,
+            var(--rich-teal) 0%,
+            var(--soft-azure) 58%,
+            transparent 100%);
+    box-shadow: 0 0 10px rgba(0, 107, 120, 0.25);
+}
+
+.contact-prep__list article:nth-child(3)::after {
+    background: linear-gradient(90deg,
+            var(--action-red) 0%,
+            #ff9a87 55%,
+            transparent 100%);
+    box-shadow: 0 0 10px rgba(232, 77, 79, 0.22);
+}
+
+.contact-prep__list article>svg,
+.contact-prep__list article h3,
+.contact-prep__list article p {
+    transition:
+        color 240ms ease,
+        transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-prep__list article:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.contact-prep__list article:hover>svg {
+    transform: translateY(-3px) rotate(-5deg);
+}
+
+.contact-prep__list article:hover h3 {
+    color: var(--deep-teal);
+}
+
+.contact-prep__list article:hover p {
+    color: var(--text-main);
+}
+
+/* Разные цвета иконок при hover */
+
+.contact-prep__list article:nth-child(1):hover>svg {
+    color: var(--deep-teal);
+}
+
+.contact-prep__list article:nth-child(2):hover>svg {
+    color: var(--rich-teal);
+}
+
+.contact-prep__list article:nth-child(3):hover>svg {
+    color: var(--action-red);
+}
+
+/* =========================================================
+   CONTACT ICON MARQUEE — DARK INFINITE ICON STRIP
+========================================================= */
+
+.contact-icon-marquee {
+    position: relative;
+    overflow: hidden;
+    padding: 24px 0;
+    background:
+        linear-gradient(90deg,
+            #05080b 0%,
+            #0c1419 50%,
+            #05080b 100%);
+    border-top: 1px solid rgba(99, 196, 227, 0.16);
+    border-bottom: 1px solid rgba(99, 196, 227, 0.16);
+}
+
+.contact-icon-marquee::before,
+.contact-icon-marquee::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: min(16vw, 170px);
+    content: "";
+    pointer-events: none;
+}
+
+.contact-icon-marquee::before {
+    left: 0;
+    background: linear-gradient(90deg,
+            #05080b 0%,
+            rgba(5, 8, 11, 0.92) 42%,
+            transparent 100%);
+}
+
+.contact-icon-marquee::after {
+    right: 0;
+    background: linear-gradient(270deg,
+            #05080b 0%,
+            rgba(5, 8, 11, 0.92) 42%,
+            transparent 100%);
+}
+
+.contact-icon-marquee__viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-icon-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: contactIconMarqueeMove 30s linear infinite;
+    will-change: transform;
+}
+
+.contact-icon-marquee__group {
+    display: flex;
+    align-items: center;
+    gap: clamp(42px, 5vw, 86px);
+    padding-right: clamp(42px, 5vw, 86px);
+}
+
+.contact-icon-marquee__group svg {
+    width: clamp(42px, 4.2vw, 64px);
+    height: clamp(42px, 4.2vw, 64px);
+    flex: 0 0 auto;
+    color: rgba(168, 221, 237, 0.66);
+    stroke-width: 1.45;
+    transition:
+        color 240ms ease,
+        opacity 240ms ease,
+        transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Accent variation across the icon rhythm */
+
+.contact-icon-marquee__group svg:nth-child(3n + 1) {
+    color: rgba(99, 196, 227, 0.78);
+}
+
+.contact-icon-marquee__group svg:nth-child(3n + 2) {
+    color: rgba(255, 255, 255, 0.58);
+}
+
+.contact-icon-marquee__group svg:nth-child(3n) {
+    color: rgba(241, 90, 92, 0.72);
+}
+
+.contact-icon-marquee__group svg:hover {
+    color: var(--white);
+    transform: translateY(-5px) scale(1.1) rotate(-5deg);
+}
+
+.contact-icon-marquee:hover .contact-icon-marquee__track {
+    animation-play-state: paused;
+}
+
+@keyframes contactIconMarqueeMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 620px) {
+    .contact-icon-marquee {
+        padding: 18px 0;
+    }
+
+    .contact-icon-marquee__group {
+        gap: 38px;
+        padding-right: 38px;
+    }
+
+    .contact-icon-marquee__group svg {
+        width: 39px;
+        height: 39px;
+    }
+
+    .contact-icon-marquee__track {
+        animation-duration: 24s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-icon-marquee__track {
+        animation-play-state: paused;
+        transform: translateX(0);
     }
 }

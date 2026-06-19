@@ -255,370 +255,239 @@
             <div class="wave-divider" aria-hidden="true"></div>
         </section>
 
-        <!-- =================================================
-                 MAIN REQUEST FORM
-            ================================================== -->
-        <section class="section section--light contact-request" id="contact-form"
-            aria-labelledby="contact-request-title">
-            <div class="container">
-                <div class="contact-request__top">
-                    <div>
-                        <p class="section-kicker" data-aos="fade-down">
-                            YOUR REQUEST
-                        </p>
+<!-- =================================================
+     COMPACT MAIN REQUEST FORM
+================================================== -->
+<section class="section section--light contact-request" id="contact-form" aria-labelledby="contact-request-title">
+    <div class="container">
+        <div class="contact-request__top">
+            <div>
+                <p class="section-kicker" data-aos="fade-down">
+                    YOUR REQUEST
+                </p>
 
-                        <h2 id="contact-request-title" data-aos="fade-up" data-aos-delay="70">
-                            Start with the details you know right now.
-                        </h2>
+                <h2 id="contact-request-title" data-aos="fade-up" data-aos-delay="70">
+                    Start with the details you know right now.
+                </h2>
+            </div>
+
+            <p class="section__description" data-aos="fade-left" data-aos-delay="120">
+                You do not need a perfect technical explanation. Share the
+                concern you can see, choose the closest support direction,
+                and begin exploring relevant local options.
+            </p>
+        </div>
+
+        <div class="contact-request__grid">
+            <aside class="contact-request__aside" data-aos="fade-right" data-aos-delay="60">
+                <div class="contact-request__aside-main">
+                    <p class="section-kicker section-kicker--light">
+                        WHAT HAPPENS NEXT
+                    </p>
+
+                    <h3>
+                        One clear request.<br />
+                        More context for your next move.
+                    </h3>
+
+                    <div class="contact-request__steps">
+                        <div class="contact-request__step">
+                            <i data-lucide="clipboard-pen" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Describe the concern</strong>
+                                <p>
+                                    Start with what changed and where you
+                                    noticed it.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-request__step">
+                            <i data-lucide="map" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Explore relevant directions</strong>
+                                <p>
+                                    Review local provider options around your
+                                    request.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-request__step">
+                            <i data-lucide="handshake" aria-hidden="true"></i>
+
+                            <div>
+                                <strong>Choose what fits</strong>
+                                <p>
+                                    You remain in control of the provider and
+                                    the next step.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </aside>
 
-                    <p class="section__description" data-aos="fade-left" data-aos-delay="120">
-                        You do not need a perfect technical explanation.
-                        Describe what you can see, select the closest
-                        support path, and provide enough context to explore
-                        relevant local options.
+            <form class="request-form" data-contact-form novalidate data-aos="fade-left" data-aos-delay="100">
+                <input type="hidden" name="selectedService" value="" data-selected-service />
+
+                <div class="request-form__heading">
+                    <p class="request-form__eyebrow">
+                        REQUEST DETAILS
+                    </p>
+
+                    <p>
+                        Fields marked with
+                        <span aria-hidden="true">*</span>
+                        are required.
                     </p>
                 </div>
 
-                <div class="contact-request__grid">
-                    <aside class="contact-request__aside" data-aos="fade-right" data-aos-delay="60">
-                        <div class="contact-request__aside-main">
-                            <p class="section-kicker section-kicker--light">
-                                WHAT HAPPENS NEXT
-                            </p>
+                <div class="request-form__fields">
+                    <div class="form-field form-field--full">
+                        <label for="request-service">
+                            Which support path feels closest to your situation?
+                            <span aria-hidden="true">*</span>
+                        </label>
 
-                            <h3>
-                                One request gives you a clearer starting
-                                point.
-                            </h3>
+                        <div class="select-wrap">
+                            <select id="request-service" name="service" required data-request-service>
+                                <option value="">
+                                    Select a support path
+                                </option>
+                                <option value="emergency-water-damage">
+                                    Emergency Water Damage Help
+                                </option>
+                                <option value="water-extraction-drying">
+                                    Water Extraction &amp; Drying
+                                </option>
+                                <option value="flood-damage-restoration">
+                                    Flood Damage Restoration
+                                </option>
+                                <option value="burst-pipe-leak-damage">
+                                    Burst Pipe &amp; Leak Damage
+                                </option>
+                                <option value="basement-water-damage">
+                                    Basement Water Damage
+                                </option>
+                                <option value="mold-remediation-options">
+                                    Mold Risk &amp; Remediation Options
+                                </option>
+                                <option value="not-sure">
+                                    I am not sure yet
+                                </option>
+                            </select>
 
-                            <ol class="contact-request__steps">
-                                <li>
-                                    <span>01</span>
-
-                                    <div>
-                                        <strong>Share the situation</strong>
-                                        <p>
-                                            Start with the water concern,
-                                            affected area, and basic context.
-                                        </p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <span>02</span>
-
-                                    <div>
-                                        <strong>Explore the direction</strong>
-                                        <p>
-                                            Review relevant local
-                                            provider-matching options based
-                                            on your request.
-                                        </p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <span>03</span>
-
-                                    <div>
-                                        <strong>Choose your next step</strong>
-                                        <p>
-                                            You decide whether, when, and
-                                            how to move forward.
-                                        </p>
-                                    </div>
-                                </li>
-                            </ol>
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
                         </div>
 
-                        <div class="contact-request__aside-note">
-                            <i data-lucide="info" aria-hidden="true"></i>
+                        <span class="form-field__error" data-error-for="request-service"></span>
+                    </div>
 
-                            <p>
-                                Aqualume does not guarantee provider
-                                availability, pricing, timing, services, or
-                                outcomes.
-                            </p>
+                    <div class="form-field form-field--full">
+                        <label for="request-summary">
+                            What is happening?
+                            <span aria-hidden="true">*</span>
+                        </label>
+
+                        <textarea id="request-summary" name="summary" rows="3" required minlength="20"
+                            placeholder="For example: Water appeared near the laundry area and part of the floor feels damp."></textarea>
+
+                        <span class="form-field__error" data-error-for="request-summary"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="request-first-name">
+                            First name
+                            <span aria-hidden="true">*</span>
+                        </label>
+
+                        <input id="request-first-name" name="firstName" type="text" autocomplete="given-name" required
+                            placeholder="First name" />
+
+                        <span class="form-field__error" data-error-for="request-first-name"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="request-email">
+                            Email address
+                            <span aria-hidden="true">*</span>
+                        </label>
+
+                        <input id="request-email" name="email" type="email" autocomplete="email" required
+                            placeholder="you@example.com" />
+
+                        <span class="form-field__error" data-error-for="request-email"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="request-postal-code">
+                            ZIP / Postal code
+                            <span aria-hidden="true">*</span>
+                        </label>
+
+                        <input id="request-postal-code" name="postalCode" type="text" inputmode="numeric"
+                            autocomplete="postal-code" required placeholder="ZIP / Postal code" />
+
+                        <span class="form-field__error" data-error-for="request-postal-code"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="request-timing">
+                            Timing
+                        </label>
+
+                        <div class="select-wrap">
+                            <select id="request-timing" name="timing">
+                                <option value="">
+                                    Select one option
+                                </option>
+                                <option value="active-now">
+                                    Water is active now
+                                </option>
+                                <option value="today">
+                                    It happened today
+                                </option>
+                                <option value="recent">
+                                    It happened recently
+                                </option>
+                                <option value="ongoing">
+                                    It is ongoing
+                                </option>
+                                <option value="not-sure">
+                                    I am not sure
+                                </option>
+                            </select>
+
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
                         </div>
-
-                        <span class="ripple-line contact-request__ripple" aria-hidden="true"></span>
-                    </aside>
-
-                    <form class="request-form" data-contact-form novalidate data-aos="fade-left" data-aos-delay="100">
-                        <input type="hidden" name="selectedService" value="" data-selected-service />
-
-                        <div class="request-form__heading">
-                            <p class="request-form__eyebrow">
-                                REQUEST DETAILS
-                            </p>
-
-                            <p>
-                                Fields marked with <span aria-hidden="true">*</span>
-                                are required.
-                            </p>
-                        </div>
-
-                        <div class="request-form__fields">
-                            <div class="form-field form-field--full">
-                                <label for="request-service">
-                                    Which support path feels closest to your
-                                    situation? <span aria-hidden="true">*</span>
-                                </label>
-
-                                <div class="select-wrap">
-                                    <select id="request-service" name="service" required data-request-service>
-                                        <option value="">
-                                            Select a support path
-                                        </option>
-                                        <option value="emergency-water-damage">
-                                            Emergency Water Damage Help
-                                        </option>
-                                        <option value="water-extraction-drying">
-                                            Water Extraction &amp; Drying
-                                        </option>
-                                        <option value="flood-damage-restoration">
-                                            Flood Damage Restoration
-                                        </option>
-                                        <option value="burst-pipe-leak-damage">
-                                            Burst Pipe &amp; Leak Damage
-                                        </option>
-                                        <option value="basement-water-damage">
-                                            Basement Water Damage
-                                        </option>
-                                        <option value="mold-remediation-options">
-                                            Mold Risk &amp; Remediation
-                                            Options
-                                        </option>
-                                        <option value="not-sure">
-                                            I am not sure yet
-                                        </option>
-                                    </select>
-
-                                    <i data-lucide="chevron-down" aria-hidden="true"></i>
-                                </div>
-
-                                <span class="form-field__error" data-error-for="request-service"></span>
-                            </div>
-
-                            <div class="form-field form-field--full">
-                                <label for="request-summary">
-                                    What is happening?
-                                    <span aria-hidden="true">*</span>
-                                </label>
-
-                                <textarea id="request-summary" name="summary" rows="5" required minlength="20"
-                                    placeholder="For example: Water appeared near the laundry area, part of the floor feels damp, and I am unsure what may be affected."></textarea>
-
-                                <span class="form-field__hint">
-                                    Include the affected area, visible water
-                                    or moisture, and anything that makes the
-                                    situation feel urgent or ongoing.
-                                </span>
-
-                                <span class="form-field__error" data-error-for="request-summary"></span>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="request-first-name">
-                                    First name <span aria-hidden="true">*</span>
-                                </label>
-
-                                <input id="request-first-name" name="firstName" type="text" autocomplete="given-name"
-                                    required placeholder="First name" />
-
-                                <span class="form-field__error" data-error-for="request-first-name"></span>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="request-last-name">
-                                    Last name <span aria-hidden="true">*</span>
-                                </label>
-
-                                <input id="request-last-name" name="lastName" type="text" autocomplete="family-name"
-                                    required placeholder="Last name" />
-
-                                <span class="form-field__error" data-error-for="request-last-name"></span>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="request-email">
-                                    Email address
-                                    <span aria-hidden="true">*</span>
-                                </label>
-
-                                <input id="request-email" name="email" type="email" autocomplete="email" required
-                                    placeholder="you@example.com" />
-
-                                <span class="form-field__error" data-error-for="request-email"></span>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="request-phone">
-                                    Phone number
-                                </label>
-
-                                <input id="request-phone" name="phone" type="tel" autocomplete="tel"
-                                    placeholder="(555) 555-5555" />
-
-                                <span class="form-field__hint">
-                                    Optional, but helpful for contact
-                                    preferences.
-                                </span>
-
-                                <span class="form-field__error" data-error-for="request-phone"></span>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="request-postal-code">
-                                    ZIP / Postal code
-                                    <span aria-hidden="true">*</span>
-                                </label>
-
-                                <input id="request-postal-code" name="postalCode" type="text" inputmode="numeric"
-                                    autocomplete="postal-code" required placeholder="ZIP / Postal code" />
-
-                                <span class="form-field__hint">
-                                    Helps identify relevant local options to
-                                    explore.
-                                </span>
-
-                                <span class="form-field__error" data-error-for="request-postal-code"></span>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="request-timing">
-                                    How would you describe the timing?
-                                </label>
-
-                                <div class="select-wrap">
-                                    <select id="request-timing" name="timing">
-                                        <option value="">
-                                            Select one option
-                                        </option>
-                                        <option value="active-now">
-                                            Water is active or spreading now
-                                        </option>
-                                        <option value="today">
-                                            It happened today
-                                        </option>
-                                        <option value="recent">
-                                            It happened recently
-                                        </option>
-                                        <option value="ongoing">
-                                            It is an ongoing concern
-                                        </option>
-                                        <option value="not-sure">
-                                            I am not sure
-                                        </option>
-                                    </select>
-
-                                    <i data-lucide="chevron-down" aria-hidden="true"></i>
-                                </div>
-                            </div>
-
-                            <div class="form-field form-field--full">
-                                <fieldset class="request-form__checkboxes">
-                                    <legend>
-                                        Which areas may be affected?
-                                    </legend>
-
-                                    <div class="request-form__check-grid">
-                                        <label class="check-control">
-                                            <input type="checkbox" name="affectedAreas" value="flooring" />
-                                            <span class="check-control__box">
-                                                <i data-lucide="check" aria-hidden="true"></i>
-                                            </span>
-                                            <span>Flooring</span>
-                                        </label>
-
-                                        <label class="check-control">
-                                            <input type="checkbox" name="affectedAreas" value="walls-ceilings" />
-                                            <span class="check-control__box">
-                                                <i data-lucide="check" aria-hidden="true"></i>
-                                            </span>
-                                            <span>Walls or ceilings</span>
-                                        </label>
-
-                                        <label class="check-control">
-                                            <input type="checkbox" name="affectedAreas" value="furniture-items" />
-                                            <span class="check-control__box">
-                                                <i data-lucide="check" aria-hidden="true"></i>
-                                            </span>
-                                            <span>Furniture or belongings</span>
-                                        </label>
-
-                                        <label class="check-control">
-                                            <input type="checkbox" name="affectedAreas" value="basement" />
-                                            <span class="check-control__box">
-                                                <i data-lucide="check" aria-hidden="true"></i>
-                                            </span>
-                                            <span>Basement or lower level</span>
-                                        </label>
-
-                                        <label class="check-control">
-                                            <input type="checkbox" name="affectedAreas" value="kitchen-bathroom" />
-                                            <span class="check-control__box">
-                                                <i data-lucide="check" aria-hidden="true"></i>
-                                            </span>
-                                            <span>Kitchen or bathroom</span>
-                                        </label>
-
-                                        <label class="check-control">
-                                            <input type="checkbox" name="affectedAreas" value="not-sure" />
-                                            <span class="check-control__box">
-                                                <i data-lucide="check" aria-hidden="true"></i>
-                                            </span>
-                                            <span>I am not sure</span>
-                                        </label>
-                                    </div>
-                                </fieldset>
-                            </div>
-
-                            <div class="form-field form-field--full">
-                                <label class="consent-control">
-                                    <input id="request-consent" name="consent" type="checkbox" required />
-
-                                    <span class="consent-control__box">
-                                        <i data-lucide="check" aria-hidden="true"></i>
-                                    </span>
-
-                                    <span>
-                                        I understand that Aqualume is an
-                                        independent platform, not a provider
-                                        of restoration, plumbing, drying,
-                                        repair, inspection, or mold
-                                        remediation services. I agree to the
-                                        processing of my request as described
-                                        in the
-                                        <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
-                                            Privacy Policy
-                                        </a>.
-                                        <span aria-hidden="true">*</span>
-                                    </span>
-                                </label>
-
-                                <span class="form-field__error" data-error-for="request-consent"></span>
-                            </div>
-                        </div>
-
-                        <div class="request-form__bottom">
-                            <button class="button button--primary" type="submit">
-                                Review My Request
-                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                            </button>
-
-                            <p>
-                                A request is not a guarantee of provider
-                                availability, pricing, services, or outcomes.
-                            </p>
-                        </div>
-
-                        <p class="request-form__status" data-contact-form-status role="status" aria-live="polite"></p>
-                    </form>
+                    </div>
                 </div>
-            </div>
-        </section>
+
+                <div class="request-form__bottom">
+                    <button class="button button--primary" type="submit">
+                        Review My Request
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </button>
+
+                    <p>
+                        <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
+                            Privacy Policy
+                        </a>
+                        and
+                        <a href="terms-of-service.html" data-config-href="legal.termsUrl">
+                            Terms of Service
+                        </a>.
+                    </p>
+                </div>
+
+                <p class="request-form__status" data-contact-form-status role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+</section>
 
         <!-- =================================================
                  CONTACT OPTIONS
@@ -652,6 +521,7 @@
                             <p>
                                 Compare the six water damage directions and
                                 start where your situation feels closest.
+                                This is the best way to get started.
                             </p>
                         </div>
 
@@ -685,8 +555,7 @@
                             <h3>Email Aqualume</h3>
                             <p>
                                 Send a general platform question or ask for
-                                help understanding the available support
-                                paths.
+                                help understanding the available support.
                             </p>
 
                             <span data-config-text="contact.email">
@@ -786,6 +655,46 @@
                             Start Your Request
                             <i data-lucide="arrow-up" aria-hidden="true"></i>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             CONTACT ICON MARQUEE
+        ================================================== -->
+        <section class="contact-icon-marquee" aria-label="Water damage support categories">
+            <div class="contact-icon-marquee__viewport">
+                <div class="contact-icon-marquee__track">
+                    <div class="contact-icon-marquee__group">
+                        <i data-lucide="waves" aria-hidden="true"></i>
+                        <i data-lucide="droplets" aria-hidden="true"></i>
+                        <i data-lucide="house" aria-hidden="true"></i>
+                        <i data-lucide="pipette" aria-hidden="true"></i>
+                        <i data-lucide="wind" aria-hidden="true"></i>
+                        <i data-lucide="cloud-rain" aria-hidden="true"></i>
+                        <i data-lucide="shield-check" aria-hidden="true"></i>
+                        <i data-lucide="map-pin" aria-hidden="true"></i>
+                        <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                        <i data-lucide="scan-search" aria-hidden="true"></i>
+                        <i data-lucide="layers" aria-hidden="true"></i>
+                        <i data-lucide="wrench" aria-hidden="true"></i>
+                    </div>
+        
+                    <!-- Duplicate set for seamless infinite loop -->
+                    <div class="contact-icon-marquee__group" aria-hidden="true">
+                        <i data-lucide="waves"></i>
+                        <i data-lucide="droplets"></i>
+                        <i data-lucide="house"></i>
+                        <i data-lucide="pipette"></i>
+                        <i data-lucide="wind"></i>
+                        <i data-lucide="cloud-rain"></i>
+                        <i data-lucide="shield-check"></i>
+                        <i data-lucide="map-pin"></i>
+                        <i data-lucide="clipboard-check"></i>
+                        <i data-lucide="scan-search"></i>
+                        <i data-lucide="layers"></i>
+                        <i data-lucide="wrench"></i>
                     </div>
                 </div>
             </div>
