@@ -2013,3 +2013,128 @@ p {
         height: 58px;
     }
 }
+
+/* =========================================================
+   TABLET + MOBILE — CENTERED FULL-WIDTH HEADINGS
+   Add this block at the very end of global.css
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    /*
+       Все H1/H2 внутри main:
+       - становятся чуть компактнее;
+       - занимают всю доступную ширину своего блока;
+       - выравниваются по центру.
+    */
+    main h1,
+    main h2 {
+        width: 100%;
+        max-width: none;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    main h1 {
+        font-size: clamp(2.3rem, 5.5vw, 3.85rem);
+        line-height: 1.04;
+    }
+
+    main h2 {
+        font-size: clamp(1.85rem, 4.4vw, 2.85rem);
+        line-height: 1.1;
+    }
+
+    /*
+       Заголовочные зоны секций на планшетах идут одной ровной
+       колонкой: сначала заголовок, потом поясняющий текст.
+    */
+    main .section__top {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 16px;
+        text-align: center;
+    }
+
+    main .section__heading {
+        width: 100%;
+        max-width: none;
+    }
+
+    main .section__description,
+    main .lead {
+        max-width: 760px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    main .section-kicker {
+        justify-content: center;
+    }
+
+    /*
+       Центрируем текстовые части hero-блоков.
+       Изображение при этом остаётся отдельным визуальным блоком.
+    */
+    main .service-hero__content,
+    main .contact-hero__content,
+    main .legal-hero__content {
+        width: 100%;
+        max-width: 850px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    main .service-hero__actions,
+    main .contact-hero__actions,
+    main .legal-hero__meta {
+        justify-content: center;
+    }
+
+    main .service-hero__note,
+    main .contact-hero__note {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: left;
+    }
+}
+
+@media (max-width: 560px) {
+
+    /*
+       На телефонах ещё немного компактнее,
+       чтобы заголовки не выглядели тяжёлыми
+       и не создавали слишком много строк.
+    */
+    main h1 {
+        font-size: clamp(2.15rem, 10vw, 2.8rem);
+        line-height: 1.05;
+    }
+
+    main h2 {
+        font-size: clamp(1.65rem, 8vw, 2.18rem);
+        line-height: 1.12;
+    }
+
+    main .section__description,
+    main .lead {
+        max-width: 100%;
+        font-size: 0.94rem;
+        line-height: 1.62;
+    }
+
+    main .section-kicker {
+        font-size: 0.64rem;
+    }
+
+    main .service-hero__content,
+    main .contact-hero__content,
+    main .legal-hero__content {
+        max-width: 100%;
+    }
+}
