@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Aqualume | Start a Water Damage Support Request</title>
+
+    <meta name="description"
+        content="Describe your water damage concern and explore relevant local provider options through Aqualume, an independent homeowner-first platform." />
+
+    <meta name="theme-color" content="#0B0F14" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- =====================================================
+             HEADER
+        ====================================================== -->
+    <header class="site-header" data-site-header>
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="Aqualume home">
+                <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
+
+                <span class="brand__wordmark" aria-label="Aqualume">
+                    <span class="brand__primary" data-config-text="company.namePrimary">
+                        Aqua
+                    </span>
+                    <span class="brand__accent" data-config-text="company.nameAccent">
+                        lume
+                    </span>
+                </span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a class="site-nav__link" href="index.html">Home</a>
+
+                <a class="site-nav__link" href="about.html">About</a>
+
+                <div class="site-nav__item">
+                    <a class="site-nav__button" href="services.html" aria-label="Explore all Aqualume services">
+                        Services
+                        <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </a>
+
+                    <div class="site-nav__dropdown" data-services-dropdown aria-label="Water damage service options">
+                    </div>
+                </div>
+
+                <a class="site-nav__link" href="index.html#how-it-works">
+                    How It Works
+                </a>
+
+                <a class="site-nav__link" href="index.html#faq">FAQ</a>
+
+                <a class="site-nav__link is-active" href="contact.html" aria-current="page">
+                    Contact
+                </a>
+            </nav>
+
+            <div class="site-header__actions">
+                <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
+                    aria-label="Call Aqualume">
+                    <i data-lucide="phone" aria-hidden="true"></i>
+                </a>
+
+                <a class="icon-button" href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                    aria-label="Email Aqualume">
+                    <i data-lucide="mail" aria-hidden="true"></i>
+                </a>
+
+                <a class="button button--primary button--small site-header__cta" href="#contact-form">
+                    Start Your Request
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+
+                <button class="mobile-menu-trigger" type="button" data-mobile-menu-open
+                    aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <i data-lucide="menu" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================
+             MOBILE MENU
+        ====================================================== -->
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__top">
+                <a class="brand" href="index.html" aria-label="Aqualume home">
+                    <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
+
+                    <span class="brand__wordmark" aria-label="Aqualume">
+                        <span class="brand__primary" data-config-text="company.namePrimary">
+                            Aqua
+                        </span>
+                        <span class="brand__accent" data-config-text="company.nameAccent">
+                            lume
+                        </span>
+                    </span>
+                </a>
+
+                <button class="mobile-menu__close" type="button" data-mobile-menu-close
+                    aria-label="Close navigation menu">
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+
+                <div class="mobile-menu__services" data-mobile-services>
+                    <button class="mobile-menu__services-trigger" type="button" data-mobile-services-trigger
+                        aria-expanded="false" aria-controls="mobile-services-list">
+                        Services
+                        <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="mobile-menu__service-list" id="mobile-services-list" data-mobile-services-list></div>
+                </div>
+
+                <a href="services.html">All Services</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+
+            <div class="mobile-menu__bottom">
+                <div class="mobile-menu__contact-actions">
+                    <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
+                        aria-label="Call Aqualume">
+                        <i data-lucide="phone" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="icon-button" href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                        aria-label="Email Aqualume">
+                        <i data-lucide="mail" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="mobile-menu__details">
+                    <a href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                        data-config-text="contact.email">
+                        hello@aqualume.com
+                    </a>
+
+                    <a href="tel:+18885550148" data-config-href="contact.phoneHref"
+                        data-config-text="contact.phoneDisplay">
+                        (888) 555-0148
+                    </a>
+
+                    <span data-config-text="contact.supportHours">
+                        24/7 request access
+                    </span>
+                </div>
+
+                <a class="button button--primary" href="#contact-form">
+                    Start Your Request
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- =================================================
+                 CONTACT HERO
+            ================================================== -->
+        <section class="contact-hero" aria-labelledby="contact-hero-title">
+            <div class="container contact-hero__container">
+                <div class="contact-hero__content">
+                    <p class="section-kicker" data-aos="fade-down" data-aos-delay="40">
+                        START A STRUCTURED REQUEST
+                    </p>
+
+                    <h1 id="contact-hero-title" data-aos="fade-up" data-aos-delay="100">
+                        Tell us what is happening. Explore a clearer next
+                        step.
+                    </h1>
+
+                    <p class="lead contact-hero__description" data-aos="fade-up" data-aos-delay="160">
+                        Share the water concern you are facing, then explore
+                        relevant local provider options through one
+                        organized request. You stay in control of what comes
+                        next.
+                    </p>
+
+                    <div class="contact-hero__actions" data-aos="fade-up" data-aos-delay="220">
+                        <a class="button button--primary" href="#contact-form">
+                            Start Your Request
+                            <i data-lucide="arrow-down" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="button button--light" href="services.html">
+                            Explore All Services
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="contact-hero__note" data-aos="fade-up" data-aos-delay="280">
+                        <i data-lucide="shield-check" aria-hidden="true"></i>
+                        <span>
+                            Aqualume is an independent provider-matching
+                            platform. It does not directly provide
+                            restoration, plumbing, drying, repair, or mold
+                            remediation services.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contact-hero__visual" data-aos="zoom-in" data-aos-delay="130">
+                    <figure class="contact-hero__photo photo-frame">
+                        <img src="assets/images/contact/contact-hero.jpg"
+                            alt="Homeowner calmly reviewing water damage support information in a bright home"
+                            width="820" height="920" fetchpriority="high" />
+
+                        <figcaption class="contact-hero__photo-label">
+                            <span class="tag tag--dark">
+                                <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                                One organized request
+                            </span>
+
+                            <span>
+                                Share the concern.<br />
+                                Explore your options.
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <span class="contact-hero__orb contact-hero__orb--one" aria-hidden="true"></span>
+
+                    <span class="contact-hero__orb contact-hero__orb--two" aria-hidden="true"></span>
+
+                    <span class="ripple-line contact-hero__ripple" aria-hidden="true"></span>
+                </div>
+            </div>
+
+            <div class="wave-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- =================================================
+                 MAIN REQUEST FORM
+            ================================================== -->
+        <section class="section section--light contact-request" id="contact-form"
+            aria-labelledby="contact-request-title">
+            <div class="container">
+                <div class="contact-request__top">
+                    <div>
+                        <p class="section-kicker" data-aos="fade-down">
+                            YOUR REQUEST
+                        </p>
+
+                        <h2 id="contact-request-title" data-aos="fade-up" data-aos-delay="70">
+                            Start with the details you know right now.
+                        </h2>
+                    </div>
+
+                    <p class="section__description" data-aos="fade-left" data-aos-delay="120">
+                        You do not need a perfect technical explanation.
+                        Describe what you can see, select the closest
+                        support path, and provide enough context to explore
+                        relevant local options.
+                    </p>
+                </div>
+
+                <div class="contact-request__grid">
+                    <aside class="contact-request__aside" data-aos="fade-right" data-aos-delay="60">
+                        <div class="contact-request__aside-main">
+                            <p class="section-kicker section-kicker--light">
+                                WHAT HAPPENS NEXT
+                            </p>
+
+                            <h3>
+                                One request gives you a clearer starting
+                                point.
+                            </h3>
+
+                            <ol class="contact-request__steps">
+                                <li>
+                                    <span>01</span>
+
+                                    <div>
+                                        <strong>Share the situation</strong>
+                                        <p>
+                                            Start with the water concern,
+                                            affected area, and basic context.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span>02</span>
+
+                                    <div>
+                                        <strong>Explore the direction</strong>
+                                        <p>
+                                            Review relevant local
+                                            provider-matching options based
+                                            on your request.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span>03</span>
+
+                                    <div>
+                                        <strong>Choose your next step</strong>
+                                        <p>
+                                            You decide whether, when, and
+                                            how to move forward.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="contact-request__aside-note">
+                            <i data-lucide="info" aria-hidden="true"></i>
+
+                            <p>
+                                Aqualume does not guarantee provider
+                                availability, pricing, timing, services, or
+                                outcomes.
+                            </p>
+                        </div>
+
+                        <span class="ripple-line contact-request__ripple" aria-hidden="true"></span>
+                    </aside>
+
+                    <form class="request-form" data-contact-form novalidate data-aos="fade-left" data-aos-delay="100">
+                        <input type="hidden" name="selectedService" value="" data-selected-service />
+
+                        <div class="request-form__heading">
+                            <p class="request-form__eyebrow">
+                                REQUEST DETAILS
+                            </p>
+
+                            <p>
+                                Fields marked with <span aria-hidden="true">*</span>
+                                are required.
+                            </p>
+                        </div>
+
+                        <div class="request-form__fields">
+                            <div class="form-field form-field--full">
+                                <label for="request-service">
+                                    Which support path feels closest to your
+                                    situation? <span aria-hidden="true">*</span>
+                                </label>
+
+                                <div class="select-wrap">
+                                    <select id="request-service" name="service" required data-request-service>
+                                        <option value="">
+                                            Select a support path
+                                        </option>
+                                        <option value="emergency-water-damage">
+                                            Emergency Water Damage Help
+                                        </option>
+                                        <option value="water-extraction-drying">
+                                            Water Extraction &amp; Drying
+                                        </option>
+                                        <option value="flood-damage-restoration">
+                                            Flood Damage Restoration
+                                        </option>
+                                        <option value="burst-pipe-leak-damage">
+                                            Burst Pipe &amp; Leak Damage
+                                        </option>
+                                        <option value="basement-water-damage">
+                                            Basement Water Damage
+                                        </option>
+                                        <option value="mold-remediation-options">
+                                            Mold Risk &amp; Remediation
+                                            Options
+                                        </option>
+                                        <option value="not-sure">
+                                            I am not sure yet
+                                        </option>
+                                    </select>
+
+                                    <i data-lucide="chevron-down" aria-hidden="true"></i>
+                                </div>
+
+                                <span class="form-field__error" data-error-for="request-service"></span>
+                            </div>
+
+                            <div class="form-field form-field--full">
+                                <label for="request-summary">
+                                    What is happening?
+                                    <span aria-hidden="true">*</span>
+                                </label>
+
+                                <textarea id="request-summary" name="summary" rows="5" required minlength="20"
+                                    placeholder="For example: Water appeared near the laundry area, part of the floor feels damp, and I am unsure what may be affected."></textarea>
+
+                                <span class="form-field__hint">
+                                    Include the affected area, visible water
+                                    or moisture, and anything that makes the
+                                    situation feel urgent or ongoing.
+                                </span>
+
+                                <span class="form-field__error" data-error-for="request-summary"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="request-first-name">
+                                    First name <span aria-hidden="true">*</span>
+                                </label>
+
+                                <input id="request-first-name" name="firstName" type="text" autocomplete="given-name"
+                                    required placeholder="First name" />
+
+                                <span class="form-field__error" data-error-for="request-first-name"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="request-last-name">
+                                    Last name <span aria-hidden="true">*</span>
+                                </label>
+
+                                <input id="request-last-name" name="lastName" type="text" autocomplete="family-name"
+                                    required placeholder="Last name" />
+
+                                <span class="form-field__error" data-error-for="request-last-name"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="request-email">
+                                    Email address
+                                    <span aria-hidden="true">*</span>
+                                </label>
+
+                                <input id="request-email" name="email" type="email" autocomplete="email" required
+                                    placeholder="you@example.com" />
+
+                                <span class="form-field__error" data-error-for="request-email"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="request-phone">
+                                    Phone number
+                                </label>
+
+                                <input id="request-phone" name="phone" type="tel" autocomplete="tel"
+                                    placeholder="(555) 555-5555" />
+
+                                <span class="form-field__hint">
+                                    Optional, but helpful for contact
+                                    preferences.
+                                </span>
+
+                                <span class="form-field__error" data-error-for="request-phone"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="request-postal-code">
+                                    ZIP / Postal code
+                                    <span aria-hidden="true">*</span>
+                                </label>
+
+                                <input id="request-postal-code" name="postalCode" type="text" inputmode="numeric"
+                                    autocomplete="postal-code" required placeholder="ZIP / Postal code" />
+
+                                <span class="form-field__hint">
+                                    Helps identify relevant local options to
+                                    explore.
+                                </span>
+
+                                <span class="form-field__error" data-error-for="request-postal-code"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="request-timing">
+                                    How would you describe the timing?
+                                </label>
+
+                                <div class="select-wrap">
+                                    <select id="request-timing" name="timing">
+                                        <option value="">
+                                            Select one option
+                                        </option>
+                                        <option value="active-now">
+                                            Water is active or spreading now
+                                        </option>
+                                        <option value="today">
+                                            It happened today
+                                        </option>
+                                        <option value="recent">
+                                            It happened recently
+                                        </option>
+                                        <option value="ongoing">
+                                            It is an ongoing concern
+                                        </option>
+                                        <option value="not-sure">
+                                            I am not sure
+                                        </option>
+                                    </select>
+
+                                    <i data-lucide="chevron-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-field form-field--full">
+                                <fieldset class="request-form__checkboxes">
+                                    <legend>
+                                        Which areas may be affected?
+                                    </legend>
+
+                                    <div class="request-form__check-grid">
+                                        <label class="check-control">
+                                            <input type="checkbox" name="affectedAreas" value="flooring" />
+                                            <span class="check-control__box">
+                                                <i data-lucide="check" aria-hidden="true"></i>
+                                            </span>
+                                            <span>Flooring</span>
+                                        </label>
+
+                                        <label class="check-control">
+                                            <input type="checkbox" name="affectedAreas" value="walls-ceilings" />
+                                            <span class="check-control__box">
+                                                <i data-lucide="check" aria-hidden="true"></i>
+                                            </span>
+                                            <span>Walls or ceilings</span>
+                                        </label>
+
+                                        <label class="check-control">
+                                            <input type="checkbox" name="affectedAreas" value="furniture-items" />
+                                            <span class="check-control__box">
+                                                <i data-lucide="check" aria-hidden="true"></i>
+                                            </span>
+                                            <span>Furniture or belongings</span>
+                                        </label>
+
+                                        <label class="check-control">
+                                            <input type="checkbox" name="affectedAreas" value="basement" />
+                                            <span class="check-control__box">
+                                                <i data-lucide="check" aria-hidden="true"></i>
+                                            </span>
+                                            <span>Basement or lower level</span>
+                                        </label>
+
+                                        <label class="check-control">
+                                            <input type="checkbox" name="affectedAreas" value="kitchen-bathroom" />
+                                            <span class="check-control__box">
+                                                <i data-lucide="check" aria-hidden="true"></i>
+                                            </span>
+                                            <span>Kitchen or bathroom</span>
+                                        </label>
+
+                                        <label class="check-control">
+                                            <input type="checkbox" name="affectedAreas" value="not-sure" />
+                                            <span class="check-control__box">
+                                                <i data-lucide="check" aria-hidden="true"></i>
+                                            </span>
+                                            <span>I am not sure</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="form-field form-field--full">
+                                <label class="consent-control">
+                                    <input id="request-consent" name="consent" type="checkbox" required />
+
+                                    <span class="consent-control__box">
+                                        <i data-lucide="check" aria-hidden="true"></i>
+                                    </span>
+
+                                    <span>
+                                        I understand that Aqualume is an
+                                        independent platform, not a provider
+                                        of restoration, plumbing, drying,
+                                        repair, inspection, or mold
+                                        remediation services. I agree to the
+                                        processing of my request as described
+                                        in the
+                                        <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
+                                            Privacy Policy
+                                        </a>.
+                                        <span aria-hidden="true">*</span>
+                                    </span>
+                                </label>
+
+                                <span class="form-field__error" data-error-for="request-consent"></span>
+                            </div>
+                        </div>
+
+                        <div class="request-form__bottom">
+                            <button class="button button--primary" type="submit">
+                                Review My Request
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </button>
+
+                            <p>
+                                A request is not a guarantee of provider
+                                availability, pricing, services, or outcomes.
+                            </p>
+                        </div>
+
+                        <p class="request-form__status" data-contact-form-status role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 CONTACT OPTIONS
+            ================================================== -->
+        <section class="section section--aqua contact-options" aria-labelledby="contact-options-title">
+            <div class="container">
+                <div class="contact-options__top">
+                    <div>
+                        <p class="section-kicker" data-aos="fade-down">
+                            ANOTHER WAY TO START
+                        </p>
+
+                        <h2 id="contact-options-title" data-aos="fade-up" data-aos-delay="70">
+                            Prefer a different starting point?
+                        </h2>
+                    </div>
+
+                    <p class="section__description" data-aos="fade-left" data-aos-delay="120">
+                        You can explore service details first, contact
+                        Aqualume directly, or begin your request whenever
+                        you are ready.
+                    </p>
+                </div>
+
+                <div class="contact-options__grid">
+                    <a class="contact-option" href="services.html" data-aos="fade-up" data-aos-delay="40">
+                        <i data-lucide="layers" aria-hidden="true"></i>
+
+                        <div>
+                            <h3>Explore all support paths</h3>
+                            <p>
+                                Compare the six water damage directions and
+                                start where your situation feels closest.
+                            </p>
+                        </div>
+
+                        <i class="contact-option__arrow" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="contact-option" href="tel:+18885550148" data-config-href="contact.phoneHref"
+                        data-aos="fade-up" data-aos-delay="120">
+                        <i data-lucide="phone" aria-hidden="true"></i>
+
+                        <div>
+                            <h3>Call Aqualume</h3>
+                            <p>
+                                Use the number below to discuss how the
+                                platform works and where to begin.
+                            </p>
+
+                            <span data-config-text="contact.phoneDisplay">
+                                (888) 555-0148
+                            </span>
+                        </div>
+
+                        <i class="contact-option__arrow" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="contact-option" href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <i data-lucide="mail" aria-hidden="true"></i>
+
+                        <div>
+                            <h3>Email Aqualume</h3>
+                            <p>
+                                Send a general platform question or ask for
+                                help understanding the available support
+                                paths.
+                            </p>
+
+                            <span data-config-text="contact.email">
+                                hello@aqualume.com
+                            </span>
+                        </div>
+
+                        <i class="contact-option__arrow" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 PREPARE YOUR REQUEST
+            ================================================== -->
+        <section class="section section--light contact-prep" aria-labelledby="contact-prep-title">
+            <div class="container">
+                <div class="contact-prep__grid">
+                    <div class="contact-prep__visual" data-aos="fade-right" data-aos-delay="60">
+                        <figure class="contact-prep__photo photo-frame">
+                            <img src="assets/images/contact/request-prep.jpg"
+                                alt="Homeowner noting water damage details in a clean home setting" width="800"
+                                height="880" loading="lazy" />
+
+                            <figcaption>
+                                A LITTLE CONTEXT<br />
+                                CAN GO A LONG WAY.
+                            </figcaption>
+                        </figure>
+
+                        <span class="contact-prep__shape" aria-hidden="true"></span>
+
+                        <span class="ripple-line contact-prep__ripple" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="contact-prep__content" data-aos="fade-left" data-aos-delay="100">
+                        <p class="section-kicker">
+                            BEFORE YOU START
+                        </p>
+
+                        <h2 id="contact-prep-title">
+                            A few simple details can help create a clearer
+                            request.
+                        </h2>
+
+                        <p class="lead">
+                            You do not need photos, measurements, or a
+                            technical diagnosis to get started. The most
+                            helpful information is simply what you are
+                            noticing in the home right now.
+                        </p>
+
+                        <div class="contact-prep__list">
+                            <article>
+                                <i data-lucide="map-pin" aria-hidden="true"></i>
+
+                                <div>
+                                    <h3>Where is the concern?</h3>
+                                    <p>
+                                        Mention the room, level, or nearby
+                                        area where water, dampness, or
+                                        visible changes are appearing.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <i data-lucide="droplet" aria-hidden="true"></i>
+
+                                <div>
+                                    <h3>What are you seeing?</h3>
+                                    <p>
+                                        Note visible water, damp surfaces,
+                                        staining, material changes, or
+                                        anything else that stands out.
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <i data-lucide="clock-3" aria-hidden="true"></i>
+
+                                <div>
+                                    <h3>When did it begin?</h3>
+                                    <p>
+                                        Share whether the situation is
+                                        active now, recent, recurring, or
+                                        something you have noticed over
+                                        time.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <a class="button button--secondary" href="#contact-form">
+                            Start Your Request
+                            <i data-lucide="arrow-up" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 CONTACT FAQ
+            ================================================== -->
+        <section class="section section--mist contact-faq" aria-labelledby="contact-faq-title">
+            <div class="container">
+                <div class="contact-faq__top">
+                    <div>
+                        <p class="section-kicker" data-aos="fade-down">
+                            BEFORE YOU SUBMIT
+                        </p>
+
+                        <h2 id="contact-faq-title" data-aos="fade-up" data-aos-delay="70">
+                            A few helpful answers before you begin.
+                        </h2>
+                    </div>
+
+                    <p class="section__description" data-aos="fade-left" data-aos-delay="120">
+                        Aqualume is designed to make the first step more
+                        organized, not more complicated.
+                    </p>
+                </div>
+
+                <div class="contact-faq__list" data-contact-faq data-aos="fade-up" data-aos-delay="100">
+                    <article class="contact-faq__item is-open">
+                        <button class="contact-faq__trigger" type="button" data-contact-faq-trigger aria-expanded="true"
+                            aria-controls="contact-faq-platform">
+                            <span>
+                                Is Aqualume a water damage restoration
+                                company?
+                            </span>
+
+                            <i data-lucide="plus" aria-hidden="true"></i>
+                        </button>
+
+                        <div class="contact-faq__content" id="contact-faq-platform">
+                            <div class="contact-faq__content-inner">
+                                <p>
+                                    No. Aqualume is an independent
+                                    provider-matching platform. It helps
+                                    homeowners organize requests, explore
+                                    relevant local options, and keep the
+                                    final choice in their hands.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="contact-faq__item">
+                        <button class="contact-faq__trigger" type="button" data-contact-faq-trigger
+                            aria-expanded="false" aria-controls="contact-faq-need-answer">
+                            <span>
+                                Do I need to know exactly what caused the
+                                water concern?
+                            </span>
+
+                            <i data-lucide="plus" aria-hidden="true"></i>
+                        </button>
+
+                        <div class="contact-faq__content" id="contact-faq-need-answer">
+                            <div class="contact-faq__content-inner">
+                                <p>
+                                    No. Start with what you can see and
+                                    describe. You can share the affected
+                                    area, visible water or moisture, and
+                                    whether the issue feels active, recent,
+                                    or ongoing.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="contact-faq__item">
+                        <button class="contact-faq__trigger" type="button" data-contact-faq-trigger
+                            aria-expanded="false" aria-controls="contact-faq-cost">
+                            <span>
+                                Does submitting a request guarantee a quote
+                                or provider availability?
+                            </span>
+
+                            <i data-lucide="plus" aria-hidden="true"></i>
+                        </button>
+
+                        <div class="contact-faq__content" id="contact-faq-cost">
+                            <div class="contact-faq__content-inner">
+                                <p>
+                                    No. Availability, pricing, service
+                                    scope, response times, and outcomes can
+                                    vary by provider and location. Aqualume
+                                    helps you explore relevant options; it
+                                    does not guarantee any specific result.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="contact-faq__item">
+                        <button class="contact-faq__trigger" type="button" data-contact-faq-trigger
+                            aria-expanded="false" aria-controls="contact-faq-control">
+                            <span>
+                                Am I required to choose a provider through
+                                Aqualume?
+                            </span>
+
+                            <i data-lucide="plus" aria-hidden="true"></i>
+                        </button>
+
+                        <div class="contact-faq__content" id="contact-faq-control">
+                            <div class="contact-faq__content-inner">
+                                <p>
+                                    No. You remain in control of your next
+                                    step. Aqualume is designed to help you
+                                    explore and compare relevant options,
+                                    not to make the decision for you.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+    <footer class="site-footer">
+        <div class="site-footer__decor" aria-hidden="true"></div>
+
+        <div class="container site-footer__inner">
+            <div class="site-footer__grid">
+                <div>
+                    <a class="brand" href="index.html" aria-label="Aqualume home">
+                        <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
+
+                        <span class="brand__wordmark" aria-label="Aqualume">
+                            <span class="brand__primary" data-config-text="company.namePrimary">
+                                Aqua
+                            </span>
+                            <span class="brand__accent" data-config-text="company.nameAccent">
+                                lume
+                            </span>
+                        </span>
+                    </a>
+
+                    <p class="site-footer__description" data-config-text="footer.description">
+                        Aqualume is an independent platform that helps
+                        homeowners explore water damage provider options.
+                        Aqualume does not directly provide restoration,
+                        drying, plumbing, mold remediation, inspection,
+                        repair, or construction services.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="site-footer__title">Navigate</p>
+
+                    <ul class="site-footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li>
+                            <a href="index.html#how-it-works">
+                                How It Works
+                            </a>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="site-footer__title">Services</p>
+                    <ul class="site-footer__links" data-footer-services></ul>
+                </div>
+
+                <div>
+                    <p class="site-footer__title">Contact</p>
+
+                    <ul class="site-footer__links">
+                        <li>
+                            <a href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                                data-config-text="contact.email">
+                                hello@aqualume.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tel:+18885550148" data-config-href="contact.phoneHref"
+                                data-config-text="contact.phoneDisplay">
+                                (888) 555-0148
+                            </a>
+                        </li>
+
+                        <li>
+                            <span data-config-text="company.serviceArea">
+                                Selected service areas across the United
+                                States
+                            </span>
+                        </li>
+
+                        <li>
+                            <span data-config-text="contact.supportHours">
+                                24/7 request access
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <p>
+                    © <span data-current-year></span>
+                    <span data-config-text="company.name">Aqualume</span>.
+                    <span data-config-text="footer.copyright">
+                        All rights reserved.
+                    </span>
+                </p>
+
+                <div class="site-footer__legal">
+                    <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms-of-service.html" data-config-href="legal.termsUrl">
+                        Terms of Service
+                    </a>
+
+                    <a href="cookie-policy.html" data-config-href="legal.cookieUrl">
+                        Cookie Policy
+                    </a>
+
+                    <button type="button" data-cookie-settings>
+                        Cookie Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================
+             COOKIE BANNER
+        ====================================================== -->
+    <section class="cookie-banner" data-cookie-banner aria-label="Cookie preferences" aria-hidden="true">
+        <div class="cookie-banner__content">
+            <div>
+                <h2 class="cookie-banner__title">Your privacy choices</h2>
+
+                <p class="cookie-banner__text">
+                    Aqualume uses essential cookies to support core
+                    functionality and may use optional cookies to improve
+                    the platform experience. You can manage your preferences
+                    at any time.
+
+                    <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
+                        Privacy Policy
+                    </a>
+
+                    <a href="cookie-policy.html" data-config-href="legal.cookieUrl">
+                        Cookie Policy
+                    </a>
+
+                    <a href="terms-of-service.html" data-config-href="legal.termsUrl">
+                        Terms of Service
+                    </a>
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="button button--primary button--small" type="button" data-cookie-accept-all>
+                    Accept All
+                </button>
+
+                <button class="button button--dark button--small" type="button" data-cookie-reject-optional>
+                    Reject Optional
+                </button>
+
+                <button class="button button--dark button--small" type="button" data-cookie-manage>
+                    Manage Preferences
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+             COOKIE PREFERENCES
+        ====================================================== -->
+    <div class="cookie-preferences" data-cookie-preferences aria-hidden="true">
+        <div class="cookie-preferences__dialog" role="dialog" aria-modal="true"
+            aria-labelledby="cookie-preferences-title">
+            <div class="cookie-preferences__top">
+                <div>
+                    <p class="section-kicker">COOKIE SETTINGS</p>
+
+                    <h2 class="cookie-preferences__title" id="cookie-preferences-title">
+                        Choose your cookie preferences.
+                    </h2>
+                </div>
+
+                <button class="icon-button icon-button--light" type="button" data-cookie-preferences-close
+                    aria-label="Close cookie settings">
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <p class="cookie-preferences__intro">
+                Essential cookies are always active because they support
+                core platform functionality. Optional cookies can be turned
+                on or off at any time.
+            </p>
+
+            <div class="cookie-category-list">
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">Essential</p>
+                        <p class="cookie-category__description">
+                            Required for core platform functionality and
+                            security.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" checked disabled data-cookie-category="essential" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Essential cookies are always active
+                        </span>
+                    </label>
+                </div>
+
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">Preferences</p>
+                        <p class="cookie-category__description">
+                            Helps remember your choices and improve the
+                            browsing experience.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" data-cookie-category="preferences" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Allow preference cookies
+                        </span>
+                    </label>
+                </div>
+
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">Analytics</p>
+                        <p class="cookie-category__description">
+                            Helps us understand how visitors use the
+                            platform.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" data-cookie-category="analytics" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Allow analytics cookies
+                        </span>
+                    </label>
+                </div>
+
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">Marketing</p>
+                        <p class="cookie-category__description">
+                            Supports relevant platform communications where
+                            enabled.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" data-cookie-category="marketing" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Allow marketing cookies
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cookie-preferences__actions">
+                <button class="button button--light" type="button" data-cookie-reject-optional>
+                    Reject Optional
+                </button>
+
+                <button class="button button--primary" type="button" data-cookie-preferences-save>
+                    Save Preferences
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@0.553.0/dist/umd/lucide.min.js"></script>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

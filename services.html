@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aqualume Services | Explore Water Damage Support Paths</title>
+    <meta name="description"
+        content="Explore water damage support paths and local provider options through Aqualume, an independent homeowner-first platform." />
+    <meta name="theme-color" content="#0B0F14" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/all-services.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- =====================================================
+             HEADER
+        ====================================================== -->
+    <header class="site-header" data-site-header>
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="Aqualume home">
+                <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
+
+                <span class="brand__wordmark" aria-label="Aqualume">
+                    <span class="brand__primary" data-config-text="company.namePrimary">
+                        Aqua
+                    </span>
+                    <span class="brand__accent" data-config-text="company.nameAccent">
+                        lume
+                    </span>
+                </span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a class="site-nav__link" href="index.html">Home</a>
+
+                <a class="site-nav__link" href="about.html">About</a>
+
+                <div class="site-nav__item">
+                    <a class="site-nav__button is-active" href="services.html" aria-current="page"
+                        aria-label="Explore all Aqualume services">
+                        Services
+                        <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </a>
+
+                    <div class="site-nav__dropdown" data-services-dropdown aria-label="Water damage service options">
+                    </div>
+                </div>
+
+                <a class="site-nav__link" href="index.html#how-it-works">
+                    How It Works
+                </a>
+
+                <a class="site-nav__link" href="index.html#faq">FAQ</a>
+
+                <a class="site-nav__link" href="contact.html">Contact</a>
+            </nav>
+
+            <div class="site-header__actions">
+                <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
+                    aria-label="Call Aqualume">
+                    <i data-lucide="phone" aria-hidden="true"></i>
+                </a>
+
+                <a class="icon-button" href="contact.html#contact-form" data-config-href="urls.request"
+                    aria-label="Email Aqualume">
+                    <i data-lucide="mail" aria-hidden="true"></i>
+                </a>
+
+                <a class="button button--primary button--small site-header__cta" href="contact.html#contact-form"
+                    data-config-href="urls.request">
+                    Start Your Request
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+
+                <button class="mobile-menu-trigger" type="button" data-mobile-menu-open
+                    aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <i data-lucide="menu" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================
+             MOBILE MENU
+        ====================================================== -->
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__top">
+                <a class="brand" href="index.html" aria-label="Aqualume home">
+                    <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
+
+                    <span class="brand__wordmark" aria-label="Aqualume">
+                        <span class="brand__primary" data-config-text="company.namePrimary">
+                            Aqua
+                        </span>
+                        <span class="brand__accent" data-config-text="company.nameAccent">
+                            lume
+                        </span>
+                    </span>
+                </a>
+
+                <button class="mobile-menu__close" type="button" data-mobile-menu-close
+                    aria-label="Close navigation menu">
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+
+                <div class="mobile-menu__services" data-mobile-services>
+                    <button class="mobile-menu__services-trigger" type="button" data-mobile-services-trigger
+                        aria-expanded="false" aria-controls="mobile-services-list">
+                        Services
+                        <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="mobile-menu__service-list" id="mobile-services-list" data-mobile-services-list></div>
+                </div>
+
+                <a href="services.html">All Services</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-menu__bottom">
+                <div class="mobile-menu__contact-actions">
+                    <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
+                        aria-label="Call Aqualume">
+                        <i data-lucide="phone" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="icon-button" href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                        aria-label="Email Aqualume">
+                        <i data-lucide="mail" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="mobile-menu__details">
+                    <a href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                        data-config-text="contact.email">
+                        hello@aqualume.com
+                    </a>
+
+                    <a href="tel:+18885550148" data-config-href="contact.phoneHref"
+                        data-config-text="contact.phoneDisplay">
+                        (888) 555-0148
+                    </a>
+
+                    <span data-config-text="contact.supportHours">
+                        24/7 request access
+                    </span>
+                </div>
+
+                <a class="button button--primary" href="contact.html#contact-form" data-config-href="urls.request">
+                    Start Your Request
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- =================================================
+                 SERVICES HERO
+            ================================================== -->
+        <section class="services-hero" aria-labelledby="services-hero-title">
+            <div class="container services-hero__container">
+                <div class="services-hero__content">
+                    <p class="section-kicker" data-aos="fade-down" data-aos-delay="40">
+                        SERVICE OPTIONS
+                    </p>
+
+                    <h1 id="services-hero-title" data-aos="fade-up" data-aos-delay="100">
+                        Explore water damage support paths with more clarity.
+                    </h1>
+
+                    <p class="lead services-hero__description" data-aos="fade-up" data-aos-delay="160">
+                        Aqualume helps homeowners explore relevant service
+                        directions and compare local provider options based
+                        on the type of water damage concern they are facing.
+                    </p>
+
+                    <div class="services-hero__actions" data-aos="fade-up" data-aos-delay="220">
+                        <a class="button button--primary" href="contact.html#contact-form"
+                            data-config-href="urls.request">
+                            Start Your Request
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="button button--light" href="index.html#how-it-works">
+                            How It Works
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="services-hero__note" data-aos="fade-up" data-aos-delay="280">
+                        <i data-lucide="compass" aria-hidden="true"></i>
+                        <span>
+                            Explore support paths first. Choose your next
+                            step with more context.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="services-hero__visual" data-aos="zoom-in" data-aos-delay="140">
+                    <figure class="services-hero__photo photo-frame">
+                        <img src="assets/images/services/services-hero.jpg"
+                            alt="Homeowner reviewing water damage support information in a bright home setting"
+                            width="820" height="900" fetchpriority="high" />
+
+                        <figcaption class="services-hero__photo-label">
+                            <span class="tag tag--dark">
+                                <i data-lucide="layers" aria-hidden="true"></i>
+                                Six support paths
+                            </span>
+
+                            <span>
+                                Start with the concern.<br />
+                                Explore the direction.
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <span class="services-hero__orb services-hero__orb--one" aria-hidden="true"></span>
+                    <span class="services-hero__orb services-hero__orb--two" aria-hidden="true"></span>
+                    <span class="ripple-line services-hero__ripple" aria-hidden="true"></span>
+                </div>
+            </div>
+
+            <div class="wave-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- =================================================
+                 INTERACTIVE SERVICE EXPLORER
+            ================================================== -->
+        <section class="section section--light services-explorer" id="service-explorer"
+            aria-labelledby="service-explorer-title">
+            <div class="container">
+                <div class="services-explorer__top">
+                    <div>
+                        <p class="section-kicker" data-aos="fade-down">
+                            EXPLORE THE OPTIONS
+                        </p>
+
+                        <h2 id="service-explorer-title" data-aos="fade-up" data-aos-delay="70">
+                            Find the support path that feels closest to what
+                            is happening.
+                        </h2>
+                    </div>
+
+                    <p class="section__description" data-aos="fade-left" data-aos-delay="120">
+                        Water concerns can overlap. Start with the direction
+                        that best reflects your situation, then explore the
+                        related details and local options at your own pace.
+                    </p>
+                </div>
+
+                <div class="services-explorer__grid">
+                    <div class="services-explorer__media" data-aos="fade-right" data-aos-delay="100" aria-live="polite">
+                        <figure class="services-explorer__photo photo-frame" data-service-explorer-media>
+                            <img src="assets/images/services/emergency-water-damage-explorer.jpg"
+                                alt="Localized water spreading near a clean residential floor" width="820" height="940"
+                                loading="lazy" data-service-explorer-image />
+
+                            <figcaption class="services-explorer__caption">
+                                <div>
+                                    <span class="tag tag--urgent" data-service-explorer-tag>
+                                        Urgent situation
+                                    </span>
+
+                                    <h3 data-service-explorer-title>
+                                        Emergency Water Damage Help
+                                    </h3>
+
+                                    <p data-service-explorer-summary>
+                                        Explore support paths for active
+                                        leaks, sudden water intrusion, and
+                                        situations where fast local support
+                                        may be needed.
+                                    </p>
+                                </div>
+
+                                <i data-lucide="siren" aria-hidden="true" data-service-explorer-icon></i>
+                            </figcaption>
+                        </figure>
+
+                        <span class="ripple-line services-explorer__ripple" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="services-explorer__rows" data-service-explorer data-aos="fade-left"
+                        data-aos-delay="120">
+                        <article class="service-explorer-row is-active" data-service-explorer-row
+                            data-service-id="emergency-water-damage">
+                            <button class="service-explorer-row__trigger" type="button" data-service-explorer-trigger
+                                aria-expanded="true" aria-controls="explorer-emergency-content">
+                                <span class="service-explorer-row__intro">
+                                    <i data-lucide="siren" aria-hidden="true"></i>
+
+                                    <span>
+                                        <strong>
+                                            Emergency Water Damage Help
+                                        </strong>
+                                        <small>
+                                            Active water and urgent
+                                            next-step concerns
+                                        </small>
+                                    </span>
+                                </span>
+
+                                <i class="service-explorer-row__toggle" data-lucide="plus" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="service-explorer-row__content" id="explorer-emergency-content">
+                                <div class="service-explorer-row__content-inner">
+                                    <p>
+                                        For active leaks, sudden water
+                                        intrusion, standing water, and
+                                        situations where fast local support
+                                        may be relevant to explore.
+                                    </p>
+
+                                    <ul>
+                                        <li>Active pipe or appliance leak</li>
+                                        <li>Water spreading across floors</li>
+                                        <li>Ceiling or wall water concerns</li>
+                                    </ul>
+
+                                    <a class="text-link" href="emergency-water-damage.html">
+                                        Explore service details
+                                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="service-explorer-row" data-service-explorer-row
+                            data-service-id="water-extraction-drying">
+                            <button class="service-explorer-row__trigger" type="button" data-service-explorer-trigger
+                                aria-expanded="false" aria-controls="explorer-extraction-content">
+                                <span class="service-explorer-row__intro">
+                                    <i data-lucide="wind" aria-hidden="true"></i>
+
+                                    <span>
+                                        <strong>Water Extraction &amp; Drying</strong>
+                                        <small>
+                                            Water removal and drying-related
+                                            concerns
+                                        </small>
+                                    </span>
+                                </span>
+
+                                <i class="service-explorer-row__toggle" data-lucide="plus" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="service-explorer-row__content" id="explorer-extraction-content">
+                                <div class="service-explorer-row__content-inner">
+                                    <p>
+                                        Explore options connected to standing
+                                        water, damp materials, and
+                                        drying-related support directions.
+                                    </p>
+
+                                    <ul>
+                                        <li>Standing water in living areas</li>
+                                        <li>Damp flooring or furnishings</li>
+                                        <li>Moisture after a contained leak</li>
+                                    </ul>
+
+                                    <a class="text-link" href="water-extraction-drying.html">
+                                        Explore service details
+                                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="service-explorer-row" data-service-explorer-row
+                            data-service-id="flood-damage-restoration">
+                            <button class="service-explorer-row__trigger" type="button" data-service-explorer-trigger
+                                aria-expanded="false" aria-controls="explorer-flood-content">
+                                <span class="service-explorer-row__intro">
+                                    <i data-lucide="cloud-rain" aria-hidden="true"></i>
+
+                                    <span>
+                                        <strong>Flood Damage Restoration</strong>
+                                        <small>
+                                            Post-flood and indoor water
+                                            intrusion concerns
+                                        </small>
+                                    </span>
+                                </span>
+
+                                <i class="service-explorer-row__toggle" data-lucide="plus" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="service-explorer-row__content" id="explorer-flood-content">
+                                <div class="service-explorer-row__content-inner">
+                                    <p>
+                                        Explore service directions for
+                                        broader water intrusion situations
+                                        after flooding or a significant
+                                        indoor water event.
+                                    </p>
+
+                                    <ul>
+                                        <li>Flooded rooms or lower areas</li>
+                                        <li>Multiple affected surfaces</li>
+                                        <li>Post-flood recovery questions</li>
+                                    </ul>
+
+                                    <a class="text-link" href="flood-damage-restoration.html">
+                                        Explore service details
+                                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="service-explorer-row" data-service-explorer-row
+                            data-service-id="burst-pipe-leak-damage">
+                            <button class="service-explorer-row__trigger" type="button" data-service-explorer-trigger
+                                aria-expanded="false" aria-controls="explorer-pipe-content">
+                                <span class="service-explorer-row__intro">
+                                    <i data-lucide="wrench" aria-hidden="true"></i>
+
+                                    <span>
+                                        <strong>Burst Pipe &amp; Leak Damage</strong>
+                                        <small>
+                                            Sudden pipe issues and
+                                            leak-related water concerns
+                                        </small>
+                                    </span>
+                                </span>
+
+                                <i class="service-explorer-row__toggle" data-lucide="plus" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="service-explorer-row__content" id="explorer-pipe-content">
+                                <div class="service-explorer-row__content-inner">
+                                    <p>
+                                        Explore support paths that may fit a
+                                        burst pipe, ongoing leak, or water
+                                        concern around plumbing-connected
+                                        areas.
+                                    </p>
+
+                                    <ul>
+                                        <li>Water near a pipe connection</li>
+                                        <li>Leak under a sink or appliance</li>
+                                        <li>Unexpected ceiling moisture</li>
+                                    </ul>
+
+                                    <a class="text-link" href="burst-pipe-leak-damage.html">
+                                        Explore service details
+                                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="service-explorer-row" data-service-explorer-row
+                            data-service-id="basement-water-damage">
+                            <button class="service-explorer-row__trigger" type="button" data-service-explorer-trigger
+                                aria-expanded="false" aria-controls="explorer-basement-content">
+                                <span class="service-explorer-row__intro">
+                                    <i data-lucide="layers" aria-hidden="true"></i>
+
+                                    <span>
+                                        <strong>Basement Water Damage</strong>
+                                        <small>
+                                            Lower-level water and moisture
+                                            concerns
+                                        </small>
+                                    </span>
+                                </span>
+
+                                <i class="service-explorer-row__toggle" data-lucide="plus" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="service-explorer-row__content" id="explorer-basement-content">
+                                <div class="service-explorer-row__content-inner">
+                                    <p>
+                                        Explore local support options for
+                                        visible water, ongoing dampness, or
+                                        moisture concerns in lower-level
+                                        spaces.
+                                    </p>
+
+                                    <ul>
+                                        <li>Water in basement areas</li>
+                                        <li>Recurring dampness or humidity</li>
+                                        <li>Moisture around stored items</li>
+                                    </ul>
+
+                                    <a class="text-link" href="basement-water-damage.html">
+                                        Explore service details
+                                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="service-explorer-row" data-service-explorer-row
+                            data-service-id="mold-remediation-options">
+                            <button class="service-explorer-row__trigger" type="button" data-service-explorer-trigger
+                                aria-expanded="false" aria-controls="explorer-mold-content">
+                                <span class="service-explorer-row__intro">
+                                    <i data-lucide="scan-search" aria-hidden="true"></i>
+
+                                    <span>
+                                        <strong>
+                                            Mold Risk &amp; Remediation Options
+                                        </strong>
+                                        <small>
+                                            Moisture-related mold questions
+                                            and support directions
+                                        </small>
+                                    </span>
+                                </span>
+
+                                <i class="service-explorer-row__toggle" data-lucide="plus" aria-hidden="true"></i>
+                            </button>
+
+                            <div class="service-explorer-row__content" id="explorer-mold-content">
+                                <div class="service-explorer-row__content-inner">
+                                    <p>
+                                        Explore relevant directions when
+                                        lingering moisture, damp materials,
+                                        or visible changes raise mold-related
+                                        concerns.
+                                    </p>
+
+                                    <ul>
+                                        <li>Persistent dampness indoors</li>
+                                        <li>Moisture around affected areas</li>
+                                        <li>Questions after a water event</li>
+                                    </ul>
+
+                                    <a class="text-link" href="mold-remediation-options.html">
+                                        Explore service details
+                                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <a class="button button--primary services-explorer__cta" href="contact.html#contact-form"
+                            data-config-href="urls.request">
+                            Start Your Request
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 EDITORIAL SPLIT
+            ================================================== -->
+        <section class="section section--aqua services-editorial" aria-labelledby="services-editorial-title">
+            <div class="container">
+                <div class="services-editorial__grid">
+                    <div class="services-editorial__content" data-aos="fade-right">
+                        <p class="section-kicker">NOT SURE WHERE TO START?</p>
+
+                        <h2 id="services-editorial-title">
+                            You do not need to identify the perfect category
+                            before exploring your options.
+                        </h2>
+
+                        <p class="lead">
+                            Water damage concerns can overlap. A leak can
+                            lead to standing water, moisture can turn into
+                            mold concerns, and a basement issue may need
+                            more than one support path. Aqualume helps you
+                            begin with clarity, even if the full picture is
+                            still unfolding.
+                        </p>
+
+                        <a class="button button--primary" href="contact.html#contact-form"
+                            data-config-href="urls.request">
+                            Start Your Request
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="services-editorial__visual" data-aos="fade-left" data-aos-delay="100">
+                        <span class="services-editorial__shape" aria-hidden="true"></span>
+
+                        <figure class="services-editorial__photo photo-frame">
+                            <img src="assets/images/services/not-sure-where-to-start.jpg"
+                                alt="Calm homeowner reviewing next steps in a bright residential interior" width="800"
+                                height="850" loading="lazy" />
+
+                            <figcaption>
+                                ONE CLEAR REQUEST.<br />
+                                MORE CONTEXT.
+                            </figcaption>
+                        </figure>
+
+                        <span class="ripple-line services-editorial__ripple" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 ENDLESS ICON MARQUEE
+            ================================================== -->
+        <section class="services-marquee" aria-label="Water damage support category icons">
+            <div class="services-marquee__row">
+                <div class="services-marquee__track" data-marquee-track>
+                    <i data-lucide="droplet" aria-hidden="true"></i>
+                    <i data-lucide="waves" aria-hidden="true"></i>
+                    <i data-lucide="house" aria-hidden="true"></i>
+                    <i data-lucide="shield-check" aria-hidden="true"></i>
+                    <i data-lucide="wrench" aria-hidden="true"></i>
+                    <i data-lucide="fan" aria-hidden="true"></i>
+                    <i data-lucide="wind" aria-hidden="true"></i>
+                    <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                    <i data-lucide="search" aria-hidden="true"></i>
+                    <i data-lucide="map-pin" aria-hidden="true"></i>
+                    <i data-lucide="cloud-rain" aria-hidden="true"></i>
+                    <i data-lucide="scan-search" aria-hidden="true"></i>
+                    <i data-lucide="arrow-left-right" aria-hidden="true"></i>
+
+                    <i data-lucide="droplet" aria-hidden="true"></i>
+                    <i data-lucide="waves" aria-hidden="true"></i>
+                    <i data-lucide="house" aria-hidden="true"></i>
+                    <i data-lucide="shield-check" aria-hidden="true"></i>
+                    <i data-lucide="wrench" aria-hidden="true"></i>
+                    <i data-lucide="fan" aria-hidden="true"></i>
+                    <i data-lucide="wind" aria-hidden="true"></i>
+                    <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                    <i data-lucide="search" aria-hidden="true"></i>
+                    <i data-lucide="map-pin" aria-hidden="true"></i>
+                    <i data-lucide="cloud-rain" aria-hidden="true"></i>
+                    <i data-lucide="scan-search" aria-hidden="true"></i>
+                    <i data-lucide="arrow-left-right" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="services-marquee__row services-marquee__row--reverse">
+                <div class="services-marquee__track" data-marquee-track aria-hidden="true">
+                    <i data-lucide="wind"></i>
+                    <i data-lucide="droplet"></i>
+                    <i data-lucide="layers"></i>
+                    <i data-lucide="house"></i>
+                    <i data-lucide="cloud-rain"></i>
+                    <i data-lucide="wrench"></i>
+                    <i data-lucide="shield-check"></i>
+                    <i data-lucide="scan-search"></i>
+                    <i data-lucide="waves"></i>
+                    <i data-lucide="map-pin"></i>
+                    <i data-lucide="clipboard-check"></i>
+                    <i data-lucide="arrow-left-right"></i>
+
+                    <i data-lucide="wind"></i>
+                    <i data-lucide="droplet"></i>
+                    <i data-lucide="layers"></i>
+                    <i data-lucide="house"></i>
+                    <i data-lucide="cloud-rain"></i>
+                    <i data-lucide="wrench"></i>
+                    <i data-lucide="shield-check"></i>
+                    <i data-lucide="scan-search"></i>
+                    <i data-lucide="waves"></i>
+                    <i data-lucide="map-pin"></i>
+                    <i data-lucide="clipboard-check"></i>
+                    <i data-lucide="arrow-left-right"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 SERVICE PATH OVERVIEW
+            ================================================== -->
+        <section class="section section--mist services-paths" aria-labelledby="services-paths-title">
+            <div class="container">
+                <div class="section__top">
+                    <div class="section__heading">
+                        <p class="section-kicker" data-aos="fade-down">
+                            SERVICE PATH OVERVIEW
+                        </p>
+
+                        <h2 id="services-paths-title" data-aos="fade-up" data-aos-delay="70">
+                            Grouped around the water concerns homeowners
+                            often need to explore.
+                        </h2>
+                    </div>
+
+                    <p class="section__description" data-aos="fade-left" data-aos-delay="120">
+                        These service paths are designed to help you start
+                        from the concern in front of you, without needing to
+                        solve every detail before you begin.
+                    </p>
+                </div>
+
+                <div class="services-paths__bands">
+                    <article class="service-path-band" data-aos="fade-up" data-aos-delay="40">
+                        <div class="service-path-band__icon">
+                            <i data-lucide="siren" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="service-path-band__content">
+                            <p class="section-kicker section-kicker--red">
+                                URGENT CONCERNS
+                            </p>
+
+                            <h3>
+                                When water is active and the next step feels
+                                time-sensitive.
+                            </h3>
+
+                            <p>
+                                Explore support paths related to sudden
+                                leaks, active water spread, and fast-moving
+                                indoor water issues.
+                            </p>
+                        </div>
+
+                        <div class="service-path-band__links">
+                            <a href="emergency-water-damage.html">
+                                Emergency Water Damage Help
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="burst-pipe-leak-damage.html">
+                                Burst Pipe &amp; Leak Damage
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <a class="text-link service-path-band__cta" href="emergency-water-damage.html">
+                            Explore urgent support
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="service-path-band" data-aos="fade-up" data-aos-delay="120">
+                        <div class="service-path-band__icon">
+                            <i data-lucide="wind" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="service-path-band__content">
+                            <p class="section-kicker">
+                                WATER REMOVAL &amp; MOISTURE CONTROL
+                            </p>
+
+                            <h3>
+                                For standing water, damp materials, and
+                                drying-related concerns.
+                            </h3>
+
+                            <p>
+                                Explore categories related to water
+                                extraction, drying, and ongoing moisture
+                                inside affected areas.
+                            </p>
+                        </div>
+
+                        <div class="service-path-band__links">
+                            <a href="water-extraction-drying.html">
+                                Water Extraction &amp; Drying
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="basement-water-damage.html">
+                                Basement Water Damage
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <a class="text-link service-path-band__cta" href="water-extraction-drying.html">
+                            Explore water removal paths
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="service-path-band" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-path-band__icon">
+                            <i data-lucide="scan-search" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="service-path-band__content">
+                            <p class="section-kicker">
+                                RECOVERY &amp; FOLLOW-UP CONCERNS
+                            </p>
+
+                            <h3>
+                                For post-flood situations, lingering damage,
+                                and mold-related questions.
+                            </h3>
+
+                            <p>
+                                Explore service directions that may fit
+                                broader recovery concerns after flooding or
+                                long-term moisture exposure.
+                            </p>
+                        </div>
+
+                        <div class="service-path-band__links">
+                            <a href="flood-damage-restoration.html">
+                                Flood Damage Restoration
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="mold-remediation-options.html">
+                                Mold Risk &amp; Remediation Options
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <a class="text-link service-path-band__cta" href="flood-damage-restoration.html">
+                            Explore recovery paths
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 FINAL CTA
+            ================================================== -->
+        <section class="section section--dark services-final" aria-labelledby="services-final-title">
+            <div class="container">
+                <div class="services-final__card" data-aos="zoom-in">
+                    <div class="services-final__content">
+                        <p class="section-kicker section-kicker--light">
+                            READY TO START?
+                        </p>
+
+                        <h2 id="services-final-title">
+                            Explore your next step with more clarity.
+                        </h2>
+
+                        <p class="lead">
+                            Tell us what is happening and begin exploring
+                            relevant local provider options through one
+                            structured request.
+                        </p>
+
+                        <div class="services-final__actions">
+                            <a class="button button--primary" href="contact.html#contact-form"
+                                data-config-href="urls.request">
+                                Start Your Request
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+
+                            <a class="button button--dark" href="emergency-water-damage.html">
+                                Explore Emergency Help
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+
+                        <p class="services-final__note">
+                            Independent platform. Homeowner choice always
+                            comes first.
+                        </p>
+                    </div>
+
+                    <div class="services-final__visual" aria-hidden="true">
+                        <i data-lucide="droplets"></i>
+                        <span class="ripple-line"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+    <footer class="site-footer">
+        <div class="site-footer__decor" aria-hidden="true"></div>
+
+        <div class="container site-footer__inner">
+            <div class="site-footer__grid">
+                <div>
+                    <a class="brand" href="index.html" aria-label="Aqualume home">
+                        <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
+
+                        <span class="brand__wordmark" aria-label="Aqualume">
+                            <span class="brand__primary" data-config-text="company.namePrimary">
+                                Aqua
+                            </span>
+                            <span class="brand__accent" data-config-text="company.nameAccent">
+                                lume
+                            </span>
+                        </span>
+                    </a>
+
+                    <p class="site-footer__description" data-config-text="footer.description">
+                        Aqualume is an independent platform that helps
+                        homeowners explore water damage provider options.
+                        Aqualume does not directly provide restoration,
+                        drying, plumbing, mold remediation, inspection,
+                        repair, or construction services.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="site-footer__title">Navigate</p>
+
+                    <ul class="site-footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li>
+                            <a href="index.html#how-it-works">
+                                How It Works
+                            </a>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="site-footer__title">Services</p>
+                    <ul class="site-footer__links" data-footer-services></ul>
+                </div>
+
+                <div>
+                    <p class="site-footer__title">Contact</p>
+
+                    <ul class="site-footer__links">
+                        <li>
+                            <a href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                                data-config-text="contact.email">
+                                hello@aqualume.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tel:+18885550148" data-config-href="contact.phoneHref"
+                                data-config-text="contact.phoneDisplay">
+                                (888) 555-0148
+                            </a>
+                        </li>
+
+                        <li>
+                            <span data-config-text="company.serviceArea">
+                                Selected service areas across the United
+                                States
+                            </span>
+                        </li>
+
+                        <li>
+                            <span data-config-text="contact.supportHours">
+                                24/7 request access
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <p>
+                    © <span data-current-year></span>
+                    <span data-config-text="company.name">Aqualume</span>.
+                    <span data-config-text="footer.copyright">
+                        All rights reserved.
+                    </span>
+                </p>
+
+                <div class="site-footer__legal">
+                    <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms-of-service.html" data-config-href="legal.termsUrl">
+                        Terms of Service
+                    </a>
+
+                    <a href="cookie-policy.html" data-config-href="legal.cookieUrl">
+                        Cookie Policy
+                    </a>
+
+                    <button type="button" data-cookie-settings>
+                        Cookie Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================
+             COOKIE BANNER
+        ====================================================== -->
+    <section class="cookie-banner" data-cookie-banner aria-label="Cookie preferences" aria-hidden="true">
+        <div class="cookie-banner__content">
+            <div>
+                <h2 class="cookie-banner__title">Your privacy choices</h2>
+
+                <p class="cookie-banner__text">
+                    Aqualume uses essential cookies to support core
+                    functionality and may use optional cookies to improve
+                    the platform experience. You can manage your preferences
+                    at any time.
+
+                    <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
+                        Privacy Policy
+                    </a>
+
+                    <a href="cookie-policy.html" data-config-href="legal.cookieUrl">
+                        Cookie Policy
+                    </a>
+
+                    <a href="terms-of-service.html" data-config-href="legal.termsUrl">
+                        Terms of Service
+                    </a>
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="button button--primary button--small" type="button" data-cookie-accept-all>
+                    Accept All
+                </button>
+
+                <button class="button button--dark button--small" type="button" data-cookie-reject-optional>
+                    Reject Optional
+                </button>
+
+                <button class="button button--dark button--small" type="button" data-cookie-manage>
+                    Manage Preferences
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+             COOKIE PREFERENCES
+        ====================================================== -->
+    <div class="cookie-preferences" data-cookie-preferences aria-hidden="true">
+        <div class="cookie-preferences__dialog" role="dialog" aria-modal="true"
+            aria-labelledby="cookie-preferences-title">
+            <div class="cookie-preferences__top">
+                <div>
+                    <p class="section-kicker">COOKIE SETTINGS</p>
+
+                    <h2 class="cookie-preferences__title" id="cookie-preferences-title">
+                        Choose your cookie preferences.
+                    </h2>
+                </div>
+
+                <button class="icon-button icon-button--light" type="button" data-cookie-preferences-close
+                    aria-label="Close cookie settings">
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <p class="cookie-preferences__intro">
+                Essential cookies are always active because they support
+                core platform functionality. Optional cookies can be turned
+                on or off at any time.
+            </p>
+
+            <div class="cookie-category-list">
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">Essential</p>
+                        <p class="cookie-category__description">
+                            Required for core platform functionality and
+                            security.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" checked disabled data-cookie-category="essential" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Essential cookies are always active
+                        </span>
+                    </label>
+                </div>
+
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">Preferences</p>
+                        <p class="cookie-category__description">
+                            Helps remember your choices and improve the
+                            browsing experience.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" data-cookie-category="preferences" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Allow preference cookies
+                        </span>
+                    </label>
+                </div>
+
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">Analytics</p>
+                        <p class="cookie-category__description">
+                            Helps us understand how visitors use the
+                            platform.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" data-cookie-category="analytics" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Allow analytics cookies
+                        </span>
+                    </label>
+                </div>
+
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">Marketing</p>
+                        <p class="cookie-category__description">
+                            Supports relevant platform communications where
+                            enabled.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" data-cookie-category="marketing" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Allow marketing cookies
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cookie-preferences__actions">
+                <button class="button button--light" type="button" data-cookie-reject-optional>
+                    Reject Optional
+                </button>
+
+                <button class="button button--primary" type="button" data-cookie-preferences-save>
+                    Save Preferences
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@0.553.0/dist/umd/lucide.min.js"></script>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/all-services.js"></script>
+</body>
+
+</html>

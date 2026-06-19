@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aqualume | Clearer Water Damage Support Options</title>
+    <meta name="description"
+        content="Aqualume is an independent platform that helps homeowners organize water damage requests and explore local provider options with more clarity." />
+    <meta name="theme-color" content="#0B0F14" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- =====================================================
+             HEADER
+        ====================================================== -->
+    <header class="site-header" data-site-header>
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="Aqualume home">
+                <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
+
+                <span class="brand__wordmark" aria-label="Aqualume">
+                    <span class="brand__primary" data-config-text="company.namePrimary">
+                        Aqua
+                    </span>
+                    <span class="brand__accent" data-config-text="company.nameAccent">
+                        lume
+                    </span>
+                </span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a class="site-nav__link is-active" href="index.html">
+                    Home
+                </a>
+
+                <a class="site-nav__link" href="about.html">
+                    About
+                </a>
+
+                <div class="site-nav__item">
+                    <a class="site-nav__button" href="services.html" aria-label="Explore all Aqualume services">
+                        Services
+                        <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </a>
+
+                    <div class="site-nav__dropdown" data-services-dropdown aria-label="Water damage service options">
+                    </div>
+                </div>
+
+                <a class="site-nav__link" href="#how-it-works">
+                    How It Works
+                </a>
+
+                <a class="site-nav__link" href="#faq">
+                    FAQ
+                </a>
+
+                <a class="site-nav__link" href="contact.html">
+                    Contact
+                </a>
+            </nav>
+
+            <div class="site-header__actions">
+                <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
+                    aria-label="Call Aqualume">
+                    <i data-lucide="phone" aria-hidden="true"></i>
+                </a>
+
+                <a class="icon-button" href="contact.html#contact-form" data-config-href="urls.request"
+                    aria-label="Email Aqualume">
+                    <i data-lucide="mail" aria-hidden="true"></i>
+                </a>
+
+                <a class="button button--primary button--small site-header__cta" href="contact.html#contact-form"
+                    data-config-href="urls.request">
+                    Start Your Request
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+
+                <button class="mobile-menu-trigger" type="button" data-mobile-menu-open
+                    aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <i data-lucide="menu" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================
+             MOBILE MENU
+        ====================================================== -->
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu__inner">
+            <div class="mobile-menu__top">
+                <a class="brand" href="index.html" aria-label="Aqualume home">
+                    <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
+
+                    <span class="brand__wordmark" aria-label="Aqualume">
+                        <span class="brand__primary" data-config-text="company.namePrimary">
+                            Aqua
+                        </span>
+                        <span class="brand__accent" data-config-text="company.nameAccent">
+                            lume
+                        </span>
+                    </span>
+                </a>
+
+                <button class="mobile-menu__close" type="button" data-mobile-menu-close
+                    aria-label="Close navigation menu">
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+
+                <div class="mobile-menu__services" data-mobile-services>
+                    <button class="mobile-menu__services-trigger" type="button" data-mobile-services-trigger
+                        aria-expanded="false" aria-controls="mobile-services-list">
+                        Services
+                        <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="mobile-menu__service-list" id="mobile-services-list" data-mobile-services-list></div>
+                </div>
+
+                <a href="services.html">All Services</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#faq">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="mobile-menu__bottom">
+                <div class="mobile-menu__contact-actions">
+                    <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
+                        aria-label="Call Aqualume">
+                        <i data-lucide="phone" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="icon-button" href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                        aria-label="Email Aqualume">
+                        <i data-lucide="mail" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="mobile-menu__details">
+                    <a href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                        data-config-text="contact.email">
+                        hello@aqualume.com
+                    </a>
+
+                    <a href="tel:+18885550148" data-config-href="contact.phoneHref"
+                        data-config-text="contact.phoneDisplay">
+                        (888) 555-0148
+                    </a>
+
+                    <span data-config-text="contact.supportHours">
+                        24/7 request access
+                    </span>
+                </div>
+
+                <a class="button button--primary" href="contact.html#contact-form" data-config-href="urls.request">
+                    Start Your Request
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- =================================================
+                 HOME HERO
+            ================================================== -->
+        <section class="home-hero" id="top" aria-labelledby="hero-title">
+            <div class="container home-hero__container">
+                <div class="home-hero__content">
+                    <p class="section-kicker" data-aos="fade-down" data-aos-delay="50">
+                        AQUALUME PLATFORM
+                    </p>
+
+                    <h1 id="hero-title" data-aos="fade-up" data-aos-delay="120">
+                        A clearer way to explore water damage support options.
+                    </h1>
+
+                    <p class="lead home-hero__description" data-aos="fade-up" data-aos-delay="190">
+                        Aqualume helps homeowners organize a water damage
+                        request, explore relevant service paths, and compare
+                        local provider options with more clarity.
+                    </p>
+
+                    <div class="home-hero__actions" data-aos="fade-up" data-aos-delay="260">
+                        <a class="button button--primary" href="#request">
+                            Start Your Request
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="button button--light" href="services.html">
+                            Explore Services
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="home-hero__trust" data-aos="fade-up" data-aos-delay="330">
+                        <div class="home-hero__trust-icon" aria-hidden="true">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+
+                        <p>
+                            Independent platform. Homeowner choice always
+                            comes first.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="home-hero__visual" data-aos="zoom-in" data-aos-delay="170">
+                    <div class="home-hero__orb home-hero__orb--one"></div>
+                    <div class="home-hero__orb home-hero__orb--two"></div>
+
+                    <figure class="home-hero__photo photo-frame">
+                        <img src="assets/images/home/home-hero.jpg"
+                            alt="Homeowner reviewing water damage support options on a tablet in a bright living room"
+                            width="800" height="920" fetchpriority="high" />
+
+                        <figcaption class="home-hero__photo-label">
+                            <span class="tag tag--dark">
+                                <i data-lucide="droplets" aria-hidden="true"></i>
+                                Clearer next steps
+                            </span>
+
+                            <span>
+                                One structured request.<br />
+                                More clarity.
+                            </span>
+                        </figcaption>
+                    </figure>
+
+                    <span class="ripple-line home-hero__ripple" aria-hidden="true"></span>
+                </div>
+            </div>
+
+            <div class="wave-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- =================================================
+                 STATS STRIP
+            ================================================== -->
+        <section class="stats-strip" aria-label="Aqualume platform overview">
+            <div class="container">
+                <div class="stats-strip__grid">
+                    <article class="stat-item" data-aos="fade-up">
+                        <div class="stat-item__value">
+                            <span data-counter-value="6">6</span>+
+                        </div>
+
+                        <p class="stat-item__label">
+                            Water damage support categories
+                        </p>
+                    </article>
+
+                    <article class="stat-item" data-aos="fade-up" data-aos-delay="80">
+                        <div class="stat-item__value">
+                            <span>24/7</span>
+                        </div>
+
+                        <p class="stat-item__label">
+                            Request access
+                        </p>
+                    </article>
+
+                    <article class="stat-item" data-aos="fade-up" data-aos-delay="160">
+                        <div class="stat-item__value">
+                            <span data-counter-value="3">3</span>
+                            <span class="stat-item__suffix">Steps</span>
+                        </div>
+
+                        <p class="stat-item__label">
+                            To compare options
+                        </p>
+                    </article>
+
+                    <article class="stat-item" data-aos="fade-up" data-aos-delay="240">
+                        <div class="stat-item__value">
+                            <span data-counter-value="1">1</span>
+                            <span class="stat-item__suffix">Platform</span>
+                        </div>
+
+                        <p class="stat-item__label">
+                            For clearer next steps
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 SITUATION SELECTOR
+            ================================================== -->
+        <section class="section section--light home-situations" id="request" aria-labelledby="situations-title">
+            <div class="container">
+                <div class="home-situations__layout">
+                    <div class="home-situations__content">
+                        <p class="section-kicker" data-aos="fade-down">
+                            WHAT ARE YOU DEALING WITH?
+                        </p>
+
+                        <h2 id="situations-title" data-aos="fade-up" data-aos-delay="80">
+                            Start with the water damage concern you are
+                            facing now.
+                        </h2>
+
+                        <p class="lead" data-aos="fade-up" data-aos-delay="150">
+                            Choose the situation that feels closest to what
+                            is happening. Aqualume will guide you toward
+                            relevant service paths and local provider options
+                            to explore.
+                        </p>
+
+                        <article class="situation-panel" data-home-situation-panel data-aos="fade-up"
+                            data-aos-delay="220">
+                            <div class="situation-panel__top">
+                                <span class="tag" data-home-situation-tag>
+                                    Urgency may vary
+                                </span>
+
+                                <i class="situation-panel__icon" data-lucide="siren" aria-hidden="true"
+                                    data-home-situation-icon></i>
+                            </div>
+
+                            <h3 data-home-situation-title>
+                                ACTIVE LEAK
+                            </h3>
+
+                            <p data-home-situation-text>
+                                A leak can spread through flooring, walls,
+                                or ceilings. Explore water damage support
+                                options based on the type and urgency of the
+                                situation.
+                            </p>
+
+                            <a class="text-link" href="emergency-water-damage.html" data-home-situation-link>
+                                <span data-home-situation-link-label>
+                                    Explore emergency support
+                                </span>
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </article>
+
+                        <a class="button button--primary home-situations__cta" href="contact.html#contact-form"
+                            data-config-href="urls.request" data-aos="fade-up" data-aos-delay="280">
+                            Start Your Request
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="home-situations__pills" data-aos="fade-left" data-aos-delay="120">
+                        <button class="situation-pill is-active" type="button" data-home-situation
+                            data-situation-id="active-leak" aria-pressed="true">
+                            <span>Active leak</span>
+                            <i data-lucide="droplet" aria-hidden="true"></i>
+                        </button>
+
+                        <button class="situation-pill" type="button" data-home-situation
+                            data-situation-id="standing-water" aria-pressed="false">
+                            <span>Standing water</span>
+                            <i data-lucide="waves" aria-hidden="true"></i>
+                        </button>
+
+                        <button class="situation-pill" type="button" data-home-situation
+                            data-situation-id="flooded-room" aria-pressed="false">
+                            <span>Flooded room</span>
+                            <i data-lucide="cloud-rain" aria-hidden="true"></i>
+                        </button>
+
+                        <button class="situation-pill" type="button" data-home-situation data-situation-id="burst-pipe"
+                            aria-pressed="false">
+                            <span>Burst pipe</span>
+                            <i data-lucide="wrench" aria-hidden="true"></i>
+                        </button>
+
+                        <button class="situation-pill" type="button" data-home-situation
+                            data-situation-id="basement-moisture" aria-pressed="false">
+                            <span>Basement moisture</span>
+                            <i data-lucide="layers" aria-hidden="true"></i>
+                        </button>
+
+                        <button class="situation-pill" type="button" data-home-situation
+                            data-situation-id="mold-concerns" aria-pressed="false">
+                            <span>Mold concerns</span>
+                            <i data-lucide="scan-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 FEATURED SERVICES
+            ================================================== -->
+        <section class="section section--mist home-featured-services" aria-labelledby="featured-services-title">
+            <div class="container">
+                <div class="section__top">
+                    <div class="section__heading">
+                        <p class="section-kicker" data-aos="fade-down">
+                            HOW AQUALUME CAN HELP
+                        </p>
+
+                        <h2 id="featured-services-title" data-aos="fade-up" data-aos-delay="80">
+                            Start with the water damage situation you are
+                            facing now.
+                        </h2>
+                    </div>
+
+                    <p class="section__description" data-aos="fade-left" data-aos-delay="130">
+                        Explore focused support paths without starting with
+                        scattered searches or unclear categories.
+                    </p>
+                </div>
+
+                <div class="featured-services-grid">
+                    <a class="featured-service featured-service--urgent" href="emergency-water-damage.html"
+                        data-aos="fade-up">
+                        <img class="featured-service__photo"
+                            src="assets/images/services/emergency-water-damage-card.jpg"
+                            alt="Water spreading across a clean residential floor near a localized leak" width="620"
+                            height="450" loading="lazy" />
+
+                        <span class="featured-service__overlay"></span>
+
+                        <i class="featured-service__icon" data-lucide="siren" aria-hidden="true"></i>
+
+                        <div class="featured-service__content">
+                            <span class="tag tag--urgent">
+                                Urgent situation
+                            </span>
+
+                            <h3>Emergency Water Damage Help</h3>
+
+                            <p>
+                                Explore support paths for active water
+                                concerns and urgent next-step questions.
+                            </p>
+
+                            <span class="text-link">
+                                Explore service
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a class="featured-service" href="water-extraction-drying.html" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <img class="featured-service__photo"
+                            src="assets/images/services/water-extraction-drying-card.jpg"
+                            alt="Clean residential drying equipment set up after a water issue" width="620" height="450"
+                            loading="lazy" />
+
+                        <span class="featured-service__overlay"></span>
+
+                        <i class="featured-service__icon" data-lucide="wind" aria-hidden="true"></i>
+
+                        <div class="featured-service__content">
+                            <span class="tag tag--dark">
+                                Water removal path
+                            </span>
+
+                            <h3>Water Extraction &amp; Drying</h3>
+
+                            <p>
+                                Explore water removal and drying-related
+                                support paths with more clarity.
+                            </p>
+
+                            <span class="text-link">
+                                Explore service
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </a>
+
+                    <a class="featured-service" href="flood-damage-restoration.html" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <img class="featured-service__photo"
+                            src="assets/images/services/flood-damage-restoration-card.jpg"
+                            alt="Calm residential room after an indoor flooding situation" width="620" height="450"
+                            loading="lazy" />
+
+                        <span class="featured-service__overlay"></span>
+
+                        <i class="featured-service__icon" data-lucide="cloud-rain" aria-hidden="true"></i>
+
+                        <div class="featured-service__content">
+                            <span class="tag tag--dark">
+                                Post-flood concerns
+                            </span>
+
+                            <h3>Flood Damage Restoration</h3>
+
+                            <p>
+                                Explore support paths after an indoor
+                                flooding or water intrusion situation.
+                            </p>
+
+                            <span class="text-link">
+                                Explore service
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="featured-services-footer" data-aos="fade-up">
+                    <p>
+                        Looking for a different type of water damage
+                        support?
+                    </p>
+
+                    <a class="button button--secondary" href="services.html">
+                        View All Services
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 HOW IT WORKS
+            ================================================== -->
+        <section class="section section--aqua home-process" id="how-it-works" aria-labelledby="how-it-works-title">
+            <div class="container">
+                <div class="home-process__grid">
+                    <div class="home-process__intro">
+                        <p class="section-kicker" data-aos="fade-down">
+                            HOW IT WORKS
+                        </p>
+
+                        <h2 id="how-it-works-title" data-aos="fade-up" data-aos-delay="70">
+                            A clearer path through water damage decisions.
+                        </h2>
+
+                        <p class="lead" data-aos="fade-up" data-aos-delay="140">
+                            Aqualume helps homeowners move from uncertainty
+                            to action through one structured request flow.
+                            Explore relevant local provider options and stay
+                            in control of what happens next.
+                        </p>
+
+                        <a class="button button--secondary" href="services.html" data-aos="fade-up"
+                            data-aos-delay="210">
+                            Explore Services
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="home-process__route" data-process-route data-aos="fade-left" data-aos-delay="120">
+                        <span class="home-process__route-line" aria-hidden="true"></span>
+
+                        <article class="home-process__node">
+                            <div class="home-process__node-top">
+                                <span class="home-process__node-label">
+                                    SHARE
+                                </span>
+
+                                <i data-lucide="droplets" aria-hidden="true"></i>
+                            </div>
+
+                            <h3>Tell us what happened</h3>
+
+                            <p>
+                                Share the type of water damage concern, from
+                                active leaks and standing water to basement
+                                moisture or post-flood issues.
+                            </p>
+
+                            <span class="tag">
+                                Leak · Flood · Moisture
+                            </span>
+                        </article>
+
+                        <article class="home-process__node">
+                            <div class="home-process__node-top">
+                                <span class="home-process__node-label">
+                                    ORGANIZE
+                                </span>
+
+                                <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                            </div>
+
+                            <h3>We organize your request</h3>
+
+                            <p>
+                                Aqualume helps structure the situation so
+                                you can explore the most relevant water
+                                damage support category more clearly.
+                            </p>
+
+                            <span class="tag">
+                                Clearer request path
+                            </span>
+                        </article>
+
+                        <article class="home-process__node">
+                            <div class="home-process__node-top">
+                                <span class="home-process__node-label">
+                                    EXPLORE
+                                </span>
+
+                                <i data-lucide="search" aria-hidden="true"></i>
+                            </div>
+
+                            <h3>Compare local options</h3>
+
+                            <p>
+                                Review local provider-matching options based
+                                on the issue, urgency, and type of support
+                                you want to explore.
+                            </p>
+
+                            <span class="tag">
+                                Local provider options
+                            </span>
+                        </article>
+
+                        <article class="home-process__node">
+                            <div class="home-process__node-top">
+                                <span class="home-process__node-label">
+                                    CHOOSE
+                                </span>
+
+                                <i data-lucide="shield-check" aria-hidden="true"></i>
+                            </div>
+
+                            <h3>Choose what fits best</h3>
+
+                            <p>
+                                Move forward with the option that feels
+                                right for your home, timeline, and comfort
+                                level.
+                            </p>
+
+                            <span class="tag">
+                                Homeowner stays in control
+                            </span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 WHY AQUALUME
+            ================================================== -->
+        <section class="section section--light home-why" aria-labelledby="why-aqualume-title">
+            <div class="container">
+                <div class="home-why__grid">
+                    <div class="home-why__visual" data-aos="fade-right">
+                        <div class="home-why__shape" aria-hidden="true"></div>
+
+                        <figure class="home-why__photo photo-frame">
+                            <img src="assets/images/home/why-aqualume.jpg"
+                                alt="Homeowner discussing clear next steps for a water damage concern" width="760"
+                                height="850" loading="lazy" />
+
+                            <figcaption class="home-why__photo-note">
+                                ONE REQUEST.<br />
+                                MORE CLARITY.
+                            </figcaption>
+                        </figure>
+
+                        <span class="ripple-line home-why__ripple" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="home-why__content">
+                        <p class="section-kicker" data-aos="fade-down">
+                            WHY AQUALUME
+                        </p>
+
+                        <h2 id="why-aqualume-title" data-aos="fade-up" data-aos-delay="70">
+                            Water damage is stressful. Finding your next
+                            step should feel simpler.
+                        </h2>
+
+                        <p class="lead" data-aos="fade-up" data-aos-delay="140">
+                            Aqualume helps homeowners organize a water
+                            damage request, understand relevant support
+                            paths, and explore local provider options
+                            without turning an already stressful situation
+                            into a complicated search process.
+                        </p>
+
+                        <div class="home-why__accordion" data-accordion data-aos="fade-up" data-aos-delay="210">
+                            <article class="home-why__statement is-open" data-accordion-item>
+                                <button class="home-why__statement-trigger" type="button" data-accordion-trigger
+                                    aria-expanded="true">
+                                    <span>One clear request</span>
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </button>
+
+                                <div class="accordion__content">
+                                    <div class="accordion__content-inner">
+                                        <p>
+                                            Share what is happening in your
+                                            home and start with a more
+                                            structured picture of the
+                                            situation.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="home-why__statement" data-accordion-item>
+                                <button class="home-why__statement-trigger" type="button" data-accordion-trigger
+                                    aria-expanded="false">
+                                    <span>Relevant support paths</span>
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </button>
+
+                                <div class="accordion__content">
+                                    <div class="accordion__content-inner">
+                                        <p>
+                                            Explore service directions that
+                                            fit the type of water damage
+                                            concern, from active leaks to
+                                            flood or moisture-related
+                                            issues.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="home-why__statement" data-accordion-item>
+                                <button class="home-why__statement-trigger" type="button" data-accordion-trigger
+                                    aria-expanded="false">
+                                    <span>You stay in control</span>
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </button>
+
+                                <div class="accordion__content">
+                                    <div class="accordion__content-inner">
+                                        <p>
+                                            Compare local provider options
+                                            and decide what fits your home,
+                                            timing, and comfort level.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="home-why__actions" data-aos="fade-up" data-aos-delay="280">
+                            <a class="button button--primary" href="contact.html#contact-form"
+                                data-config-href="urls.request">
+                                Start Your Request
+                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                            </a>
+
+                            <a class="button button--light" href="services.html">
+                                Explore Services
+                                <i data-lucide="arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 FAQ
+            ================================================== -->
+        <section class="section section--mist home-faq" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="home-faq__grid">
+                    <aside class="home-faq__intro" data-aos="fade-right">
+                        <p class="section-kicker section-kicker--light">
+                            CLARITY BEFORE YOU START
+                        </p>
+
+                        <h2 id="faq-title">
+                            Clear answers before your next step.
+                        </h2>
+
+                        <p>
+                            Aqualume is designed to make water damage
+                            decisions feel more manageable. Here are
+                            answers to common questions about requests,
+                            local provider options, and homeowner choice.
+                        </p>
+
+                        <div class="home-faq__intro-icon" aria-hidden="true">
+                            <i data-lucide="circle-help"></i>
+                        </div>
+
+                        <span class="ripple-line home-faq__ripple" aria-hidden="true"></span>
+                    </aside>
+
+                    <div class="accordion home-faq__accordion" data-accordion data-aos="fade-left" data-aos-delay="100">
+                        <article class="accordion__item is-open" data-accordion-item>
+                            <button class="accordion__trigger" type="button" data-accordion-trigger
+                                aria-expanded="true">
+                                <span class="accordion__question">
+                                    Is Aqualume a water damage restoration
+                                    company?
+                                </span>
+
+                                <span class="accordion__icon">
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </span>
+                            </button>
+
+                            <div class="accordion__content">
+                                <div class="accordion__content-inner">
+                                    <p>
+                                        No. Aqualume is an independent
+                                        platform designed to help homeowners
+                                        organize water damage requests and
+                                        explore local provider options.
+                                        Aqualume does not personally perform
+                                        restoration, drying, plumbing, mold
+                                        removal, or repair work.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="accordion__item" data-accordion-item>
+                            <button class="accordion__trigger" type="button" data-accordion-trigger
+                                aria-expanded="false">
+                                <span class="accordion__question">
+                                    How does provider matching work?
+                                </span>
+
+                                <span class="accordion__icon">
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </span>
+                            </button>
+
+                            <div class="accordion__content">
+                                <div class="accordion__content-inner">
+                                    <p>
+                                        You begin by sharing the type of
+                                        water damage concern you are dealing
+                                        with. Your request can then be
+                                        organized around relevant support
+                                        categories and local provider
+                                        options to explore.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="accordion__item" data-accordion-item>
+                            <button class="accordion__trigger" type="button" data-accordion-trigger
+                                aria-expanded="false">
+                                <span class="accordion__question">
+                                    Can I use Aqualume for urgent water
+                                    damage concerns?
+                                </span>
+
+                                <span class="accordion__icon">
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </span>
+                            </button>
+
+                            <div class="accordion__content">
+                                <div class="accordion__content-inner">
+                                    <p>
+                                        Yes. You can start a request for
+                                        urgent situations such as active
+                                        leaks, standing water, burst pipe
+                                        concerns, or sudden water intrusion.
+                                        Available options and response
+                                        timing can vary by location and
+                                        provider.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="accordion__item" data-accordion-item>
+                            <button class="accordion__trigger" type="button" data-accordion-trigger
+                                aria-expanded="false">
+                                <span class="accordion__question">
+                                    What types of situations can I submit?
+                                </span>
+
+                                <span class="accordion__icon">
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </span>
+                            </button>
+
+                            <div class="accordion__content">
+                                <div class="accordion__content-inner">
+                                    <p>
+                                        You can explore support paths for
+                                        active leaks, water extraction and
+                                        drying, flood damage, burst pipe
+                                        issues, basement moisture, and
+                                        moisture-related mold concerns.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="accordion__item" data-accordion-item>
+                            <button class="accordion__trigger" type="button" data-accordion-trigger
+                                aria-expanded="false">
+                                <span class="accordion__question">
+                                    Does it cost anything to start a
+                                    request?
+                                </span>
+
+                                <span class="accordion__icon">
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </span>
+                            </button>
+
+                            <div class="accordion__content">
+                                <div class="accordion__content-inner">
+                                    <p>
+                                        Starting a request through Aqualume
+                                        is intended to be simple. Any
+                                        provider-specific pricing,
+                                        availability, and service details
+                                        should be reviewed directly before
+                                        you choose how to proceed.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="accordion__item" data-accordion-item>
+                            <button class="accordion__trigger" type="button" data-accordion-trigger
+                                aria-expanded="false">
+                                <span class="accordion__question">
+                                    Do I choose which local provider to
+                                    contact?
+                                </span>
+
+                                <span class="accordion__icon">
+                                    <i data-lucide="plus" aria-hidden="true"></i>
+                                </span>
+                            </button>
+
+                            <div class="accordion__content">
+                                <div class="accordion__content-inner">
+                                    <p>
+                                        Yes. Aqualume is designed to help
+                                        you explore and compare available
+                                        options. You remain in control of
+                                        which provider, service path, or
+                                        next step feels right for your home.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+                 FINAL CTA + REQUEST FORM
+            ================================================== -->
+        <section class="section section--dark home-request" aria-labelledby="request-title">
+            <div class="container">
+                <div class="home-request__grid">
+                    <div class="home-request__content" data-aos="fade-right">
+                        <p class="section-kicker section-kicker--light">
+                            READY WHEN YOU ARE
+                        </p>
+
+                        <h2 id="request-title">
+                            Ready to find a clearer next step for your home?
+                        </h2>
+
+                        <p class="lead">
+                            Tell us what is happening, select the type of
+                            support you want to explore, and begin comparing
+                            local provider options with more clarity.
+                        </p>
+
+                        <div class="home-request__trust">
+                            <i data-lucide="shield-check" aria-hidden="true"></i>
+
+                            <span>
+                                Independent platform. Homeowner choice
+                                always comes first.
+                            </span>
+                        </div>
+
+                        <span class="ripple-line home-request__ripple" aria-hidden="true"></span>
+                    </div>
+
+                    <form class="home-request__form" data-aqualume-form novalidate
+                        aria-describedby="request-form-note request-form-status" data-aos="fade-left"
+                        data-aos-delay="100">
+                        <div class="form-field">
+                            <label for="home-zip-code">
+                                ZIP Code
+                            </label>
+
+                            <input id="home-zip-code" name="zipCode" type="text" inputmode="numeric"
+                                autocomplete="postal-code" placeholder="Enter ZIP Code" pattern="[0-9]{5}(-[0-9]{4})?"
+                                required />
+
+                            <span class="form-error">
+                                Enter a valid ZIP Code.
+                            </span>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="home-situation">
+                                What are you dealing with?
+                            </label>
+
+                            <select id="home-situation" name="situation" required>
+                                <option value="" selected disabled>
+                                    Select a situation
+                                </option>
+                                <option value="active-leak">
+                                    Active leak
+                                </option>
+                                <option value="standing-water">
+                                    Standing water
+                                </option>
+                                <option value="flooded-room">
+                                    Flooded room
+                                </option>
+                                <option value="burst-pipe">
+                                    Burst pipe
+                                </option>
+                                <option value="basement-moisture">
+                                    Basement moisture
+                                </option>
+                                <option value="mold-concerns">
+                                    Mold concerns
+                                </option>
+                                <option value="something-else">
+                                    Something else
+                                </option>
+                            </select>
+
+                            <span class="form-error">
+                                Choose the situation closest to what is
+                                happening.
+                            </span>
+                        </div>
+
+                        <button class="button button--primary button--full" type="submit">
+                            Start Your Request
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </button>
+
+                        <p class="form-note" id="request-form-note">
+                            By continuing, you agree to the
+                            <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
+                                Privacy Policy
+                            </a>
+                            and
+                            <a href="terms-of-service.html" data-config-href="legal.termsUrl">
+                                Terms of Service
+                            </a>.
+                        </p>
+
+                        <div class="form-status" id="request-form-status" data-form-status role="status"
+                            aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+    <footer class="site-footer">
+        <div class="site-footer__decor" aria-hidden="true"></div>
+
+        <div class="container site-footer__inner">
+            <div class="site-footer__grid">
+                <div>
+                    <a class="brand" href="index.html" aria-label="Aqualume home">
+                        <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
+
+                        <span class="brand__wordmark" aria-label="Aqualume">
+                            <span class="brand__primary" data-config-text="company.namePrimary">
+                                Aqua
+                            </span>
+                            <span class="brand__accent" data-config-text="company.nameAccent">
+                                lume
+                            </span>
+                        </span>
+                    </a>
+
+                    <p class="site-footer__description" data-config-text="footer.description">
+                        Aqualume is an independent platform that helps
+                        homeowners explore water damage provider options.
+                        Aqualume does not directly provide restoration,
+                        drying, plumbing, mold remediation, inspection,
+                        repair, or construction services.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="site-footer__title">Navigate</p>
+
+                    <ul class="site-footer__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="site-footer__title">Services</p>
+
+                    <ul class="site-footer__links" data-footer-services></ul>
+                </div>
+
+                <div>
+                    <p class="site-footer__title">Contact</p>
+
+                    <ul class="site-footer__links">
+                        <li>
+                            <a href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
+                                data-config-text="contact.email">
+                                hello@aqualume.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tel:+18885550148" data-config-href="contact.phoneHref"
+                                data-config-text="contact.phoneDisplay">
+                                (888) 555-0148
+                            </a>
+                        </li>
+
+                        <li>
+                            <span data-config-text="company.serviceArea">
+                                Selected service areas across the United
+                                States
+                            </span>
+                        </li>
+
+                        <li>
+                            <span data-config-text="contact.supportHours">
+                                24/7 request access
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <p>
+                    © <span data-current-year></span>
+                    <span data-config-text="company.name">Aqualume</span>.
+                    <span data-config-text="footer.copyright">
+                        All rights reserved.
+                    </span>
+                </p>
+
+                <div class="site-footer__legal">
+                    <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms-of-service.html" data-config-href="legal.termsUrl">
+                        Terms of Service
+                    </a>
+
+                    <a href="cookie-policy.html" data-config-href="legal.cookieUrl">
+                        Cookie Policy
+                    </a>
+
+                    <button type="button" data-cookie-settings>
+                        Cookie Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =====================================================
+             COOKIE BANNER
+        ====================================================== -->
+    <section class="cookie-banner" data-cookie-banner aria-label="Cookie preferences" aria-hidden="true">
+        <div class="cookie-banner__content">
+            <div>
+                <h2 class="cookie-banner__title">Your privacy choices</h2>
+
+                <p class="cookie-banner__text">
+                    Aqualume uses essential cookies to support core
+                    functionality and may use optional cookies to improve
+                    the platform experience. You can manage your
+                    preferences at any time.
+
+                    <a href="privacy-policy.html" data-config-href="legal.privacyUrl">
+                        Privacy Policy
+                    </a>
+
+                    <a href="cookie-policy.html" data-config-href="legal.cookieUrl">
+                        Cookie Policy
+                    </a>
+
+                    <a href="terms-of-service.html" data-config-href="legal.termsUrl">
+                        Terms of Service
+                    </a>
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="button button--primary button--small" type="button" data-cookie-accept-all>
+                    Accept All
+                </button>
+
+                <button class="button button--dark button--small" type="button" data-cookie-reject-optional>
+                    Reject Optional
+                </button>
+
+                <button class="button button--dark button--small" type="button" data-cookie-manage>
+                    Manage Preferences
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+             COOKIE PREFERENCES MODAL
+        ====================================================== -->
+    <div class="cookie-preferences" data-cookie-preferences aria-hidden="true">
+        <div class="cookie-preferences__dialog" role="dialog" aria-modal="true"
+            aria-labelledby="cookie-preferences-title">
+            <div class="cookie-preferences__top">
+                <div>
+                    <p class="section-kicker">COOKIE SETTINGS</p>
+
+                    <h2 class="cookie-preferences__title" id="cookie-preferences-title">
+                        Choose your cookie preferences.
+                    </h2>
+                </div>
+
+                <button class="icon-button icon-button--light" type="button" data-cookie-preferences-close
+                    aria-label="Close cookie settings">
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <p class="cookie-preferences__intro">
+                Essential cookies are always active because they support
+                core platform functionality. Optional cookies can be turned
+                on or off at any time.
+            </p>
+
+            <div class="cookie-category-list">
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">
+                            Essential
+                        </p>
+
+                        <p class="cookie-category__description">
+                            Required for core platform functionality and
+                            security.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" checked disabled data-cookie-category="essential" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Essential cookies are always active
+                        </span>
+                    </label>
+                </div>
+
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">
+                            Preferences
+                        </p>
+
+                        <p class="cookie-category__description">
+                            Helps remember your choices and improve the
+                            browsing experience.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" data-cookie-category="preferences" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Allow preference cookies
+                        </span>
+                    </label>
+                </div>
+
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">
+                            Analytics
+                        </p>
+
+                        <p class="cookie-category__description">
+                            Helps us understand how visitors use the
+                            platform.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" data-cookie-category="analytics" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Allow analytics cookies
+                        </span>
+                    </label>
+                </div>
+
+                <div class="cookie-category">
+                    <div>
+                        <p class="cookie-category__title">
+                            Marketing
+                        </p>
+
+                        <p class="cookie-category__description">
+                            Supports relevant platform communications where
+                            enabled.
+                        </p>
+                    </div>
+
+                    <label class="switch">
+                        <input type="checkbox" data-cookie-category="marketing" />
+                        <span class="switch__track"></span>
+                        <span class="sr-only">
+                            Allow marketing cookies
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="cookie-preferences__actions">
+                <button class="button button--light" type="button" data-cookie-reject-optional>
+                    Reject Optional
+                </button>
+
+                <button class="button button--primary" type="button" data-cookie-preferences-save>
+                    Save Preferences
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================
+             SCRIPTS
+        ====================================================== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@0.553.0/dist/umd/lucide.min.js"></script>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/home.js"></script>
+</body>
+
+</html>
