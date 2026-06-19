@@ -100,6 +100,105 @@
     }
 
     /**
+     * Inserts arbitrary attribute values from config.
+     *
+     * HTML examples:
+     * <a data-config-attr="aria-label:company.name"></a>
+     * <a data-config-attr="aria-label:company.name|title:company.name"></a>
+     */
+    function hydrateConfigAttributes() {
+        const attributeElements = document.querySelectorAll('[data-config-attr]');
+
+        attributeElements.forEach((element) => {
+            const configAttr = element.dataset.configAttr;
+
+            if (!configAttr) {
+                return;
+            }
+
+            configAttr.split('|').forEach((pair) => {
+                const separatorIndex = pair.indexOf(':');
+
+                if (separatorIndex === -1) {
+                    return;
+                }
+
+                const attributeName = pair.slice(0, separatorIndex).trim();
+                const configPath = pair.slice(separatorIndex + 1).trim();
+
+                if (!attributeName || !configPath) {
+                    return;
+                }
+
+                const value = getConfigValue(configPath);
+
+                if (typeof value !== 'undefined') {
+                    element.setAttribute(attributeName, String(value));
+                }
+            });
+        });
+    }
+
+    /**
+     * Replaces company placeholder tokens inside attribute values.
+     * Example:
+     * data-clarity-title="Does {{company.name}} ..."
+     */
+    function hydrateCompanyAttributePlaceholders() {
+        document.querySelectorAll('*').forEach((element) => {
+            Array.from(element.attributes).forEach((attribute) => {
+                if (!attribute.value.includes('{{company.name}}')) {
+                    return;
+                }
+
+                element.setAttribute(
+                    attribute.name,
+                    attribute.value.replaceAll('{{company.name}}', CONFIG.company.name)
+                );
+            });
+        });
+    }
+
+    /**
+     * Builds accessible labels that include the current company name.
+     *
+     * HTML examples:
+     * <a data-config-company-label="Call"></a>
+     * <a data-config-company-label="Explore all {company} services"></a>
+     */
+    function hydrateCompanyLabels() {
+        const labelElements = document.querySelectorAll('[data-config-company-label]');
+
+        labelElements.forEach((element) => {
+            const rawTemplate = element.dataset.configCompanyLabel;
+
+            if (!rawTemplate) {
+                return;
+            }
+
+            const label = rawTemplate.includes('{company}')
+                ? rawTemplate.replaceAll('{company}', CONFIG.company.name)
+                : `${rawTemplate} ${CONFIG.company.name}`;
+
+            element.setAttribute('aria-label', label.trim());
+        });
+    }
+
+    /**
+     * Sets Google Maps links from the centralized company address config.
+     *
+     * HTML example:
+     * <a data-config-map-link></a>
+     */
+    function hydrateMapLinks() {
+        document.querySelectorAll('[data-config-map-link]').forEach((element) => {
+            element.setAttribute('href', CONFIG.company.mapHref);
+            element.setAttribute('target', '_blank');
+            element.setAttribute('rel', 'noopener noreferrer');
+        });
+    }
+
+    /**
      * Inserts a current year into elements:
      * <span data-current-year></span>
      */
@@ -786,6 +885,10 @@
     function init() {
         hydrateTextValues();
         hydrateHrefValues();
+        hydrateConfigAttributes();
+        hydrateCompanyAttributePlaceholders();
+        hydrateCompanyLabels();
+        hydrateMapLinks();
         hydrateCurrentYear();
 
         renderDesktopServiceDropdown();

@@ -13,18 +13,30 @@ window.AQUALUME_CONFIG = {
         nameAccent: 'lume',
         tagline: 'Water damage can feel chaotic. Finding the next step should feel clearer.',
         platformType: 'Independent water damage provider-matching platform',
-        serviceArea: 'Selected service areas across the United States',
         address: 'Selected service areas across the United States',
-        mapQuery: 'United States'
+        serviceArea: 'Selected service areas across the United States',
+        supportHours: '24/7 request access',
+        mapQuery: 'Selected service areas across the United States',
+
+        get mapHref() {
+            const query = this.mapQuery || this.address;
+
+            return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+        }
     },
 
     contact: {
         email: 'hello@aqualume.com',
         phoneRaw: '+18885550148',
         phoneDisplay: '(888) 555-0148',
-        supportHours: '24/7 request access',
-        emailHref: 'mailto:hello@aqualume.com',
-        phoneHref: 'tel:+18885550148'
+
+        get emailHref() {
+            return `mailto:${this.email}`;
+        },
+
+        get phoneHref() {
+            return `tel:${this.phoneRaw.replace(/[^\d+]/g, '')}`;
+        }
     },
 
     legal: {
@@ -45,8 +57,9 @@ window.AQUALUME_CONFIG = {
     },
 
     footer: {
-        description:
-            'Aqualume is an independent platform that helps homeowners explore water damage provider options. Aqualume does not directly provide restoration, drying, plumbing, mold remediation, inspection, repair, or construction services.',
+        get description() {
+            return `${window.AQUALUME_CONFIG.company.name} is an independent platform that helps homeowners explore water damage provider options. ${window.AQUALUME_CONFIG.company.name} does not directly provide restoration, drying, plumbing, mold remediation, inspection, repair, or construction services.`;
+        },
         copyright: 'All rights reserved.',
         cookieSettingsLabel: 'Cookie Settings'
     },

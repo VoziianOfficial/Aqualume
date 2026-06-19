@@ -33,10 +33,10 @@
         ====================================================== -->
     <header class="site-header" data-site-header>
         <div class="site-header__inner">
-            <a class="brand" href="index.html" aria-label="Aqualume home">
+            <a class="brand" href="index.html" data-config-company-label="{company} home">
                 <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
 
-                <span class="brand__wordmark" aria-label="Aqualume">
+                <span class="brand__wordmark" data-config-attr="aria-label:company.name">
                     <span class="brand__primary" data-config-text="company.namePrimary">
                         Aqua
                     </span>
@@ -54,7 +54,7 @@
                 </a>
 
                 <div class="site-nav__item">
-                    <a class="site-nav__button" href="services.html" aria-label="Explore all Aqualume services">
+                    <a class="site-nav__button" href="services.html" data-config-company-label="Explore all {company} services">
                         Services
                         <i data-lucide="chevron-down" aria-hidden="true"></i>
                     </a>
@@ -74,12 +74,12 @@
 
             <div class="site-header__actions">
                 <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
-                    aria-label="Call Aqualume">
+                    data-config-company-label="Call">
                     <i data-lucide="phone" aria-hidden="true"></i>
                 </a>
 
                 <a class="icon-button" href="contact.html#contact-form" data-config-href="urls.request"
-                    aria-label="Email Aqualume">
+                    data-config-company-label="Email">
                     <i data-lucide="mail" aria-hidden="true"></i>
                 </a>
 
@@ -103,10 +103,10 @@
     <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
         <div class="mobile-menu__inner">
             <div class="mobile-menu__top">
-                <a class="brand" href="index.html" aria-label="Aqualume home">
+                <a class="brand" href="index.html" data-config-company-label="{company} home">
                     <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
 
-                    <span class="brand__wordmark" aria-label="Aqualume">
+                    <span class="brand__wordmark" data-config-attr="aria-label:company.name">
                         <span class="brand__primary" data-config-text="company.namePrimary">
                             Aqua
                         </span>
@@ -145,12 +145,12 @@
             <div class="mobile-menu__bottom">
                 <div class="mobile-menu__contact-actions">
                     <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
-                        aria-label="Call Aqualume">
+                        data-config-company-label="Call">
                         <i data-lucide="phone" aria-hidden="true"></i>
                     </a>
 
                     <a class="icon-button" href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
-                        aria-label="Email Aqualume">
+                        data-config-company-label="Email">
                         <i data-lucide="mail" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -166,7 +166,7 @@
                         (888) 555-0148
                     </a>
 
-                    <span data-config-text="contact.supportHours">
+                    <span data-config-text="company.supportHours">
                         24/7 request access
                     </span>
                 </div>
@@ -195,7 +195,7 @@
                     </h1>
 
                     <p class="lead about-hero__description" data-aos="fade-up" data-aos-delay="160">
-                        Aqualume was built to help homeowners move from
+                        <span data-config-text="company.name">Aqualume</span> was built to help homeowners move from
                         uncertainty toward clearer service paths and local
                         provider options.
                     </p>
@@ -268,7 +268,7 @@
                     </div>
 
                     <p class="lead" data-aos="fade-left" data-aos-delay="120">
-                        Aqualume was designed around a simple idea:
+                        <span data-config-text="company.name">Aqualume</span> was designed around a simple idea:
                         homeowners deserve a clearer way to navigate water
                         damage situations.
                     </p>
@@ -336,7 +336,7 @@
                     <div class="about-difference__side about-difference__side--platform" data-aos="fade-left"
                         data-aos-delay="120">
                         <p class="about-difference__side-label">
-                            Aqualume is designed to help you:
+                            <span data-config-text="company.name">Aqualume</span> is designed to help you:
                         </p>
 
                         <ul class="about-difference__structured-list">
@@ -388,7 +388,7 @@
                     </div>
 
                     <p class="section__description" data-aos="fade-left" data-aos-delay="120">
-                        Aqualume is designed to make a difficult moment feel
+                        <span data-config-text="company.name">Aqualume</span> is designed to make a difficult moment feel
                         more organized without taking choice away from the
                         homeowner.
                     </p>
@@ -405,7 +405,7 @@
                         <h4>Start with what is happening now.</h4>
 
                         <p>
-                            Aqualume helps you put the situation into a
+                            <span data-config-text="company.name">Aqualume</span> helps you put the situation into a
                             clearer context before you begin exploring
                             next-step options.
                         </p>
@@ -555,12 +555,12 @@
                         <p class="section-kicker">HOMEOWNER FEEDBACK</p>
 
                         <h2 id="testimonials-title">
-                            What homeowners say about the Aqualume
+                            What homeowners say about the <span data-config-text="company.name">Aqualume</span>
                             experience.
                         </h2>
 
                         <p class="lead">
-                            People often come to Aqualume during urgent or
+                            People often come to <span data-config-text="company.name">Aqualume</span> during urgent or
                             uncertain situations. These development
                             placeholders should be replaced with verified,
                             authorized customer feedback before launch.
@@ -598,7 +598,7 @@
         <!-- =================================================
                  PLATFORM PROMISE STRIP
             ================================================== -->
-        <section class="about-promise" aria-label="Aqualume platform promise">
+        <section class="about-promise" data-config-company-label="{company} platform promise">
             <div class="container">
                 <div class="about-promise__grid">
                     <article data-aos="fade-up">
@@ -607,7 +607,7 @@
                         <h3>Independent platform</h3>
 
                         <p>
-                            Aqualume is built to help homeowners explore
+                            <span data-config-text="company.name">Aqualume</span> is built to help homeowners explore
                             options, not push one provider or one outcome.
                         </p>
                     </article>
@@ -696,10 +696,10 @@
         <div class="container site-footer__inner">
             <div class="site-footer__grid">
                 <div>
-                    <a class="brand" href="index.html" aria-label="Aqualume home">
+                    <a class="brand" href="index.html" data-config-company-label="{company} home">
                         <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
 
-                        <span class="brand__wordmark" aria-label="Aqualume">
+                        <span class="brand__wordmark" data-config-attr="aria-label:company.name">
                             <span class="brand__primary" data-config-text="company.namePrimary">
                                 Aqua
                             </span>
@@ -765,7 +765,7 @@
                         </li>
 
                         <li>
-                            <span data-config-text="contact.supportHours">
+                            <span data-config-text="company.supportHours">
                                 24/7 request access
                             </span>
                         </li>
@@ -812,7 +812,7 @@
                 <h2 class="cookie-banner__title">Your privacy choices</h2>
 
                 <p class="cookie-banner__text">
-                    Aqualume uses essential cookies to support core
+                    <span data-config-text="company.name">Aqualume</span> uses essential cookies to support core
                     functionality and may use optional cookies to improve
                     the platform experience. You can manage your preferences
                     at any time.

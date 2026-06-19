@@ -35,10 +35,10 @@
         ====================================================== -->
     <header class="site-header" data-site-header>
         <div class="site-header__inner">
-            <a class="brand" href="index.html" aria-label="Aqualume home">
+            <a class="brand" href="index.html" data-config-company-label="{company} home">
                 <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
 
-                <span class="brand__wordmark" aria-label="Aqualume">
+                <span class="brand__wordmark" data-config-attr="aria-label:company.name">
                     <span class="brand__primary" data-config-text="company.namePrimary">
                         Aqua
                     </span>
@@ -54,7 +54,7 @@
                 <a class="site-nav__link" href="about.html">About</a>
 
                 <div class="site-nav__item">
-                    <a class="site-nav__button" href="services.html" aria-label="Explore all Aqualume services">
+                    <a class="site-nav__button" href="services.html" data-config-company-label="Explore all {company} services">
                         Services
                         <i data-lucide="chevron-down" aria-hidden="true"></i>
                     </a>
@@ -76,12 +76,12 @@
 
             <div class="site-header__actions">
                 <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
-                    aria-label="Call Aqualume">
+                    data-config-company-label="Call">
                     <i data-lucide="phone" aria-hidden="true"></i>
                 </a>
 
                 <a class="icon-button" href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
-                    aria-label="Email Aqualume">
+                    data-config-company-label="Email">
                     <i data-lucide="mail" aria-hidden="true"></i>
                 </a>
 
@@ -104,10 +104,10 @@
     <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
         <div class="mobile-menu__inner">
             <div class="mobile-menu__top">
-                <a class="brand" href="index.html" aria-label="Aqualume home">
+                <a class="brand" href="index.html" data-config-company-label="{company} home">
                     <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
 
-                    <span class="brand__wordmark" aria-label="Aqualume">
+                    <span class="brand__wordmark" data-config-attr="aria-label:company.name">
                         <span class="brand__primary" data-config-text="company.namePrimary">
                             Aqua
                         </span>
@@ -146,12 +146,12 @@
             <div class="mobile-menu__bottom">
                 <div class="mobile-menu__contact-actions">
                     <a class="icon-button" href="tel:+18885550148" data-config-href="contact.phoneHref"
-                        aria-label="Call Aqualume">
+                        data-config-company-label="Call">
                         <i data-lucide="phone" aria-hidden="true"></i>
                     </a>
 
                     <a class="icon-button" href="mailto:hello@aqualume.com" data-config-href="contact.emailHref"
-                        aria-label="Email Aqualume">
+                        data-config-company-label="Email">
                         <i data-lucide="mail" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -167,7 +167,7 @@
                         (888) 555-0148
                     </a>
 
-                    <span data-config-text="contact.supportHours">
+                    <span data-config-text="company.supportHours">
                         24/7 request access
                     </span>
                 </div>
@@ -217,7 +217,7 @@
                     <div class="contact-hero__note" data-aos="fade-up" data-aos-delay="280">
                         <i data-lucide="shield-check" aria-hidden="true"></i>
                         <span>
-                            Aqualume is an independent provider-matching
+                            <span data-config-text="company.name">Aqualume</span> is an independent provider-matching
                             platform. It does not directly provide
                             restoration, plumbing, drying, repair, or mold
                             remediation services.
@@ -507,7 +507,7 @@
 
                     <p class="section__description" data-aos="fade-left" data-aos-delay="120">
                         You can explore service details first, contact
-                        Aqualume directly, or begin your request whenever
+                        <span data-config-text="company.name">Aqualume</span> directly, or begin your request whenever
                         you are ready.
                     </p>
                 </div>
@@ -533,7 +533,7 @@
                         <i data-lucide="phone" aria-hidden="true"></i>
 
                         <div>
-                            <h3>Call Aqualume</h3>
+                            <h3>Call <span data-config-text="company.name">Aqualume</span></h3>
                             <p>
                                 Use the number below to discuss how the
                                 platform works and where to begin.
@@ -552,7 +552,7 @@
                         <i data-lucide="mail" aria-hidden="true"></i>
 
                         <div>
-                            <h3>Email Aqualume</h3>
+                            <h3>Email <span data-config-text="company.name">Aqualume</span></h3>
                             <p>
                                 Send a general platform question or ask for
                                 help understanding the available support.
@@ -717,7 +717,7 @@
                     </div>
 
                     <p class="section__description" data-aos="fade-left" data-aos-delay="120">
-                        Aqualume is designed to make the first step more
+                        <span data-config-text="company.name">Aqualume</span> is designed to make the first step more
                         organized, not more complicated.
                     </p>
                 </div>
@@ -727,7 +727,7 @@
                         <button class="contact-faq__trigger" type="button" data-contact-faq-trigger aria-expanded="true"
                             aria-controls="contact-faq-platform">
                             <span>
-                                Is Aqualume a water damage restoration
+                                Is <span data-config-text="company.name">Aqualume</span> a water damage restoration
                                 company?
                             </span>
 
@@ -737,7 +737,7 @@
                         <div class="contact-faq__content" id="contact-faq-platform">
                             <div class="contact-faq__content-inner">
                                 <p>
-                                    No. Aqualume is an independent
+                                    No. <span data-config-text="company.name">Aqualume</span> is an independent
                                     provider-matching platform. It helps
                                     homeowners organize requests, explore
                                     relevant local options, and keep the
@@ -787,7 +787,7 @@
                                 <p>
                                     No. Availability, pricing, service
                                     scope, response times, and outcomes can
-                                    vary by provider and location. Aqualume
+                                    vary by provider and location. <span data-config-text="company.name">Aqualume</span>
                                     helps you explore relevant options; it
                                     does not guarantee any specific result.
                                 </p>
@@ -800,7 +800,7 @@
                             aria-expanded="false" aria-controls="contact-faq-control">
                             <span>
                                 Am I required to choose a provider through
-                                Aqualume?
+                                <span data-config-text="company.name">Aqualume</span>?
                             </span>
 
                             <i data-lucide="plus" aria-hidden="true"></i>
@@ -810,7 +810,7 @@
                             <div class="contact-faq__content-inner">
                                 <p>
                                     No. You remain in control of your next
-                                    step. Aqualume is designed to help you
+                                    step. <span data-config-text="company.name">Aqualume</span> is designed to help you
                                     explore and compare relevant options,
                                     not to make the decision for you.
                                 </p>
@@ -831,10 +831,10 @@
         <div class="container site-footer__inner">
             <div class="site-footer__grid">
                 <div>
-                    <a class="brand" href="index.html" aria-label="Aqualume home">
+                    <a class="brand" href="index.html" data-config-company-label="{company} home">
                         <img class="brand__mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true" />
 
-                        <span class="brand__wordmark" aria-label="Aqualume">
+                        <span class="brand__wordmark" data-config-attr="aria-label:company.name">
                             <span class="brand__primary" data-config-text="company.namePrimary">
                                 Aqua
                             </span>
@@ -900,7 +900,7 @@
                         </li>
 
                         <li>
-                            <span data-config-text="contact.supportHours">
+                            <span data-config-text="company.supportHours">
                                 24/7 request access
                             </span>
                         </li>
@@ -947,7 +947,7 @@
                 <h2 class="cookie-banner__title">Your privacy choices</h2>
 
                 <p class="cookie-banner__text">
-                    Aqualume uses essential cookies to support core
+                    <span data-config-text="company.name">Aqualume</span> uses essential cookies to support core
                     functionality and may use optional cookies to improve
                     the platform experience. You can manage your preferences
                     at any time.

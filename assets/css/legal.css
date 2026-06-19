@@ -1452,3 +1452,188 @@
         transition: none;
     }
 }
+
+/* =========================================================
+   LEGAL PAGES — FINAL TABLET / MOBILE CONTAINER FIX
+========================================================= */
+
+.legal-page {
+    overflow-x: hidden;
+    overflow-x: clip;
+}
+
+.legal-page *,
+.legal-page *::before,
+.legal-page *::after {
+    box-sizing: border-box;
+}
+
+.legal-hero__container,
+.legal-layout__container,
+.legal-hero__content,
+.legal-hero__card,
+.legal-toc,
+.legal-toc__inner,
+.legal-content,
+.legal-content__section,
+.legal-content__section>div,
+.legal-data-grid,
+.legal-platform-grid,
+.legal-cookie-table,
+.legal-cookie-table__row,
+.legal-cookie-table__row>div,
+.legal-contact-card,
+.legal-contact-card>div,
+.legal-details {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Long legal text, email addresses and links cannot stretch a layout */
+.legal-page p,
+.legal-page h1,
+.legal-page h2,
+.legal-page h3,
+.legal-page a,
+.legal-page span,
+.legal-page strong {
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   TABLET
+   Stack the layout earlier so 1024px / iPad does not squeeze.
+========================================================= */
+
+@media (max-width: 1120px) {
+
+    .legal-hero__container,
+    .legal-layout__container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .legal-hero__content {
+        max-width: 760px;
+    }
+
+    .legal-hero__card {
+        width: min(100%, 700px);
+    }
+
+    .legal-toc__inner {
+        position: static;
+        padding-top: 0;
+    }
+
+    .legal-toc nav {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 0 9px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border: 0;
+        overscroll-behavior-x: contain;
+        scrollbar-width: thin;
+    }
+
+    .legal-toc nav a {
+        flex: 0 0 auto;
+        max-width: 260px;
+        padding: 9px 12px;
+        border: 1px solid var(--soft-border);
+        border-radius: 999px;
+        background: var(--white);
+        white-space: normal;
+    }
+
+    .legal-toc nav a::before {
+        display: none;
+    }
+
+    .legal-toc nav a:hover,
+    .legal-toc nav a.is-active {
+        padding-left: 12px;
+        border-color: rgba(0, 95, 111, 0.26);
+        background: var(--pale-aqua);
+    }
+
+    .legal-toc__help {
+        display: none;
+    }
+
+    .legal-content__section {
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .legal-data-grid,
+    .legal-platform-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .legal-contact-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .legal-contact-card .button {
+        width: fit-content;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+    /*
+       Cancels old negative margin that was pushing
+       the TOC outside the right edge of the container.
+    */
+    .legal-toc nav {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .legal-toc nav a {
+        max-width: 74vw;
+        font-size: 0.67rem;
+    }
+
+    .legal-content__section {
+        grid-template-columns: 33px minmax(0, 1fr);
+        gap: 13px;
+    }
+
+    .legal-data-grid,
+    .legal-platform-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .legal-cookie-table__row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .legal-cookie-table__row .tag {
+        justify-self: start;
+    }
+
+    .legal-contact-card {
+        padding: 18px;
+    }
+
+    .legal-contact-card .button {
+        width: 100%;
+    }
+
+    .legal-details a,
+    .legal-details>span {
+        width: 100%;
+        min-width: 0;
+    }
+}
