@@ -2184,3 +2184,96 @@ p {
         font-size: clamp(3.2rem, 4.45vw, 4.8rem);
     }
 }
+
+/* =========================================================
+   PREMIUM 3D EFFECT FOR H1 + H2
+   Add at the very end of global.css
+========================================================= */
+
+/* Light sections: clean white highlight + subtle teal depth */
+main h1,
+main h2 {
+    position: relative;
+    isolation: isolate;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.98),
+        1px 2px 0 rgba(184, 222, 233, 0.66),
+        2px 3px 0 rgba(132, 195, 214, 0.27),
+        4px 6px 14px rgba(0, 95, 111, 0.13);
+}
+
+/* Dark sections and dark hero/card areas */
+.section--dark h1,
+.section--dark h2,
+.section--dark-soft h1,
+.section--dark-soft h2,
+.service-hero h1,
+.legal-hero__card h2,
+.contact-request__aside h3 {
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.12),
+        1px 2px 0 rgba(0, 0, 0, 0.24),
+        2px 4px 0 rgba(0, 0, 0, 0.16),
+        5px 8px 18px rgba(0, 0, 0, 0.34);
+}
+
+/* White/light hero headings need the same premium depth,
+   but without making the text look dirty */
+.home-hero h1,
+.about-hero h1,
+.services-hero h1,
+.contact-hero h1,
+.legal-hero h1 {
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 1),
+        1px 2px 0 rgba(191, 227, 237, 0.72),
+        2px 3px 0 rgba(136, 199, 217, 0.28),
+        5px 7px 16px rgba(0, 95, 111, 0.14);
+}
+
+/* Slightly richer depth on desktop without making headings too heavy */
+@media (min-width: 1101px) {
+    main h1 {
+        text-shadow:
+            0 1px 0 rgba(255, 255, 255, 1),
+            1px 2px 0 rgba(191, 227, 237, 0.76),
+            2px 4px 0 rgba(129, 194, 213, 0.3),
+            6px 9px 20px rgba(0, 95, 111, 0.16);
+    }
+
+    .section--dark h1,
+    .section--dark h2,
+    .section--dark-soft h1,
+    .section--dark-soft h2,
+    .service-hero h1 {
+        text-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.13),
+            1px 2px 0 rgba(0, 0, 0, 0.28),
+            3px 5px 0 rgba(0, 0, 0, 0.17),
+            7px 10px 22px rgba(0, 0, 0, 0.38);
+    }
+}
+
+/* Mobile: keep the volume, but make it lighter and cleaner */
+@media (max-width: 560px) {
+
+    main h1,
+    main h2 {
+        text-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.92),
+            1px 2px 0 rgba(181, 222, 234, 0.45),
+            3px 5px 11px rgba(0, 95, 111, 0.11);
+    }
+
+    .section--dark h1,
+    .section--dark h2,
+    .section--dark-soft h1,
+    .section--dark-soft h2,
+    .service-hero h1,
+    .legal-hero__card h2 {
+        text-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.1),
+            1px 2px 0 rgba(0, 0, 0, 0.22),
+            4px 6px 13px rgba(0, 0, 0, 0.3);
+    }
+}
